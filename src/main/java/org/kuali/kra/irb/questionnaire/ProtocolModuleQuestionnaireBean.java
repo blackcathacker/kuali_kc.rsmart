@@ -43,16 +43,19 @@ public class ProtocolModuleQuestionnaireBean extends ProtocolModuleQuestionnaire
     
     @Override
     public KrmsRulesContext getKrmsRulesContextFromBean() {
-        String protocolNumber = getModuleItemKey().indexOf("|")==-1 ? getModuleItemKey() : getModuleItemKey().substring(0, getModuleItemKey().indexOf("|"));
-        Integer sequenceNumber = Integer.valueOf(getModuleSubItemKey());
-        Map<String, Object> values = new HashMap<String, Object>();
-        List<Protocol> protocols = 
+	if (getModuleItemKey() != null && getModuleSubItemKey() != null) {
+	    String protocolNumber = getModuleItemKey().indexOf("|")==-1 ? getModuleItemKey() : getModuleItemKey().substring(0, getModuleItemKey().indexOf("|"));
+	    Integer sequenceNumber = Integer.valueOf(getModuleSubItemKey());
+	    Map<String, Object> values = new HashMap<String, Object>();
+	    values.put("protocolNumber", protocolNumber);
+	    values.put("sequenceNumber", sequenceNumber);
+	    List<Protocol> protocols = 
                 (List<Protocol>) KraServiceLocator.getService(BusinessObjectService.class).findMatching(Protocol.class, values);
-        if (protocols != null && !protocols.isEmpty()) {
-            return protocols.get(0).getKrmsRulesContext();
-        } else {
-            return null;
-        }
+	    if (protocols != null && !protocols.isEmpty()) {
+		return protocols.get(0).getKrmsRulesContext();
+	    } 
+	}
+	return null;
     }
 
    
