@@ -1,0 +1,38 @@
+diff --git a/src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java b/src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java
+index 9dcb3dd..a8adddb 100644
+--- a/src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java
++++ b/src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java
+@@ -52,6 +52,7 @@ import org.kuali.kra.web.struts.form.CustomDataDocumentForm;
+ import org.kuali.kra.web.struts.form.KraTransactionalDocumentFormBase;
+ import org.kuali.rice.core.api.CoreApiServiceLocator;
+ import org.kuali.rice.core.api.config.property.ConfigurationService;
++import org.kuali.rice.core.api.exception.RiceRuntimeException;
+ import org.kuali.rice.core.api.util.RiceConstants;
+ import org.kuali.rice.core.api.util.RiceKeyConstants;
+ import org.kuali.rice.ken.util.NotificationConstants;
+@@ -87,6 +88,7 @@ import javax.servlet.http.HttpServletResponse;
+ import javax.xml.parsers.DocumentBuilder;
+ import javax.xml.parsers.DocumentBuilderFactory;
+ import javax.xml.parsers.ParserConfigurationException;
++
+ import java.io.ByteArrayOutputStream;
+ import java.io.IOException;
+ import java.io.StringReader;
+@@ -620,7 +622,17 @@ public class KraTransactionalDocumentActionBase extends KualiTransactionalDocume
+      * @return the status (INITIATED, SAVED, etc.)
+      */
+     private String getDocumentStatus(Document doc) {
++      try {
+         return doc.getDocumentHeader().getWorkflowDocument().getStatus().getLabel();
++      } catch (RiceRuntimeException e) {
++        LOG.error("Could not find doc.getDocumentNumber(): " + doc.getDocumentNumber());
++        LOG.error("Could not find doc.getDocumentHeader().getDocumentNumber(): "
++            + doc.getDocumentHeader().getDocumentNumber());
++        LOG.error("Could not find doc.getDocumentHeader().getOrganizationDocumentNumber(): "
++            + doc.getDocumentHeader().getOrganizationDocumentNumber());
++        LOG.error(e.getMessage(), e);
++        return "NOT FOUND";
++      }
+     }
+     
+     /**

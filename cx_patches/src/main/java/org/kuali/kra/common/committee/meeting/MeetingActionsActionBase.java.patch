@@ -1,0 +1,24 @@
+diff --git a/src/main/java/org/kuali/kra/common/committee/meeting/MeetingActionsActionBase.java b/src/main/java/org/kuali/kra/common/committee/meeting/MeetingActionsActionBase.java
+index ba07b62..c1a0527 100644
+--- a/src/main/java/org/kuali/kra/common/committee/meeting/MeetingActionsActionBase.java
++++ b/src/main/java/org/kuali/kra/common/committee/meeting/MeetingActionsActionBase.java
+@@ -197,13 +197,15 @@ public abstract class MeetingActionsActionBase extends MeetingActionBase {
+         MeetingHelperBase meetingHelper = ((MeetingFormBase) form).getMeetingHelper();
+         PrintableAttachment source = new PrintableAttachment();
+         String scheduleId = request.getParameter("scheduleId");
+-        if (scheduleId != null) {
+-            String selectedLine = request.getParameter("line");
++        if (scheduleId != null && scheduleId.length() > 0) {
++            final Long schedule_id = Long.parseLong(scheduleId);
++            final List<ScheduleAgenda> scheduleAgendas = getAgendaDoc(schedule_id);
++            final String selectedLine = request.getParameter("line");
++            if (selectedLine != null && selectedLine.length() > 0) {
+               selection = Integer.parseInt(selectedLine);
+-            Long schedule_id = Long.parseLong(scheduleId);
+-            List<ScheduleAgenda> scheduleAgendas = getAgendaDoc(schedule_id);
+               source.setContent(scheduleAgendas.get(selection).getPdfStore());
+             }
++        }
+         else {
+             source.setContent(meetingHelper.getScheduleAgendas().get(selection).getPdfStore());
+         }

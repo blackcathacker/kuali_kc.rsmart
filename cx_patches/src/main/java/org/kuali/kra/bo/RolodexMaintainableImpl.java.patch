@@ -1,0 +1,35 @@
+diff --git a/src/main/java/org/kuali/kra/bo/RolodexMaintainableImpl.java b/src/main/java/org/kuali/kra/bo/RolodexMaintainableImpl.java
+index 6e8710d..1109268 100644
+--- a/src/main/java/org/kuali/kra/bo/RolodexMaintainableImpl.java
++++ b/src/main/java/org/kuali/kra/bo/RolodexMaintainableImpl.java
+@@ -41,6 +41,8 @@ public class RolodexMaintainableImpl extends KraMaintainableImpl {
+     public static final String AUTO_GEN_ROLODEX_ID_PARM = "AUTO_GENERATE_NON_EMPLOYEE_ID";
+     public static final String SECTION_ID = "Edit Address Book";
+     public static final String ROLODEX_ID_NAME = "rolodexId";
++    private static final String YES = "Y";
++    private static final String NO  = "N";
+     
+     
+     private transient ParameterService parameterService;
+@@ -92,6 +94,21 @@ public class RolodexMaintainableImpl extends KraMaintainableImpl {
+         setGenerateDefaultValues(document.getDocumentHeader().getWorkflowDocument().getDocumentTypeName());       
+     }
+ 
++    @Override
++    public void prepareForSave() {
++        super.prepareForSave();
++        final Rolodex rolodex = (Rolodex) getBusinessObject();
++        
++        if (rolodex != null) {
++            if (rolodex.getIsSponsorAddress() != null && rolodex.getIsSponsorAddress().equalsIgnoreCase(YES)) {
++                rolodex.setSponsorAddressFlag(true);
++            }
++            else if (rolodex.getIsSponsorAddress() != null && rolodex.getIsSponsorAddress().equalsIgnoreCase(NO)) {
++                rolodex.setSponsorAddressFlag(false);
++            }
++        }
++    }
++            
+     protected boolean isAutoGenerateCode() {
+         return getParameterService().getParameterValueAsBoolean(Constants.KC_GENERIC_PARAMETER_NAMESPACE, 
+                 Constants.KC_ALL_PARAMETER_DETAIL_TYPE_CODE, AUTO_GEN_ROLODEX_ID_PARM);

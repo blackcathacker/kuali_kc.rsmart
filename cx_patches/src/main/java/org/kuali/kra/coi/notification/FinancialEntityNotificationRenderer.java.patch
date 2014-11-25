@@ -1,0 +1,24 @@
+diff --git a/src/main/java/org/kuali/kra/coi/notification/FinancialEntityNotificationRenderer.java b/src/main/java/org/kuali/kra/coi/notification/FinancialEntityNotificationRenderer.java
+index 09e6193..e49626d 100644
+--- a/src/main/java/org/kuali/kra/coi/notification/FinancialEntityNotificationRenderer.java
++++ b/src/main/java/org/kuali/kra/coi/notification/FinancialEntityNotificationRenderer.java
+@@ -16,6 +16,7 @@
+ package org.kuali.kra.coi.notification;
+ 
+ import org.kuali.kra.bo.KcPerson;
++import org.kuali.kra.bo.Unit;
+ import org.kuali.kra.coi.personfinancialentity.PersonFinIntDisclosure;
+ import org.kuali.kra.common.notification.NotificationRendererBase;
+ import org.kuali.kra.infrastructure.KraServiceLocator;
+@@ -53,7 +54,10 @@ public class FinancialEntityNotificationRenderer extends NotificationRendererBas
+         Map<String, String> params = super.getDefaultReplacementParameters();
+         String personId = getDisclosure().getPersonId();
+         KcPerson reporter = getKcPersonService().getKcPersonByPersonId(personId);
+-        params.put("{UNIT}", reporter.getUnit().getUnitName());
++        final Unit unit = reporter.getUnit();
++        if (unit != null) {
++          params.put("{UNIT}", unit.getUnitName());
++        }
+         params.put("{FE_ENTITY_NAME}", disclosure.getEntityName());
+         return params;
+     }

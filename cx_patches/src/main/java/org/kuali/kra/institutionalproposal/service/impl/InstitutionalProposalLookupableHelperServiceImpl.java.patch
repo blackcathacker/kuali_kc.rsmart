@@ -1,0 +1,43 @@
+diff --git a/src/main/java/org/kuali/kra/institutionalproposal/service/impl/InstitutionalProposalLookupableHelperServiceImpl.java b/src/main/java/org/kuali/kra/institutionalproposal/service/impl/InstitutionalProposalLookupableHelperServiceImpl.java
+index fe4dd1c..00871bd 100644
+--- a/src/main/java/org/kuali/kra/institutionalproposal/service/impl/InstitutionalProposalLookupableHelperServiceImpl.java
++++ b/src/main/java/org/kuali/kra/institutionalproposal/service/impl/InstitutionalProposalLookupableHelperServiceImpl.java
+@@ -57,6 +57,7 @@ public class InstitutionalProposalLookupableHelperServiceImpl extends KraLookupa
+     private boolean includeMergeCustomActionUrls;
+     private DocumentService documentService;
+     private InstitutionalProposalService institutionalProposalService;
++    protected String proposalLogNumber;
+ 
+     public void setDocumentService(DocumentService documentService) {
+         this.documentService = documentService;
+@@ -287,6 +288,7 @@ public class InstitutionalProposalLookupableHelperServiceImpl extends KraLookupa
+             } else if (returnLocation.contains(MERGE_PROPOSAL_LOG_ACTION)) {
+                 includeMainSearchCustomActionUrls = false;
+                 includeMergeCustomActionUrls = true;
++                setProposalLogNumber(fieldValues.get("proposalLogNumber"));
+             } else {
+                 includeMainSearchCustomActionUrls = true;
+                 includeMergeCustomActionUrls = false;
+@@ -303,6 +305,9 @@ public class InstitutionalProposalLookupableHelperServiceImpl extends KraLookupa
+         Properties parameters = new Properties();
+         parameters.put(KRADConstants.DISPATCH_REQUEST_PARAMETER, "mergeToInstitutionalProposal");
+         parameters.put("institutionalProposalNumber", institutionalProposal.getProposalNumber());
++        if (getProposalLogNumber() != null) {
++            parameters.put("proposalLogNumber", getProposalLogNumber());
++        }
+         String href  = UrlFactory.parameterizeUrl("../" + MERGE_PROPOSAL_LOG_ACTION, parameters);
+         htmlData.setHref(href);
+         return htmlData;
+@@ -321,4 +326,12 @@ public class InstitutionalProposalLookupableHelperServiceImpl extends KraLookupa
+         this.institutionalProposalService = institutionalProposalService;
+     }
+ 
++
++    protected void setProposalLogNumber(final String proposalLogNumber) {
++        this.proposalLogNumber = proposalLogNumber;
++    }
++
++    protected String getProposalLogNumber() {
++        return this.proposalLogNumber;
++    }
+ }

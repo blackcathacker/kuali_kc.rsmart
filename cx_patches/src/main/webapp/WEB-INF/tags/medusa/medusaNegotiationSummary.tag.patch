@@ -1,0 +1,13 @@
+diff --git a/src/main/webapp/WEB-INF/tags/medusa/medusaNegotiationSummary.tag b/src/main/webapp/WEB-INF/tags/medusa/medusaNegotiationSummary.tag
+index 0cc57e2..1a0e821 100644
+--- a/src/main/webapp/WEB-INF/tags/medusa/medusaNegotiationSummary.tag
++++ b/src/main/webapp/WEB-INF/tags/medusa/medusaNegotiationSummary.tag
+@@ -31,7 +31,7 @@
+       <td><fmt:formatDate pattern="MM/dd/yyyy" value="${node.bo.negotiationStartDate}"/></td>
+     </tr>
+     <tr>
+-      <th style="text-align: right;">Aggreement Type:</th>
++      <th style="text-align: right;">Agreement Type:</th>
+       <td><c:out value="${node.bo.negotiationAgreementType.description}"/></td>
+       <th style="text-align: right;">Negotiation End Date:</th>
+       <td><fmt:formatDate pattern="MM/dd/yyyy" value="${node.bo.negotiationEndDate}"/></td>      

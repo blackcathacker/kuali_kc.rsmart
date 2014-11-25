@@ -1,0 +1,18 @@
+diff --git a/src/main/java/org/kuali/kra/institutionalproposal/proposallog/service/impl/ProposalLogServiceImpl.java b/src/main/java/org/kuali/kra/institutionalproposal/proposallog/service/impl/ProposalLogServiceImpl.java
+index f595ad0..f1611f6 100644
+--- a/src/main/java/org/kuali/kra/institutionalproposal/proposallog/service/impl/ProposalLogServiceImpl.java
++++ b/src/main/java/org/kuali/kra/institutionalproposal/proposallog/service/impl/ProposalLogServiceImpl.java
+@@ -61,6 +61,13 @@ public class ProposalLogServiceImpl implements ProposalLogService {
+     }
+     
+     protected void updateProposalLogStatus(String proposalNumber, String logStatus) {
++        // https://github.com/rSmart/issues/issues/383
++        // java.lang.NullPointerException
++        // org.kuali.rice.krad.dao.impl.BusinessObjectDaoOjb.findBySinglePrimaryKey(BusinessObjectDaoOjb.java:65)
++        // org.kuali.rice.krad.dao.proxy.BusinessObjectDaoProxy.findBySinglePrimaryKey(BusinessObjectDaoProxy.java:172)
++        if (proposalNumber == null || proposalNumber.length() == 0) {
++            throw new IllegalArgumentException("Can't update proposal log status; proposal number is null or empty!.");
++        }
+         ProposalLog proposalLog = getBusinessObjectService().findBySinglePrimaryKey(ProposalLog.class, proposalNumber);
+         if (proposalLog == null) {
+             throw new IllegalArgumentException("Can't update proposal log status; proposal number " + proposalNumber + " not found.");

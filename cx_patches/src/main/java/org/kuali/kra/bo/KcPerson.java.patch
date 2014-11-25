@@ -1,0 +1,26 @@
+diff --git a/src/main/java/org/kuali/kra/bo/KcPerson.java b/src/main/java/org/kuali/kra/bo/KcPerson.java
+index 16cc11e..b6d6032 100644
+--- a/src/main/java/org/kuali/kra/bo/KcPerson.java
++++ b/src/main/java/org/kuali/kra/bo/KcPerson.java
+@@ -51,6 +51,7 @@ import java.util.Date;
+  * Represents a person in KC.
+  */
+ public class KcPerson implements Contactable, BusinessObject {
++    private static final org.apache.log4j.Logger LOG = org.apache.log4j.Logger.getLogger(KcPerson.class);
+ 
+     private static final long serialVersionUID = 1L;
+ 
+@@ -129,7 +130,12 @@ public class KcPerson implements Contactable, BusinessObject {
+      */
+     public static KcPerson fromEntityAndPersonId(final EntityContract entity, final String personId) {
+         if (entity == null) {
+-            throw new IllegalArgumentException("the entity is null");
++          // throw new IllegalArgumentException("the entity is null");
++          final IllegalArgumentException e = new IllegalArgumentException(
++              "the entity is null; behavior change: returning empty KcPerson reference instead of throwing an IllegalArgumentException: personId="
++                  + personId);
++          LOG.info(e.getMessage(), e);
++          return fromPersonId(personId);
+         }
+         
+         if (StringUtils.isEmpty(personId)) {

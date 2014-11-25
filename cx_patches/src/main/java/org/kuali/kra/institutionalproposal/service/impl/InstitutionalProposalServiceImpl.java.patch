@@ -1,0 +1,15 @@
+diff --git a/src/main/java/org/kuali/kra/institutionalproposal/service/impl/InstitutionalProposalServiceImpl.java b/src/main/java/org/kuali/kra/institutionalproposal/service/impl/InstitutionalProposalServiceImpl.java
+index 70bcbdf..3da9331 100644
+--- a/src/main/java/org/kuali/kra/institutionalproposal/service/impl/InstitutionalProposalServiceImpl.java
++++ b/src/main/java/org/kuali/kra/institutionalproposal/service/impl/InstitutionalProposalServiceImpl.java
+@@ -536,7 +536,9 @@ public class InstitutionalProposalServiceImpl implements InstitutionalProposalSe
+         institutionalProposal.setRequestedEndDateInitial(budget.getBudgetPeriods().get(0).getEndDate());
+         
+         if (budget.getModularBudgetFlag()) {
+-            if (budget.getBudgetPeriod(0).getBudgetModular().getTotalDirectCost() != null) {
++            if (budget.getBudgetPeriod(0) != null &&
++                budget.getBudgetPeriod(0).getBudgetModular() != null &&
++                budget.getBudgetPeriod(0).getBudgetModular().getTotalDirectCost() != null) {
+                 institutionalProposal.setTotalDirectCostInitial(
+                     new KualiDecimal(budget.getBudgetPeriod(0).getBudgetModular().getTotalDirectCost().bigDecimalValue()));
+             }

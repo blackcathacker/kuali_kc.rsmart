@@ -1,0 +1,14 @@
+diff --git a/src/main/resources/org/kuali/kra/datadictionary/NegotiationUnassociatedDetail.xml b/src/main/resources/org/kuali/kra/datadictionary/NegotiationUnassociatedDetail.xml
+index 1012bf7..991333a 100644
+--- a/src/main/resources/org/kuali/kra/datadictionary/NegotiationUnassociatedDetail.xml
++++ b/src/main/resources/org/kuali/kra/datadictionary/NegotiationUnassociatedDetail.xml
+@@ -293,7 +293,7 @@
+ 
+ 		  </list>
+ 		</property>
+-		<property name="resultSetLimit" value="50" />
++		<!-- <property name="resultSetLimit" value="500" /> -->
+ 	</bean>
+     
+ </beans>
+\ No newline at end of file

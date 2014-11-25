@@ -1,0 +1,30 @@
+diff --git a/src/main/resources/org/kuali/kra/datadictionary/Award.xml b/src/main/resources/org/kuali/kra/datadictionary/Award.xml
+index 4c27bf8..ce7aeb5 100644
+--- a/src/main/resources/org/kuali/kra/datadictionary/Award.xml
++++ b/src/main/resources/org/kuali/kra/datadictionary/Award.xml
+@@ -519,7 +519,7 @@
+     <property name="forceUppercase" value="false" />
+     <property name="label" value="Account ID" />
+     <property name="shortLabel" value="Account ID" />
+-    <property name="maxLength" value="7" />
++    <property name="maxLength" value="16" />
+     <property name="validationPattern" >
+       <bean parent="AlphaNumericValidationPattern" />
+     </property>
+@@ -922,7 +922,6 @@
+ 		<property name="name" value="awardIdAccount" />
+ 		<property name="label" value="Award ID: Account" />
+ 		<property name="shortLabel" value="Award ID: Account" />
+-    <property name="maxLength" value="20" />
+     <property name="required" value="false" />
+     <property name="control" >
+       <bean parent="TextControlDefinition"
+@@ -1142,7 +1141,7 @@
+ 			
+ 		  </list>
+ 		</property>
+-		<property name="resultSetLimit" value="50" />
++		<!-- <property name="resultSetLimit" value="500" /> -->
+ 	</bean>
+   
+ </beans>

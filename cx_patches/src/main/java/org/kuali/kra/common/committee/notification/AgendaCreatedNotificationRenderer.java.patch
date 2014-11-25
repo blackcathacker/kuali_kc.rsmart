@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/kuali/kra/common/committee/notification/AgendaCreatedNotificationRenderer.java b/src/main/java/org/kuali/kra/common/committee/notification/AgendaCreatedNotificationRenderer.java
+index e2c4cb8..577c6bb 100644
+--- a/src/main/java/org/kuali/kra/common/committee/notification/AgendaCreatedNotificationRenderer.java
++++ b/src/main/java/org/kuali/kra/common/committee/notification/AgendaCreatedNotificationRenderer.java
+@@ -67,7 +67,7 @@ public class AgendaCreatedNotificationRenderer extends CommitteeNotificationRend
+         params.put(CommitteeReplacementParameters.LAST_ACTION_DATE, scheduleAgenda.getCommitteeSchedule().getScheduledDate().toString());
+         params.put(CommitteeReplacementParameters.ACTION_TAKEN, actionTaken);
+         params.put(CommitteeReplacementParameters.OBJECT_INDEX, new Integer(scheduleAgenda.getAgendaNumber().intValue() - 1).toString());
+-        params.put(CommitteeReplacementParameters.SCHEDULE_ID, scheduleAgenda.getCommitteeSchedule().getScheduleId());
++        params.put(CommitteeReplacementParameters.SCHEDULE_ID, "" + scheduleAgenda.getCommitteeSchedule().getId());
+         return params;
+     }    
+ 

@@ -1,0 +1,74 @@
+diff --git a/src/main/java/org/kuali/kra/award/home/Award.java b/src/main/java/org/kuali/kra/award/home/Award.java
+index 3af2d42..6eda3c2 100644
+--- a/src/main/java/org/kuali/kra/award/home/Award.java
++++ b/src/main/java/org/kuali/kra/award/home/Award.java
+@@ -107,6 +107,7 @@ public class Award extends KraPersistableBusinessObjectBase implements KeywordsM
+     public static final String NOTIFICATION_IACUC_SPECIAL_REVIEW_LINK_DELETED = "555";
+     
+     private static final long serialVersionUID = 3797220122448310165L;
++    private static final org.apache.log4j.Logger LOG = org.apache.log4j.Logger.getLogger(Award.class);
+     private Long awardId;
+     private AwardDocument awardDocument;
+     private String awardNumber;
+@@ -246,7 +247,6 @@ public class Award extends KraPersistableBusinessObjectBase implements KeywordsM
+ 
+     // transient for award header label
+     private transient String docIdStatus;
+-    private transient String awardIdAccount;
+ 
+     private transient String lookupOspAdministratorName;
+     transient AwardAmountInfoService awardAmountInfoService;
+@@ -1927,7 +1927,12 @@ public class Award extends KraPersistableBusinessObjectBase implements KeywordsM
+                 }
+                 return 0;
+               }});
+-        awardCloseoutItems.addAll(TOTAL_STATIC_REPORTS, awardCloseoutNewItems);
++        // https://github.com/rSmart/issues/issues/361
++        // java.lang.IndexOutOfBoundsException: Index: 5, Size: 4
++        // at org.kuali.kra.award.home.Award.add(Award.java:1931)
++        // Be aware, this *could* be a behavioral change - not sure.
++        // awardCloseoutItems.addAll(TOTAL_STATIC_REPORTS, awardCloseoutNewItems);
++        awardCloseoutItems.addAll(awardCloseoutNewItems);
+         awardCloseoutItem.setAward(this);
+     }
+ 
+@@ -3169,14 +3174,11 @@ public class Award extends KraPersistableBusinessObjectBase implements KeywordsM
+     }
+ 
+     public String getAwardIdAccount() {
+-        if (awardIdAccount == null) {
+         if (StringUtils.isNotBlank(getAccountNumber())) {
+-                awardIdAccount = getAwardNumber() + ":" + getAccountNumber();
++        	return getAwardNumber() + ":" + getAccountNumber();
+     	} else {
+-                awardIdAccount = getAwardNumber() + ":";
+-            }
++        	return getAwardNumber() + ":";
+         }
+-        return awardIdAccount;
+     }
+ 
+     public void setLookupOspAdministratorName(String lookupOspAdministratorName) {
+@@ -3211,7 +3213,13 @@ public class Award extends KraPersistableBusinessObjectBase implements KeywordsM
+             KraServiceLocator.getService(UnitService.class).retrieveUnitAdministratorsByUnitNumber(getUnitNumber());
+         for (UnitAdministrator unitAdministrator : unitAdministrators) {
+             if(unitAdministrator.getUnitAdministratorType().getDefaultGroupFlag().equals(DEFAULT_GROUP_CODE_FOR_CENTRAL_ADMIN_CONTACTS)) {
+-                KcPerson person = getKcPersonService().getKcPersonByPersonId(unitAdministrator.getPersonId());
++                KcPerson person = null;
++                try {
++                  person = getKcPersonService().getKcPersonByPersonId(unitAdministrator.getPersonId());
++                } catch (IllegalArgumentException e) {
++                  LOG.info("initCentralAdminContacts(): entity/person missing: " + unitAdministrator.getPersonId());
++                }
++                if (person != null) {
+                   AwardUnitContact newAwardUnitContact = new AwardUnitContact();
+                   newAwardUnitContact.setAward(this);
+                   newAwardUnitContact.setPerson(person);
+@@ -3221,6 +3229,7 @@ public class Award extends KraPersistableBusinessObjectBase implements KeywordsM
+                 }
+             }
+         }
++    }
+ 
+     public boolean isAwardInMultipleNodeHierarchy() {
+         return awardInMultipleNodeHierarchy;

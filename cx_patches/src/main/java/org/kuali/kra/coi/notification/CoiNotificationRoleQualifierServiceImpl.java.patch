@@ -1,0 +1,24 @@
+diff --git a/src/main/java/org/kuali/kra/coi/notification/CoiNotificationRoleQualifierServiceImpl.java b/src/main/java/org/kuali/kra/coi/notification/CoiNotificationRoleQualifierServiceImpl.java
+index c6c6b4a..29f3dcf 100644
+--- a/src/main/java/org/kuali/kra/coi/notification/CoiNotificationRoleQualifierServiceImpl.java
++++ b/src/main/java/org/kuali/kra/coi/notification/CoiNotificationRoleQualifierServiceImpl.java
+@@ -17,6 +17,7 @@ package org.kuali.kra.coi.notification;
+ 
+ import org.apache.commons.lang.StringUtils;
+ import org.kuali.kra.bo.KcPerson;
++import org.kuali.kra.bo.Unit;
+ import org.kuali.kra.coi.CoiDisclosure;
+ import org.kuali.kra.common.notification.bo.NotificationModuleRoleQualifier;
+ import org.kuali.kra.kim.bo.KcKimAttributes;
+@@ -44,7 +45,10 @@ public class CoiNotificationRoleQualifierServiceImpl implements CoiNotificationR
+             if (coiDisclosure == null) {
+                 // no disclosure, so we must be sending a FE notification
+                 KcPerson reporter = KcPerson.fromPersonId(GlobalVariables.getUserSession().getPrincipalId());
+-                return reporter.getUnit().getUnitNumber();
++                final Unit unit = reporter.getUnit();
++                if (unit != null) {
++                  return unit.getUnitNumber();
++                }
+             } else {
+                 return coiDisclosure.getLeadUnitNumber();
+             }

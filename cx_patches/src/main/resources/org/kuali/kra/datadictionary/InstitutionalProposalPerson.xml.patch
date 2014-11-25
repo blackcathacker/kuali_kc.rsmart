@@ -1,0 +1,13 @@
+diff --git a/src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposalPerson.xml b/src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposalPerson.xml
+index e08e7f8..2b0a638 100644
+--- a/src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposalPerson.xml
++++ b/src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposalPerson.xml
+@@ -236,7 +236,7 @@
+ 		    <bean p:attributeName="fullName" parent="FieldDefinition" />
+ 		  </list>
+ 		</property>
+-		<property name="resultSetLimit" value="50" />
++		<!-- <property name="resultSetLimit" value="500" /> -->
+ 	</bean>
+   
+ </beans>

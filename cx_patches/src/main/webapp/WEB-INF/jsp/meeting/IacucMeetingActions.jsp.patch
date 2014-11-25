@@ -1,0 +1,21 @@
+diff --git a/src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingActions.jsp b/src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingActions.jsp
+index e31813b..30958c3 100644
+--- a/src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingActions.jsp
++++ b/src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingActions.jsp
+@@ -16,8 +16,8 @@
+ 
+ <%@ include file="/WEB-INF/jsp/kraTldHeader.jsp"%>
+ 
+-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+-<html:html>
++<!DOCTYPE html>
++<html>
+ 
+     <head>
+         <script>var jsContextPath = "${pageContext.request.contextPath}";</script>
+@@ -182,4 +182,4 @@
+ 
+     </SCRIPT> 
+ 
+-</html:html>
++</html>

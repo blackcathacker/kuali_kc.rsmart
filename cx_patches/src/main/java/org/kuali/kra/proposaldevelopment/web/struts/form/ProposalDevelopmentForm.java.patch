@@ -1,0 +1,27 @@
+diff --git a/src/main/java/org/kuali/kra/proposaldevelopment/web/struts/form/ProposalDevelopmentForm.java b/src/main/java/org/kuali/kra/proposaldevelopment/web/struts/form/ProposalDevelopmentForm.java
+index 8e63c45..145ffbb 100644
+--- a/src/main/java/org/kuali/kra/proposaldevelopment/web/struts/form/ProposalDevelopmentForm.java
++++ b/src/main/java/org/kuali/kra/proposaldevelopment/web/struts/form/ProposalDevelopmentForm.java
+@@ -547,8 +547,8 @@ public class ProposalDevelopmentForm extends BudgetVersionFormBase implements Re
+      * @return the value of newProposalPersonUnit
+      */
+     public List<Unit> getNewProposalPersonUnit() {
+-        if (this.getProposalDevelopmentDocument().getDevelopmentProposal().getProposalPersons().size() > this.newProposalPersonUnit.size()) {
+-            this.newProposalPersonUnit.add(this.newProposalPersonUnit.size(), new Unit());
++        while (getProposalDevelopmentDocument().getDevelopmentProposal().getProposalPersons().size() > newProposalPersonUnit.size()) {
++            this.newProposalPersonUnit.add(new Unit());
+         }
+         return this.newProposalPersonUnit;
+     }
+@@ -568,9 +568,8 @@ public class ProposalDevelopmentForm extends BudgetVersionFormBase implements Re
+      * @return the value of newProposalPersonDegree
+      */
+     public List<ProposalPersonDegree> getNewProposalPersonDegree() {
+-
+-        if (this.getProposalDevelopmentDocument().getDevelopmentProposal().getProposalPersons().size() > this.newProposalPersonDegree.size()) {
+-            this.newProposalPersonDegree.add(this.newProposalPersonDegree.size(),new ProposalPersonDegree());
++        while (this.getProposalDevelopmentDocument().getDevelopmentProposal().getProposalPersons().size() > this.newProposalPersonDegree.size()) {
++            this.newProposalPersonDegree.add(new ProposalPersonDegree());
+         }
+         return this.newProposalPersonDegree;
+     }

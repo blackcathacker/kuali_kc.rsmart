@@ -1,0 +1,65 @@
+diff --git a/src/main/java/org/kuali/kra/web/filter/PerformanceLoggingFilter.java b/src/main/java/org/kuali/kra/web/filter/PerformanceLoggingFilter.java
+index 1d88de3..f89e2da 100644
+--- a/src/main/java/org/kuali/kra/web/filter/PerformanceLoggingFilter.java
++++ b/src/main/java/org/kuali/kra/web/filter/PerformanceLoggingFilter.java
+@@ -35,6 +35,7 @@ import java.io.IOException;
+  */
+ public class PerformanceLoggingFilter implements Filter {
+     private static final Log LOG = LogFactory.getLog(PerformanceLoggingFilter.class);
++    private static final int MB_CONVERSION = 1024 * 1024;
+     
+     /**
+      * @see Filter#destroy()
+@@ -53,24 +54,42 @@ public class PerformanceLoggingFilter implements Filter {
+      * only thing that gets logged in <b>INFO</b> here is the intended action.</p>
+      * 
+      * <p>Memory used for a request is calculated with {@link Runtime#freeMemory()} and 
+-     * {@link Runtime#totalMemory()}
++     * {@link Runtime#totalMemory()}. The calculation is imperfect and subject to
++     * garbage collection so you may see negative numbers if GC occurred during
++     * the threads execution. If you take multiple samples in a very controlled environment
++     * (i.e. only one interactive user), you can extract some reasonable data. You have been warned.
+      *
+      * @see javax.servlet.Filter#doFilter(ServletRequest,ServletResponse,FilterChain)
+      * @see Runtime#totalMemory()
+      * @see Runtime#freeMemory()
+      */
+-    public void doFilter(ServletRequest request, 
+-                         ServletResponse response, 
+-                         FilterChain chain) throws IOException, ServletException {
+-        long start = System.currentTimeMillis();
+-        long startMem = Runtime.getRuntime().freeMemory();
++    public void doFilter(final ServletRequest request,
++                         final ServletResponse response,
++                         final FilterChain chain) throws IOException, ServletException {
++        if (LOG.isInfoEnabled()) {
++            final long start = System.currentTimeMillis();
++            final Runtime rt = Runtime.getRuntime();
++            final long totalMem = rt.totalMemory();
++            final long startMemInUse = totalMem - rt.freeMemory();
++
+             chain.doFilter(request, response);
+ 
+-        if (LOG.isInfoEnabled() ) {
+             long elapsed = System.currentTimeMillis() - start;
+-            long usedMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+-            LOG.info(((HttpServletRequest) request).getRequestURI() + " : " + elapsed + " ms");
+-            LOG.info(((HttpServletRequest) request).getRequestURI() + " : " + usedMemory + " memory used");
++            final long finishMemInUse = totalMem - rt.freeMemory();
++            final long usedMemory = finishMemInUse - startMemInUse;
++            final String uri = ((HttpServletRequest) request).getRequestURI();
++            // elapsed time in milliseconds
++            LOG.info(uri + " : " + elapsed + " ms");
++            // for backwards compatibility, display total amount of memory used in the jvm in bytes
++            // FYI there are better ways to get this information; you might take a look at:
++            // http://stackoverflow.com/questions/1161647/how-to-redirect-verbose-garbage-collection-output-to-a-file
++            // And a handy tool to go with the data: https://github.com/chewiebug/GCViewer
++            LOG.info(uri + " : " + finishMemInUse + " memory used");
++            // try to calculate MB used by this particular servlet request
++            LOG.info(uri + " : " + usedMemory / MB_CONVERSION + " MB memory used for request *");
++        }
++        else { // just run the filter
++            chain.doFilter(request, response);
+         }
+     }
+ }

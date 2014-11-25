@@ -1,0 +1,30 @@
+diff --git a/src/main/java/org/kuali/kra/budget/web/struts/action/BudgetAction.java b/src/main/java/org/kuali/kra/budget/web/struts/action/BudgetAction.java
+index 036fc1e..ec694ae 100644
+--- a/src/main/java/org/kuali/kra/budget/web/struts/action/BudgetAction.java
++++ b/src/main/java/org/kuali/kra/budget/web/struts/action/BudgetAction.java
+@@ -185,11 +185,12 @@ public class BudgetAction extends BudgetActionBase {
+      */
+     @Override
+     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
++        ActionForward actionForward = null;
+         final BudgetForm budgetForm = (BudgetForm) form;
++        if(budgetForm != null) {
+           if(budgetForm.getMethodToCall().equals("close")){
+               setupDocumentExit();
+           }
+-        ActionForward actionForward = null;
+ 
+           actionForward = super.execute(mapping, budgetForm, request, response);
+ 
+@@ -202,6 +203,11 @@ public class BudgetAction extends BudgetActionBase {
+           if (budgetForm.isAuditActivated() && !"route".equals(((KualiForm)form).getMethodToCall())) {
+               KraServiceLocator.getService(KualiRuleService.class).applyRules(new DocumentAuditEvent(budgetForm.getBudgetDocument()));
+           }
++        } else {
++          // https://github.com/rSmart/issues/issues/417
++          // I am not positive this is the right thing to do in this case and is my best guess...
++          setupDocumentExit();
++        }
+         
+         return actionForward; 
+     }

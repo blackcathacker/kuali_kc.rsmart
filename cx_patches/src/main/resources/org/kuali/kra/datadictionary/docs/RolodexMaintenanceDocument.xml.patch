@@ -1,0 +1,13 @@
+diff --git a/src/main/resources/org/kuali/kra/datadictionary/docs/RolodexMaintenanceDocument.xml b/src/main/resources/org/kuali/kra/datadictionary/docs/RolodexMaintenanceDocument.xml
+index 6f347e2..6b65821 100644
+--- a/src/main/resources/org/kuali/kra/datadictionary/docs/RolodexMaintenanceDocument.xml
++++ b/src/main/resources/org/kuali/kra/datadictionary/docs/RolodexMaintenanceDocument.xml
+@@ -54,7 +54,7 @@
+         <bean parent="MaintainableFieldDefinition" p:name="phoneNumber"/>
+         <bean parent="MaintainableFieldDefinition" p:name="postalCode"/>
+         <bean parent="MaintainableFieldDefinition" p:name="prefix"/>
+-        <bean parent="MaintainableFieldDefinition" p:name="sponsorAddressFlag" p:required="true"/>
++        <bean parent="MaintainableFieldDefinition" p:name="isSponsorAddress" p:required="true"/>
+         <bean parent="MaintainableFieldDefinition" p:name="sponsorCode"/>
+         <bean parent="MaintainableFieldDefinition" p:name="state"/>
+         <bean parent="MaintainableFieldDefinition" p:name="suffix"/>

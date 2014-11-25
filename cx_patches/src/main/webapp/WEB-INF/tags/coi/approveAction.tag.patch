@@ -1,0 +1,15 @@
+diff --git a/src/main/webapp/WEB-INF/tags/coi/approveAction.tag b/src/main/webapp/WEB-INF/tags/coi/approveAction.tag
+index fd0dd75..96cd132 100644
+--- a/src/main/webapp/WEB-INF/tags/coi/approveAction.tag
++++ b/src/main/webapp/WEB-INF/tags/coi/approveAction.tag
+@@ -30,8 +30,8 @@
+  		</h3>
+ 	    <c:if test="${disclosureHelper.unresolvedEventsPresent}">
+ 	        <c:set var="readOnlyApprove" value="true" />
+-  		    <div class="body" style="text-align:left;color:#FF0000;">			
+-               <strong>${disclosureHelper.annualCertApprovalErrorMsgForAdmin}</strong>
++            <div class="alert alert-error">
++                ${disclosureHelper.annualCertApprovalErrorMsgForAdmin}
+             </div>
+ 		</c:if>
+ 		<h4><div class="body">Disclosure Status is set to '<c:out value="${KualiForm.disclosureActionHelper.maximumDispositionStatus.description}"/>' based on the Project-Financial Entity conflict status.</div></h4>
