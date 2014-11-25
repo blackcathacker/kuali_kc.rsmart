@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/kuali/kra/timeandmoney/transactions/TransactionRuleImpl.java b/src/main/java/org/kuali/kra/timeandmoney/transactions/TransactionRuleImpl.java
+index 36b4a7c..c8b28ed 100644
+--- a/src/main/java/org/kuali/kra/timeandmoney/transactions/TransactionRuleImpl.java
++++ b/src/main/java/org/kuali/kra/timeandmoney/transactions/TransactionRuleImpl.java
+@@ -72,7 +72,7 @@ public class TransactionRuleImpl extends ResearchDocumentRuleBase implements Tra
+      * @return
+      */
+     public boolean processAddPendingTransactionBusinessRules(AddTransactionRuleEvent event) {
+-        boolean valid = areRequiredFieldsComplete(event.getPendingTransactionItemForValidation());
++        boolean valid = areRequiredFieldsComplete(event.getPendingTransactionItemForValidation()) && sourceAndDestinationAwardsAreDifferent(event.getPendingTransactionItemForValidation());
+         if (valid) {
+             event.getTimeAndMoneyDocument().add(event.getPendingTransactionItemForValidation());
+             List<Award> awards = processTransactions(event.getTimeAndMoneyDocument());

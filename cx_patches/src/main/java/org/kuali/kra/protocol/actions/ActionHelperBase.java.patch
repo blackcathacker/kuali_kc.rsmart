@@ -1,0 +1,14 @@
+diff --git a/src/main/java/org/kuali/kra/protocol/actions/ActionHelperBase.java b/src/main/java/org/kuali/kra/protocol/actions/ActionHelperBase.java
+index 22c6648..337b9bd 100644
+--- a/src/main/java/org/kuali/kra/protocol/actions/ActionHelperBase.java
++++ b/src/main/java/org/kuali/kra/protocol/actions/ActionHelperBase.java
+@@ -1178,6 +1178,9 @@ public abstract class ActionHelperBase implements Serializable {
+     
+     
+     protected boolean hasFollowupAction(String actionCode) {
++        if (followupActionActions == null) {
++            return false;
++        }
+         for (ValidProtocolActionActionBase action : followupActionActions) {
+             if (StringUtils.equals(action.getFollowupActionCode(),actionCode)) {
+                 return true;

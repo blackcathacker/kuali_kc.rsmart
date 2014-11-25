@@ -1,0 +1,16 @@
+diff --git a/src/main/java/org/kuali/kra/iacuc/protocol/IacucProtocolProtocolAction.java b/src/main/java/org/kuali/kra/iacuc/protocol/IacucProtocolProtocolAction.java
+index a164109..1794801 100644
+--- a/src/main/java/org/kuali/kra/iacuc/protocol/IacucProtocolProtocolAction.java
++++ b/src/main/java/org/kuali/kra/iacuc/protocol/IacucProtocolProtocolAction.java
+@@ -75,6 +75,11 @@ public class IacucProtocolProtocolAction extends IacucProtocolAction {
+         ProtocolFormBase protocolForm = (ProtocolFormBase) form;
+         String commandParam = request.getParameter(KRADConstants.PARAMETER_COMMAND);
+ 
++        if ("close".equals(protocolForm.getMethodToCall()) || protocolForm.getMethodToCall() == null) {
++            // If we're closing, we can just leave right here.
++            return mapping.findForward(KRADConstants.MAPPING_PORTAL);
++        }
++        
+         protocolForm.getProtocolHelper().prepareView();
+ 
+         return actionForward;

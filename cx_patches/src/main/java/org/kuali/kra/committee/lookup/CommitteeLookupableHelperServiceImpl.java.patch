@@ -1,0 +1,36 @@
+diff --git a/src/main/java/org/kuali/kra/committee/lookup/CommitteeLookupableHelperServiceImpl.java b/src/main/java/org/kuali/kra/committee/lookup/CommitteeLookupableHelperServiceImpl.java
+index 1c1e7fe..fa207ec 100644
+--- a/src/main/java/org/kuali/kra/committee/lookup/CommitteeLookupableHelperServiceImpl.java
++++ b/src/main/java/org/kuali/kra/committee/lookup/CommitteeLookupableHelperServiceImpl.java
+@@ -15,6 +15,8 @@
+  */
+ package org.kuali.kra.committee.lookup;
+ 
++import org.kuali.rice.krad.util.KRADConstants;
++
+ import org.kuali.kra.committee.bo.Committee;
+ import org.kuali.kra.committee.document.CommitteeDocument;
+ import org.kuali.kra.common.committee.bo.CommitteeType;
+@@ -27,6 +29,8 @@ import org.kuali.kra.infrastructure.PermissionConstants;
+  */
+ public class CommitteeLookupableHelperServiceImpl extends CommitteeLookupableHelperServiceImplBase<Committee, CommitteeDocument> {
+ 
++    private static final String DOCHANDLER_LINK = "%s/DocHandler.do?command=displayDocSearchView&docId=%s";
++
+     /**
+      * Comment for <code>serialVersionUID</code>
+      */
+@@ -48,6 +52,13 @@ public class CommitteeLookupableHelperServiceImpl extends CommitteeLookupableHel
+     }
+ 
+     @Override
++    protected String getCustomResumeEditUrl(final String editCommitteeDocId) {
++        final String workflowUrl = getKualiConfigurationService().getPropertyValueAsString(KRADConstants.WORKFLOW_URL_KEY);
++        return String.format(DOCHANDLER_LINK, workflowUrl, editCommitteeDocId);
++    }
++
++
++    @Override
+     protected String getDocumentTypeName() {
+         return "CommitteeDocument";
+     }

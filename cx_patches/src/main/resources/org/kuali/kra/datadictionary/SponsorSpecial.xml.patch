@@ -1,0 +1,13 @@
+diff --git a/src/main/resources/org/kuali/kra/datadictionary/SponsorSpecial.xml b/src/main/resources/org/kuali/kra/datadictionary/SponsorSpecial.xml
+index db4b3a1..8d0bb26 100644
+--- a/src/main/resources/org/kuali/kra/datadictionary/SponsorSpecial.xml
++++ b/src/main/resources/org/kuali/kra/datadictionary/SponsorSpecial.xml
+@@ -103,7 +103,7 @@
+       		</list>
+     	</property>
+     
+-    	<property name="resultSetLimit" value="8000" />
++    	<!-- <property name="resultSetLimit" value="500" /> -->
+     
+   	</bean>
+ 

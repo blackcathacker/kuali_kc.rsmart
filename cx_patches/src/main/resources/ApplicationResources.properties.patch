@@ -1,0 +1,32 @@
+diff --git a/src/main/resources/ApplicationResources.properties b/src/main/resources/ApplicationResources.properties
+index e7f79e4..2a27fab 100644
+--- a/src/main/resources/ApplicationResources.properties
++++ b/src/main/resources/ApplicationResources.properties
+@@ -350,6 +350,7 @@ error.invalid.date.required.for=There is a conflict between Valid Answers and Da
+ error.invalid.explanation.required.for=There is a conflict between Valid Answers and Explanation Required For configuration.
+ error.invalid.primeSponsorCode=Prime Sponsor ID is invalid.
+ error.invalid.sponsorCode=Sponsor Code is invalid.
++error.invalid.countryCode=Sponsor Country Code is invalid.
+ error.invalid.deadLineTime= DeadlineTime is invalid.
+ error.invalid.awardId=Award ID is invalid.
+ error.invalid.rolodexId=Rolodex ID is invalid.
+@@ -796,8 +797,8 @@ error.award.awardhierarchy.sync.invalidstatus=The Award {0} must have an active
+ error.award.awardhierarchy.sync.locked=This Award has been locked for an Award Hierarchy Sync operation by document number {0}. 
+ 
+ #START - Overriden rice properties
+-app.feedback.linkText=Provide Feedback
+-app.feedback.link=https://test.kuali.org/jira/secure/CreateIssue.jspa?pid=10310&issuetype=1
++app.feedback.linkText=Get Help
++app.feedback.link=mailto:support@rsmart.com?Subject=Help
+ document.question.delete.text=Are you sure you want to delete {0}?
+ #END - Overriden rice properties
+ 
+@@ -885,7 +886,7 @@ error.protocol.recordcommittee.no.smrsrrdisapprove.reviewer.comments=You must en
+ error.protocol.recordcommittee.no.minormajordisapprove.reviewer.comments=You must enter at least one reviewer comment for a Minor Revisions or Major Revisions required or Disapprove committee decision.
+ error.protocol.document.state.changed=The document state has changed prior to the action taken, please reload and try again.
+ #FIX ME: RICE HACK
+-app.copyright=Copyright 2005-2014 The Kuali Foundation. All rights reserved.<BR/>Portions of Kuali are copyrighted by other parties as described in the <a target="_ack" href="acknowledgments.jsp">Acknowledgments</a> screen.
++app.copyright=Copyright 2013-2014 rSmart. Copyright 2005-2014 The Kuali Foundation. All rights reserved.<BR/>Portions of Kuali are copyrighted by other parties as described in the <a target="_ack" href="acknowledgments.jsp">Acknowledgments</a> screen.
+ 
+ error.committeeSchedule.delete=You cannot delete this schedule. It has been used in protocol submission or has meeting data entered.
+ error.committeeMember.delete=This person cannot be deleted {0}.

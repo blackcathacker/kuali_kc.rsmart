@@ -1,0 +1,12 @@
+diff --git a/src/main/resources/org/kuali/kra/datadictionary/Budget.xml b/src/main/resources/org/kuali/kra/datadictionary/Budget.xml
+index 8ff3e83..b249ce7 100644
+--- a/src/main/resources/org/kuali/kra/datadictionary/Budget.xml
++++ b/src/main/resources/org/kuali/kra/datadictionary/Budget.xml
+@@ -359,6 +359,6 @@
+ 	        <bean p:attributeName="versionNumber" parent="FieldDefinition" />
+ 		  </list>
+ 		</property>
+-		<property name="resultSetLimit" value="50" />
++		<!-- <property name="resultSetLimit" value="500" /> -->
+ 	</bean>
+ </beans>

@@ -1,0 +1,15 @@
+diff --git a/src/main/resources/org/kuali/kra/datadictionary/ProposalDevelopmentDocument.xml b/src/main/resources/org/kuali/kra/datadictionary/ProposalDevelopmentDocument.xml
+index 821aa4e..19be724 100644
+--- a/src/main/resources/org/kuali/kra/datadictionary/ProposalDevelopmentDocument.xml
++++ b/src/main/resources/org/kuali/kra/datadictionary/ProposalDevelopmentDocument.xml
+@@ -146,6 +146,10 @@
+               <bean parent="WorkflowProperty" p:path="developmentProposalList.principalInvestigatorName"/>
+               <bean parent="WorkflowProperty" p:path="developmentProposalList.title"/>
+               <bean parent="WorkflowProperty" p:path="developmentProposalList.sponsor.sponsorCode"/>
++              <bean parent="WorkflowProperty" p:path="developmentProposalList.proposalPersons.personId"/>
++              <bean parent="WorkflowProperty" p:path="developmentProposalList.proposalPersons.proposalPersonRoleId"/>
++              <bean parent="WorkflowProperty" p:path="developmentProposalList.proposalPersons.homeUnit"/>
++              <bean parent="WorkflowProperty" p:path="developmentProposalList.proposalPersons.units"/>
+ 			 </list>
+           </property>
+         </bean>

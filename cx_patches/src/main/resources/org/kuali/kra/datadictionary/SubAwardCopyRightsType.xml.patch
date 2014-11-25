@@ -1,0 +1,13 @@
+diff --git a/src/main/resources/org/kuali/kra/datadictionary/SubAwardCopyRightsType.xml b/src/main/resources/org/kuali/kra/datadictionary/SubAwardCopyRightsType.xml
+index 2b285e2..aa90099 100644
+--- a/src/main/resources/org/kuali/kra/datadictionary/SubAwardCopyRightsType.xml
++++ b/src/main/resources/org/kuali/kra/datadictionary/SubAwardCopyRightsType.xml
+@@ -84,7 +84,7 @@
+    
+       </list>
+     </property>
+-    <property name="resultSetLimit" value="50" />
++    <!-- <property name="resultSetLimit" value="500" /> -->
+   </bean>
+ 	
+   

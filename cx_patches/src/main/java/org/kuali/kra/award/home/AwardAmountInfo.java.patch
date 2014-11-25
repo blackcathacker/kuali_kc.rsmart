@@ -1,0 +1,173 @@
+diff --git a/src/main/java/org/kuali/kra/award/home/AwardAmountInfo.java b/src/main/java/org/kuali/kra/award/home/AwardAmountInfo.java
+index 988187e..5052f91 100644
+--- a/src/main/java/org/kuali/kra/award/home/AwardAmountInfo.java
++++ b/src/main/java/org/kuali/kra/award/home/AwardAmountInfo.java
+@@ -80,14 +80,20 @@ public class AwardAmountInfo extends AwardAssociate {
+     // private AwardBudgetInfo awardBudgetInfo;   
+     // private AwardAmtFnaDistribution awardAmtFnaDistribution;   
+     public AwardAmountInfo() {
+-        setAnticipatedTotalDirect(new KualiDecimal(0.00));
+-        setAnticipatedTotalIndirect(new KualiDecimal(0.00));
+-        setObligatedTotalDirect(new KualiDecimal(0.00));
+-        setObligatedTotalIndirect(new KualiDecimal(0.00));
+-        setAnticipatedTotalAmount(new KualiDecimal(0.00));
+-        setAmountObligatedToDate(new KualiDecimal(0.00));
+-        setObliDistributableAmount(new KualiDecimal(0.00));
+-        setAntDistributableAmount(new KualiDecimal(0.00));
++    	anticipatedTotalAmount = KualiDecimal.ZERO; 
++    	antDistributableAmount = KualiDecimal.ZERO;
++    	amountObligatedToDate = KualiDecimal.ZERO;
++    	obliDistributableAmount = KualiDecimal.ZERO;
++    	anticipatedChange = KualiDecimal.ZERO;
++    	obligatedChange = KualiDecimal.ZERO;
++    	obligatedChangeDirect = KualiDecimal.ZERO;
++    	obligatedChangeIndirect = KualiDecimal.ZERO;
++    	anticipatedChangeDirect = KualiDecimal.ZERO;
++    	anticipatedChangeIndirect = KualiDecimal.ZERO;
++    	anticipatedTotalDirect = KualiDecimal.ZERO;
++    	anticipatedTotalIndirect = KualiDecimal.ZERO;
++    	obligatedTotalDirect = KualiDecimal.ZERO;
++    	obligatedTotalIndirect = KualiDecimal.ZERO;
+     }
+ 
+     public Long getAwardAmountInfoId() {
+@@ -99,6 +105,9 @@ public class AwardAmountInfo extends AwardAssociate {
+     }
+ 
+     public KualiDecimal getAnticipatedTotalAmount() {
++    	if (anticipatedTotalAmount == null) {
++    		anticipatedTotalAmount = KualiDecimal.ZERO;
++    	}
+         return anticipatedTotalAmount;
+     }
+ 
+@@ -112,6 +121,9 @@ public class AwardAmountInfo extends AwardAssociate {
+     }
+ 
+     public KualiDecimal getAntDistributableAmount() {
++    	if (antDistributableAmount == null) {
++    		antDistributableAmount = KualiDecimal.ZERO;
++    	}
+         return antDistributableAmount;
+     }
+ 
+@@ -136,6 +148,9 @@ public class AwardAmountInfo extends AwardAssociate {
+     }
+ 
+     public KualiDecimal getAmountObligatedToDate() {
++    	if (amountObligatedToDate == null) {
++    		amountObligatedToDate = KualiDecimal.ZERO;
++    	}
+         return amountObligatedToDate;
+     }
+ 
+@@ -149,6 +164,9 @@ public class AwardAmountInfo extends AwardAssociate {
+     }
+ 
+     public KualiDecimal getObliDistributableAmount() {
++    	if (obliDistributableAmount == null) {
++    		obliDistributableAmount = KualiDecimal.ZERO;
++    	}
+         return obliDistributableAmount;
+     }
+ 
+@@ -189,6 +207,9 @@ public class AwardAmountInfo extends AwardAssociate {
+     }
+ 
+     public KualiDecimal getAnticipatedChange() {
++    	if (anticipatedChange == null) {
++    		anticipatedChange = KualiDecimal.ZERO;
++    	}
+         return anticipatedChange;
+     }
+ 
+@@ -197,6 +218,9 @@ public class AwardAmountInfo extends AwardAssociate {
+     }
+ 
+     public KualiDecimal getObligatedChange() {
++    	if (obligatedChange == null) {
++    		obligatedChange = KualiDecimal.ZERO;
++    	}
+         return obligatedChange;
+     }
+ 
+@@ -205,6 +229,9 @@ public class AwardAmountInfo extends AwardAssociate {
+     }
+ 
+     public KualiDecimal getObligatedChangeDirect() {
++    	if (obligatedChangeDirect == null) {
++    		obligatedChangeDirect = KualiDecimal.ZERO;
++    	}
+         return obligatedChangeDirect;
+     }
+ 
+@@ -213,6 +240,9 @@ public class AwardAmountInfo extends AwardAssociate {
+     }
+ 
+     public KualiDecimal getObligatedChangeIndirect() {
++    	if (obligatedChangeIndirect == null) {
++    		obligatedChangeIndirect = KualiDecimal.ZERO;
++    	}
+         return obligatedChangeIndirect;
+     }
+ 
+@@ -221,6 +251,9 @@ public class AwardAmountInfo extends AwardAssociate {
+     }
+ 
+     public KualiDecimal getAnticipatedChangeDirect() {
++    	if (anticipatedChangeDirect == null) {
++    		anticipatedChangeDirect = KualiDecimal.ZERO;
++    	}
+         return anticipatedChangeDirect;
+     }
+ 
+@@ -229,6 +262,9 @@ public class AwardAmountInfo extends AwardAssociate {
+     }
+ 
+     public KualiDecimal getAnticipatedChangeIndirect() {
++    	if (anticipatedChangeIndirect == null) {
++    		anticipatedChangeIndirect = KualiDecimal.ZERO;
++    	}
+         return anticipatedChangeIndirect;
+     }
+ 
+@@ -237,6 +273,9 @@ public class AwardAmountInfo extends AwardAssociate {
+     }
+ 
+     public KualiDecimal getAnticipatedTotalDirect() {
++    	if (anticipatedTotalDirect == null) {
++    		anticipatedTotalDirect = KualiDecimal.ZERO;
++    	}
+         return anticipatedTotalDirect;
+     }
+ 
+@@ -245,6 +284,9 @@ public class AwardAmountInfo extends AwardAssociate {
+     }
+ 
+     public KualiDecimal getAnticipatedTotalIndirect() {
++    	if (anticipatedTotalIndirect == null) {
++    		anticipatedTotalIndirect = KualiDecimal.ZERO;
++    	}
+         return anticipatedTotalIndirect;
+     }
+ 
+@@ -253,6 +295,9 @@ public class AwardAmountInfo extends AwardAssociate {
+     }
+ 
+     public KualiDecimal getObligatedTotalDirect() {
++    	if (obligatedTotalDirect == null) {
++    		obligatedTotalDirect = KualiDecimal.ZERO;
++    	}
+         return obligatedTotalDirect;
+     }
+ 
+@@ -261,6 +306,9 @@ public class AwardAmountInfo extends AwardAssociate {
+     }
+ 
+     public KualiDecimal getObligatedTotalIndirect() {
++    	if (obligatedTotalIndirect == null) {
++    		obligatedTotalIndirect = KualiDecimal.ZERO;
++    	}
+         return obligatedTotalIndirect;
+     }
+ 

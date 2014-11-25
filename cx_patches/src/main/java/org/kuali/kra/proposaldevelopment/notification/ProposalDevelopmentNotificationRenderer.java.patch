@@ -1,0 +1,20 @@
+diff --git a/src/main/java/org/kuali/kra/proposaldevelopment/notification/ProposalDevelopmentNotificationRenderer.java b/src/main/java/org/kuali/kra/proposaldevelopment/notification/ProposalDevelopmentNotificationRenderer.java
+index 2759e6d..85c5899 100644
+--- a/src/main/java/org/kuali/kra/proposaldevelopment/notification/ProposalDevelopmentNotificationRenderer.java
++++ b/src/main/java/org/kuali/kra/proposaldevelopment/notification/ProposalDevelopmentNotificationRenderer.java
+@@ -58,6 +58,7 @@ public class ProposalDevelopmentNotificationRenderer extends NotificationRendere
+         SimpleDateFormat dateFormatter = new SimpleDateFormat("MM/dd/yyyy");
+         Map<String, String> result = super.getDefaultReplacementParameters();
+         result.put("{PROPOSAL_NUMBER}", developmentProposal.getProposalNumber());
++        result.put("{DOCUMENT_NUMBER}", developmentProposal.getProposalDocument().getDocumentNumber());
+         result.put("{PROPOSAL_TITLE}", developmentProposal.getTitle());
+         result.put("{SPONSOR_CODE}", developmentProposal.getSponsorCode());
+         result.put("{SPONSOR_NAME}", developmentProposal.getSponsorName());
+@@ -77,6 +78,7 @@ public class ProposalDevelopmentNotificationRenderer extends NotificationRendere
+         result.put("{PRIME_SPONSOR_NAME}", developmentProposal.getPrimeSponsor() != null ? developmentProposal.getPrimeSponsor().getSponsorName() : "");
+         InstitutionalProposal instProp = getProposalDevelopmentService().getInstitutionalProposal(developmentProposal.getProposalNumber());
+         result.put("{INSTITUTIONAL_PROPOSAL_NUMBER}", instProp != null ? instProp.getProposalNumber() : "");
++        result.put("{INSTITUTIONAL_PROPOSAL_DOC_NBR}", instProp != null ? instProp.getInstitutionalProposalDocument().getDocumentNumber() : "");
+         if (proposalChangedData != null) {
+             result.put("{OVERRIDE_FIELD_NAME}", proposalChangedData.getEditableColumn().getColumnLabel());
+             result.put("{OVERRIDE_FIELD_VALUE}", proposalChangedData.getDisplayValue());

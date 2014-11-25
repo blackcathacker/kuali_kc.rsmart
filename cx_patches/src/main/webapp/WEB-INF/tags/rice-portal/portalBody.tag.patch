@@ -1,0 +1,35 @@
+diff --git a/src/main/webapp/WEB-INF/tags/rice-portal/portalBody.tag b/src/main/webapp/WEB-INF/tags/rice-portal/portalBody.tag
+index afeb0f6..93cfb17 100644
+--- a/src/main/webapp/WEB-INF/tags/rice-portal/portalBody.tag
++++ b/src/main/webapp/WEB-INF/tags/rice-portal/portalBody.tag
+@@ -19,8 +19,6 @@
+ <%@ attribute name="channelUrl" required="true" %>
+ <%@ attribute name="selectedTab" required="true" %>
+ 
+-<portal:immutableBar />
+-
+ <c:choose>
+   <c:when test='${!empty channelTitle && !empty channelUrl}'>
+ 	  <c:if test="${!empty param.backdoorId}">
+@@ -31,6 +29,7 @@
+ 	  </div>
+   </c:when>
+   <c:otherwise>
++  <div class="container-fluid body-container">
+ 	<table border="0" width="100%"  cellspacing="0" cellpadding="0" id="iframe_portlet_container_table">
+ 	   	<tr valign="top" bgcolor="#FFFFFF">
+       		<td width="15" class="leftback-focus">&nbsp;</td>
+@@ -61,8 +60,12 @@
+ 	        </c:choose>
+        </tr>
+     </table>
++    </div>
+   </c:otherwise>
+ </c:choose>
+ 
+ <div class="footerbevel">&nbsp;</div>
+- <div id="footer-copyright"> <bean:message key="app.copyright" /></div>
++<div id="footer-copyright">
++  <bean:message key="app.copyright" />
++  <div class="footer-build">${ConfigProperties.version} (${ConfigProperties.datasource.ojb.platform})</div>
++</div>

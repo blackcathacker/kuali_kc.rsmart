@@ -1,0 +1,13 @@
+diff --git a/src/main/webapp/WEB-INF/jsp/irb/researchAreaAjax.jsp b/src/main/webapp/WEB-INF/jsp/irb/researchAreaAjax.jsp
+index a80e54a..ffa239c 100644
+--- a/src/main/webapp/WEB-INF/jsp/irb/researchAreaAjax.jsp
++++ b/src/main/webapp/WEB-INF/jsp/irb/researchAreaAjax.jsp
+@@ -14,7 +14,7 @@
+  limitations under the License.
+ --%>
+ <%@ include file="/WEB-INF/jsp/kraTldHeader.jsp"%>
+-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
++<!DOCTYPE html>
+ <html>
+ <head>
+     <meta http-equiv="content-type" content="text/html; charset=utf-8">

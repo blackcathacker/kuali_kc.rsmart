@@ -1,0 +1,13 @@
+diff --git a/src/main/resources/org/kuali/kra/datadictionary/CustReportDetails.xml b/src/main/resources/org/kuali/kra/datadictionary/CustReportDetails.xml
+index 3b28958..f52541d 100644
+--- a/src/main/resources/org/kuali/kra/datadictionary/CustReportDetails.xml
++++ b/src/main/resources/org/kuali/kra/datadictionary/CustReportDetails.xml
+@@ -238,6 +238,6 @@
+ 					/> 
+ 			</list>
+ 		</property>
+-		<property name="resultSetLimit" value="50" />
++		<!-- <property name="resultSetLimit" value="500" /> -->
+ 	</bean>
+ </beans>
+\ No newline at end of file

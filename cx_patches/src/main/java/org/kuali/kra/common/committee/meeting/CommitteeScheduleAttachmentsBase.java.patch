@@ -1,0 +1,25 @@
+diff --git a/src/main/java/org/kuali/kra/common/committee/meeting/CommitteeScheduleAttachmentsBase.java b/src/main/java/org/kuali/kra/common/committee/meeting/CommitteeScheduleAttachmentsBase.java
+index d04f594..53e5bf2 100644
+--- a/src/main/java/org/kuali/kra/common/committee/meeting/CommitteeScheduleAttachmentsBase.java
++++ b/src/main/java/org/kuali/kra/common/committee/meeting/CommitteeScheduleAttachmentsBase.java
+@@ -55,6 +55,7 @@ public abstract class CommitteeScheduleAttachmentsBase extends KraPersistableBus
+     private CommitteeScheduleBase committeeSchedule;
+     private String newUpdateUser;
+     private Timestamp newUpdateTimestamp;
++    private Long scheduleIdFk;
+     
+     /**
+      * Gets the committeeSchedule attribute. 
+@@ -364,4 +365,12 @@ public abstract class CommitteeScheduleAttachmentsBase extends KraPersistableBus
+         return KraServiceLocator.getService(KcAttachmentService.class).getFileTypeIcon(this);
+     }
+ 
++    public Long getScheduleIdFk() {
++      return scheduleIdFk;
++    }
++
++    public void setScheduleIdFk(Long scheduleIdFk) {
++      this.scheduleIdFk = scheduleIdFk;
++    }
++
+ }

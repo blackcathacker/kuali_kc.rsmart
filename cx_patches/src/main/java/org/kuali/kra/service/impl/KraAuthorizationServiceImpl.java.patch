@@ -1,0 +1,68 @@
+diff --git a/src/main/java/org/kuali/kra/service/impl/KraAuthorizationServiceImpl.java b/src/main/java/org/kuali/kra/service/impl/KraAuthorizationServiceImpl.java
+index 1dee9fd..fd8c2c0 100644
+--- a/src/main/java/org/kuali/kra/service/impl/KraAuthorizationServiceImpl.java
++++ b/src/main/java/org/kuali/kra/service/impl/KraAuthorizationServiceImpl.java
+@@ -15,6 +15,8 @@
+  */
+ package org.kuali.kra.service.impl;
+ 
++import org.apache.commons.logging.Log;
++import org.apache.commons.logging.LogFactory;
+ import org.apache.commons.lang.StringUtils;
+ import org.kuali.kra.bo.KcPerson;
+ import org.kuali.kra.bo.RolePersons;
+@@ -47,6 +49,8 @@ public class KraAuthorizationServiceImpl implements KraAuthorizationService {
+     private IdentityService identityManagementService;
+     private PermissionService permissionService;
+     
++    private static final Log LOG = LogFactory.getLog(KraAuthorizationServiceImpl.class);
++
+     /**
+      * Set the Unit Authorization Service.  Injected by Spring.
+      * @param unitAuthorizationService the Unit Authorization Service
+@@ -106,13 +110,18 @@ public class KraAuthorizationServiceImpl implements KraAuthorizationService {
+ 
+     @Override
+     public boolean hasPermission(String userId, Permissionable permissionable, String permissionName) {
+-        return hasPermission(userId, permissionable, permissionable.getNamespace(), permissionName);
++      String nameSpace = null;
++      if (permissionable != null) {
++        nameSpace = permissionable.getNamespace();
++      }
++      return hasPermission(userId, permissionable, nameSpace, permissionName);
+     }
+ 
+     @Override
+     public boolean hasPermission(String userId, Permissionable permissionable, String permissionNamespace, String permissionName) {
+         boolean userHasPermission = false;
+         Map<String, String> qualifiedRoleAttributes = new HashMap<String, String>();
++        if (permissionable != null) {
+           qualifiedRoleAttributes.put(permissionable.getDocumentKey(), permissionable.getDocumentNumberForPermission());
+           permissionable.populateAdditionalQualifiedRoleAttributes(qualifiedRoleAttributes);
+           Map<String, String> permissionAttributes = PermissionAttributes.getAttributes(permissionName);
+@@ -125,6 +134,7 @@ public class KraAuthorizationServiceImpl implements KraAuthorizationService {
+           if (!userHasPermission && StringUtils.isNotEmpty(unitNumber)) {
+               userHasPermission = unitAuthorizationService.hasPermission(userId, unitNumber, permissionNamespace, permissionName);
+           }
++        }
+         return userHasPermission;
+     }
+ 
+@@ -172,11 +182,16 @@ public class KraAuthorizationServiceImpl implements KraAuthorizationService {
+             qualifiedRoleAttrs.put(permissionable.getDocumentKey(), permissionable.getDocumentNumberForPermission());
+             Collection<String> users = roleManagementService.getRoleMemberPrincipalIds(permissionable.getNamespace(), roleName,new HashMap<String,String>(qualifiedRoleAttrs));
+             for(String userId : users) {
+-                KcPerson person = kcPersonService.getKcPersonByPersonId(userId);
++                try {
++                    final KcPerson person = kcPersonService.getKcPersonByPersonId(userId);
+                     if (person != null && person.getActive()) {
+                         persons.add(person);
+                     }
+                 }
++                catch (IllegalArgumentException e) {
++                    LOG.info("getPersonsInRole: ignoring missing person/entity: " + userId);
++                }
++            }
+         } 
+         return persons;
+     }

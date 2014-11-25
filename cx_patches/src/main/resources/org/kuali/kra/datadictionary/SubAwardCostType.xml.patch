@@ -1,0 +1,13 @@
+diff --git a/src/main/resources/org/kuali/kra/datadictionary/SubAwardCostType.xml b/src/main/resources/org/kuali/kra/datadictionary/SubAwardCostType.xml
+index 8fdb0fa..23a8315 100644
+--- a/src/main/resources/org/kuali/kra/datadictionary/SubAwardCostType.xml
++++ b/src/main/resources/org/kuali/kra/datadictionary/SubAwardCostType.xml
+@@ -88,7 +88,7 @@
+         
+       </list>
+     </property>
+-    <property name="resultSetLimit" value="50" />
++    <!-- <property name="resultSetLimit" value="500" /> -->
+   </bean>
+ 	
+   

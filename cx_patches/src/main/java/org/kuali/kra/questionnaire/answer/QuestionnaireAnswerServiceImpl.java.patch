@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/kuali/kra/questionnaire/answer/QuestionnaireAnswerServiceImpl.java b/src/main/java/org/kuali/kra/questionnaire/answer/QuestionnaireAnswerServiceImpl.java
+index 9881602..793b151 100644
+--- a/src/main/java/org/kuali/kra/questionnaire/answer/QuestionnaireAnswerServiceImpl.java
++++ b/src/main/java/org/kuali/kra/questionnaire/answer/QuestionnaireAnswerServiceImpl.java
+@@ -512,7 +512,7 @@ public class QuestionnaireAnswerServiceImpl implements QuestionnaireAnswerServic
+         List<List<Answer>> parentAnswers = setupParentAnswers(answers);
+         List<String> ruleIds = new ArrayList<String>();
+         for (Answer answer : answers) {
+-            if (answer.getQuestionnaireQuestion().getParentQuestionNumber() > 0) {
++            if (answer.getQuestionnaireQuestion() != null && answer.getQuestionnaireQuestion().getParentQuestionNumber() > 0) {
+                 answer.setParentAnswer(parentAnswers.get(answer.getQuestionnaireQuestion().getParentQuestionNumber()));
+             }
+             if (StringUtils.isNotBlank(answer.getQuestionnaireQuestion().getRuleId())) {

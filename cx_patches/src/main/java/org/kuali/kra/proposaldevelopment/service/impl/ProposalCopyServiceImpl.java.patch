@@ -1,0 +1,12 @@
+diff --git a/src/main/java/org/kuali/kra/proposaldevelopment/service/impl/ProposalCopyServiceImpl.java b/src/main/java/org/kuali/kra/proposaldevelopment/service/impl/ProposalCopyServiceImpl.java
+index c311930..067986a 100644
+--- a/src/main/java/org/kuali/kra/proposaldevelopment/service/impl/ProposalCopyServiceImpl.java
++++ b/src/main/java/org/kuali/kra/proposaldevelopment/service/impl/ProposalCopyServiceImpl.java
+@@ -623,6 +623,7 @@ public class ProposalCopyServiceImpl implements ProposalCopyService {
+                     method.invoke(object, proposalNumber);
+                 } else if (isPropertyGetterMethod(method, methods)
+                         && !StringUtils.equals(method.getName(), "getProposalDocument")
++                        && !StringUtils.equals(method.getName(), "getWorkflowDocument")
+                         && !StringUtils.equals(method.getName(), "getDocumentHeader")) {
+                     Object value = method.invoke(object);
+                     if (value instanceof Collection) {

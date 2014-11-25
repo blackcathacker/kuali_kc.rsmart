@@ -1,0 +1,74 @@
+diff --git a/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetCumilativeXmlStream.java b/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetCumilativeXmlStream.java
+index 5f5dd26..df9eb27 100644
+--- a/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetCumilativeXmlStream.java
++++ b/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetCumilativeXmlStream.java
+@@ -87,10 +87,14 @@ public class BudgetCumilativeXmlStream extends BudgetBaseStream {
+ 		BudgetParent budgetParent = budget.getBudgetParent();
+ 		ReportHeaderType reportHeaderType = getReportHeaderTypeForCumulativeReport(budgetParent);
+ 		budgetSummaryReport.setReportHeader(reportHeaderType);
++		
+ 		cumulativePageType = getCumulativeBudgetReportPageType();
+ 		budgetSummaryReport.setCumilativePage(cumulativePageType);
+-		ReportPageType[] reportPageTypeArray = getReportPageTypes();
+-		budgetSummaryReport.setReportPageArray(reportPageTypeArray);
++        ReportPageType[] reportPageTypeList = new ReportPageType[1];
++        reportPageTypeList[0]=cumulativePageType;
++//
++//		ReportPageType[] reportPageTypeArray = getReportPageTypes();
++		budgetSummaryReport.setReportPageArray(reportPageTypeList);
+ 		return budgetSummaryReport;
+ 	}
+ 
+@@ -157,7 +161,6 @@ public class BudgetCumilativeXmlStream extends BudgetBaseStream {
+ 	 * BusgetSummary, CalculationMethodology and period to reportPageType
+ 	 */
+ 	private ReportPageType getCumulativeBudgetReportPageType() {
+-
+ 		ReportPageType reportPageType = ReportPageType.Factory.newInstance();
+ 		BudgetSummary budgetSummary = getCumulativeBudget();
+ 		CalculationMethodology calculationMethodology = getCumulativeCalculationMethodology();
+@@ -389,6 +392,7 @@ public class BudgetCumilativeXmlStream extends BudgetBaseStream {
+ 		}
+ 		ReportType reportType = getReportTypeForNonPersonnel(categoryDesc,
+ 				costElementDesc, calculatedCost, null);
++		if(calculatedCost.doubleValue()>0.0)
+ 		    reportTypeList.add(reportType);
+ 		setReportTypeForBudgetCumulativeNonPersonnel(reportTypeList);
+ 		Collections.sort(reportTypeList, new Comparator<ReportType>() {
+@@ -540,15 +544,27 @@ public class BudgetCumilativeXmlStream extends BudgetBaseStream {
+ 			calculatedCost = getCalculatedCostForBudgetExclusionsSortId4ForCumulativeReport();
+ 			ReportType reportTypeForSortId4 = getReportTypeForExclusions(
+ 					sortId, categoryDesc, calculatedCost);
++	         if(calculatedCost.doubleValue()>0.0d)
+ 	             reportTypeList.add(reportTypeForSortId4);
+ 		} else {
+ 			sortId = 1;
+-			setReportTypeOHExclusionForSortId(reportTypeList, sortId);
++			setReportTypeOHExclusionForSortIdForCumulativeReport(reportTypeList, sortId);
+ 		}
+ 		subReportType.setGroupArray(getGroupsType(reportTypeList));
+ 		return subReportType;
+ 	}
+ 	
++    protected void setReportTypeOHExclusionForSortId(
++            List<ReportType> reportTypeList, int sortId) {
++        List<ReportTypeVO> tempReportTypeVOList = new ArrayList<ReportTypeVO>();
++        for (BudgetPeriod budgetPeriod : budget.getBudgetPeriods()) {
++            this.budgetPeriod = budgetPeriod;
++            setReportTypeVOListForOHExclusionSortId(tempReportTypeVOList);
++        }
++        setReportTypeListOHExclusionForSortId(reportTypeList, sortId,
++                tempReportTypeVOList);
++    }
++
+ 	/*
+ 	 * This method gets sum of calculatedCost from list of BudgetPeriod,
+ 	 * BudgetLineItem and iterate through each BudgetLineItemCalculatedAmount
+@@ -642,6 +658,7 @@ public class BudgetCumilativeXmlStream extends BudgetBaseStream {
+ 			calculatedCost = getCalculatedCostForBudgetExclusionsSortId4ForCumulativeReport();
+ 			ReportType reportTypeForSortId4 = getReportTypeForExclusions(
+ 					sortId, categoryDesc, calculatedCost);
++			if(calculatedCost.doubleValue()>0.0d)
+ 			    reportTypeList.add(reportTypeForSortId4);
+ 		}
+ 		subReportType.setGroupArray(getGroupsType(reportTypeList));

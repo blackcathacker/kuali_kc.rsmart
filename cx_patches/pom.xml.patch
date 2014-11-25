@@ -1,0 +1,295 @@
+diff --git a/pom.xml b/pom.xml
+index 4e18ac8..3365067 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -1,13 +1,12 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
++<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+ 
+     <modelVersion>4.0.0</modelVersion>
+     <groupId>org.kuali.kra</groupId>
+     <artifactId>kc_project</artifactId>
+     <packaging>war</packaging>
+-    <name>Kuali Coeus</name>
+-    <version>5.2.1</version>
++    <name>rSmart Cloud Express</name>
++    <version>5.2.1.9-rsmart-SNAPSHOT</version>
+     <description>
+         The Kuali Coeus (KC) project is building a comprehensive system to manage the complexities of research
+         administration that fully addresses the needs from the faculty researcher through grants administration to
+@@ -30,7 +29,7 @@
+     </licenses>
+ 
+     <prerequisites>
+-        <maven>3.0</maven>
++        <maven>3.2.1</maven>
+     </prerequisites>
+ 
+ 	<build>
+@@ -190,6 +189,9 @@
+                     <useIncrementalCompilation>false</useIncrementalCompilation>
+                     <source>${project.compile.source}</source>
+                     <target>${project.compile.target}</target>
++                    <fork>true</fork>
++                    <maxmem>2048m</maxmem>
++                    <permgensize>256m</permgensize>
+                 </configuration>
+             </plugin>
+             <plugin>
+@@ -415,12 +417,6 @@
+                 <version>${tomcat6-maven-plugin.version}</version>
+                 <dependencies>
+                     <dependency>
+-                        <groupId>com.oracle</groupId>
+-                        <artifactId>ojdbc6</artifactId>
+-                        <version>${oracle.version}</version>
+-                        <scope>runtime</scope>
+-                    </dependency>
+-                    <dependency>
+                         <groupId>mysql</groupId>
+                         <artifactId>mysql-connector-java</artifactId>
+                         <version>${mysql.version}</version>
+@@ -438,12 +434,6 @@
+                 <version>${tomcat7-maven-plugin.version}</version>
+                 <dependencies>
+                     <dependency>
+-                        <groupId>com.oracle</groupId>
+-                        <artifactId>ojdbc6</artifactId>
+-                        <version>${oracle.version}</version>
+-                        <scope>runtime</scope>
+-                    </dependency>
+-                    <dependency>
+                         <groupId>mysql</groupId>
+                         <artifactId>mysql-connector-java</artifactId>
+                         <version>${mysql.version}</version>
+@@ -484,12 +474,6 @@
+                 <version>${jetty-maven-plugin.version}</version>
+                 <dependencies>
+                     <dependency>
+-                        <groupId>com.oracle</groupId>
+-                        <artifactId>ojdbc6</artifactId>
+-                        <version>${oracle.version}</version>
+-                        <scope>runtime</scope>
+-                    </dependency>
+-                    <dependency>
+                         <groupId>mysql</groupId>
+                         <artifactId>mysql-connector-java</artifactId>
+                         <version>${mysql.version}</version>
+@@ -517,6 +501,13 @@
+                 </configuration>
+             </plugin>
+ 		</plugins>
++        <extensions>
++            <extension>
++                <groupId>org.kuali.maven.wagons</groupId>
++                <artifactId>maven-s3-wagon</artifactId>
++                <version>${wagon.s3.version}</version>
++            </extension>
++        </extensions>
+ 	</build>
+ 
+     <dependencies>
+@@ -552,14 +543,6 @@
+             </exclusions>
+         </dependency>
+ 
+-        <dependency>
+-            <groupId>com.oracle</groupId>
+-            <artifactId>ojdbc6</artifactId>
+-            <version>${oracle.version}</version>
+-            <!-- should be provided once embedded jetty is figured out -->
+-            <scope>test</scope>
+-        </dependency>
+-
+         <!-- Required for jdk7 -->
+         <dependency>
+             <groupId>com.sun.xml.bind</groupId>
+@@ -579,6 +562,18 @@
+             <version>${commons-lang.version}</version>
+         </dependency>
+ 
++        <dependency>
++            <groupId>com.rsmart</groupId>
++            <artifactId>tokenauth</artifactId>
++            <version>1.0.7</version>
++            <exclusions>
++                <exclusion>
++                <groupId>commons-logging</groupId>
++                <artifactId>commons-logging</artifactId>
++                </exclusion>
++            </exclusions>
++        </dependency>
++
+         <!-- For FTP client -->
+         <dependency>
+             <groupId>commons-net</groupId>
+@@ -1393,6 +1388,16 @@ module of int tests -->
+                 </exclusion>
+             </exclusions>
+         </dependency>
++        <dependency>
++            <groupId>com.rsmart.kuali</groupId>
++            <artifactId>kc_hr_rest</artifactId>
++            <version>${rsmart.hr.rest.version}</version>
++        </dependency>
++        <dependency>
++            <groupId>com.rsmart.kuali</groupId>
++            <artifactId>cx_data_migration</artifactId>
++            <version>${rsmart.cx.data.migration.version}</version>
++        </dependency>
+     </dependencies>
+ 
+ 	<profiles>
+@@ -1660,12 +1665,6 @@ module of int tests -->
+                         <version>${jetty-maven-plugin.version}</version>
+                         <dependencies>
+                             <dependency>
+-                                <groupId>com.oracle</groupId>
+-                                <artifactId>ojdbc6</artifactId>
+-                                <version>${oracle.version}</version>
+-                                <scope>runtime</scope>
+-                            </dependency>
+-                            <dependency>
+                                 <groupId>mysql</groupId>
+                                 <artifactId>mysql-connector-java</artifactId>
+                                 <version>${mysql.version}</version>
+@@ -1707,12 +1706,6 @@ module of int tests -->
+                         <version>${tomcat6-maven-plugin.version}</version>
+                         <dependencies>
+                             <dependency>
+-                                <groupId>com.oracle</groupId>
+-                                <artifactId>ojdbc6</artifactId>
+-                                <version>${oracle.version}</version>
+-                                <scope>runtime</scope>
+-                            </dependency>
+-                            <dependency>
+                                 <groupId>mysql</groupId>
+                                 <artifactId>mysql-connector-java</artifactId>
+                                 <version>${mysql.version}</version>
+@@ -1732,12 +1725,6 @@ module of int tests -->
+                         <version>${tomcat7-maven-plugin.version}</version>
+                         <dependencies>
+                             <dependency>
+-                                <groupId>com.oracle</groupId>
+-                                <artifactId>ojdbc6</artifactId>
+-                                <version>${oracle.version}</version>
+-                                <scope>runtime</scope>
+-                            </dependency>
+-                            <dependency>
+                                 <groupId>mysql</groupId>
+                                 <artifactId>mysql-connector-java</artifactId>
+                                 <version>${mysql.version}</version>
+@@ -2006,6 +1993,17 @@ module of int tests -->
+ 
+     <repositories>
+         <repository>
++            <id>rsmart-dev</id>
++            <name>rsmart-dev</name>
++            <url>https://nexus.rsmart.com/nexus/content/groups/public/</url>
++            <snapshots>
++                <enabled>true</enabled>
++            </snapshots>
++            <releases>
++                <enabled>true</enabled>
++            </releases>
++        </repository>
++        <repository>
+             <id>kuali.nexus</id>
+             <name>Nexus Repository Manager</name>
+             <url>http://nexus.kuali.org/content/groups/public</url>
+@@ -2033,17 +2031,29 @@ module of int tests -->
+     </pluginRepositories>
+ 
+     <scm>
+-        <connection>scm:svn:https://svn.kuali.org/repos/kc/trunk
+-        </connection>
+-        <developerConnection>scm:svn:https://svn.kuali.org/repos/kc/trunk
+-        </developerConnection>
++        <connection>scm:git:git://github.com/rSmart/kuali_kc.git</connection>
++        <developerConnection>scm:git:git@github.com:rSmart/kuali_kc.git</developerConnection>
++        <url>https://github.com/rSmart/kuali_kc</url>
+       <tag>HEAD</tag>
+-        <url>https://fisheye.kuali.org/browse/kc</url>
+   </scm>
+ 
++    <distributionManagement>
++        <downloadUrl>https://github.com/rSmart/kc_platform</downloadUrl>
++        <snapshotRepository>
++            <id>rsmart.snapshot.repo</id>
++            <name>rsmart snapshot repository</name>
++            <url>s3://rsmart-dev/artifacts/maven/snapshot</url>
++        </snapshotRepository>
++        <repository>
++            <id>rsmart.release.repo</id>
++            <name>rsmart release repository</name>
++            <url>s3://rsmart-dev/artifacts/maven/release</url>
++        </repository>
++    </distributionManagement>
++
+     <issueManagement>
+-        <system>Jira</system>
+-        <url>https://jira.kuali.org</url>
++        <system>github</system>
++        <url>https://github.com/rSmart/kuali_kc/issues</url>
+     </issueManagement>
+ 
+     <ciManagement>
+@@ -2066,12 +2076,12 @@ module of int tests -->
+     <properties>
+         <!--dependency versions-->
+         <aopalliance.version>1.0</aopalliance.version>
+-        <cglib-nodep.version>2.2.2</cglib-nodep.version>
++        <cglib-nodep.version>3.1</cglib-nodep.version>
+         <commons-collections.version>3.2.1</commons-collections.version>
+         <commons-lang.version>2.6</commons-lang.version>
+         <commons-net.version>3.1</commons-net.version>
+         <cxf.version>2.7.0</cxf.version>
+-        <db-ojb.version>1.0.4-patch8</db-ojb.version>
++        <db-ojb.version>1.0.4-patch9-rsmart</db-ojb.version>
+         <displaytag.version>1.2</displaytag.version>
+         <drools.version>5.5.0.Final</drools.version>
+         <dwr.version>3.0.RC2</dwr.version>
+@@ -2126,7 +2136,6 @@ module of int tests -->
+         <org.eclipse.birt.runtime.version>3.7.1</org.eclipse.birt.runtime.version>
+         <pdfbox.version>1.7.1</pdfbox.version>
+         <phs398modularbudget-1.2-gg.version>1.0.5</phs398modularbudget-1.2-gg.version>
+-        <rice.version>2.3.6</rice.version>
+         <servlet.version>2.5</servlet.version>
+         <s2sform.version>1.2.2</s2sform.version>
+         <sf424-2.1-gg.version>1.0</sf424-2.1-gg.version>
+@@ -2149,17 +2158,17 @@ module of int tests -->
+         <maven-clean-plugin.version>2.5</maven-clean-plugin.version>
+         <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
+         <maven-dependency-plugin.version>2.8</maven-dependency-plugin.version>
+-        <maven-deploy-plugin.version>2.8</maven-deploy-plugin.version>
++        <maven-deploy-plugin.version>2.8.1</maven-deploy-plugin.version>
+         <maven-enforcer-plugin.version>1.3.1</maven-enforcer-plugin.version>
+-        <maven-install-plugin.version>2.5</maven-install-plugin.version>
++        <maven-install-plugin.version>2.5.1</maven-install-plugin.version>
+         <maven-javadoc-plugin.version>2.9.1</maven-javadoc-plugin.version>
+         <maven-resources-plugin.version>2.6</maven-resources-plugin.version>
+         <maven-site-plugin.version>3.3</maven-site-plugin.version>
+         <maven-source-plugin.version>2.2.1</maven-source-plugin.version>
+-        <maven-surefire-plugin.version>2.16</maven-surefire-plugin.version>
++        <maven-surefire-plugin.version>2.17</maven-surefire-plugin.version>
+         <maven-war-plugin.version>2.4</maven-war-plugin.version>
+-        <truezip-maven-plugin.version>1.1</truezip-maven-plugin.version>
+-        <tomcat-maven-plugin.version>2.1</tomcat-maven-plugin.version>
++        <truezip-maven-plugin.version>1.2</truezip-maven-plugin.version>
++        <tomcat-maven-plugin.version>2.2</tomcat-maven-plugin.version>
+         <tomcat6-maven-plugin.version>${tomcat-maven-plugin.version}</tomcat6-maven-plugin.version>
+         <tomcat7-maven-plugin.version>${tomcat-maven-plugin.version}</tomcat7-maven-plugin.version>
+ 
+@@ -2200,5 +2209,10 @@ module of int tests -->
+         <monitoring.spring.import />
+         <monitoring.spring.service />
+ 
++        <wagon.s3.version>1.2.1</wagon.s3.version>
++
++        <rice.version>2.3.6.3-rsmart</rice.version>
++        <rsmart.hr.rest.version>0.9-SNAPSHOT</rsmart.hr.rest.version>
++        <rsmart.cx.data.migration.version>5.2.1.9-SNAPSHOT</rsmart.cx.data.migration.version>
+     </properties>
+ </project>

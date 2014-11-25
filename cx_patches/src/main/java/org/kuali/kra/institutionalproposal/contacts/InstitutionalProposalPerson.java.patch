@@ -1,0 +1,21 @@
+diff --git a/src/main/java/org/kuali/kra/institutionalproposal/contacts/InstitutionalProposalPerson.java b/src/main/java/org/kuali/kra/institutionalproposal/contacts/InstitutionalProposalPerson.java
+index 3c279a7..3be8c0b 100644
+--- a/src/main/java/org/kuali/kra/institutionalproposal/contacts/InstitutionalProposalPerson.java
++++ b/src/main/java/org/kuali/kra/institutionalproposal/contacts/InstitutionalProposalPerson.java
+@@ -264,7 +264,15 @@ public class InstitutionalProposalPerson extends InstitutionalProposalContact im
+     }
+ 
+     public String toString() {
+-        return String.format("%s:%s", getContact().getIdentifier().toString(), getContact().getFullName());
++        final StringBuilder id = new StringBuilder();
++        if (getContact() != null && getContact().getIdentifier() != null) {
++          id.append(getContact().getIdentifier().toString());
++        }
++        final StringBuilder name = new StringBuilder();
++        if (getContact() != null && getContact().getFullName() != null) {
++          name.append(getContact().getFullName());
++        }
++        return String.format("%s:%s", id.toString(), name.toString());
+     }
+ 
+     /**

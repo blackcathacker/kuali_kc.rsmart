@@ -1,0 +1,26 @@
+diff --git a/src/main/webapp/WEB-INF/tags/rice-portal/portalResearcherBody.tag b/src/main/webapp/WEB-INF/tags/rice-portal/portalResearcherBody.tag
+index 0dc5fc5..8ea599c 100644
+--- a/src/main/webapp/WEB-INF/tags/rice-portal/portalResearcherBody.tag
++++ b/src/main/webapp/WEB-INF/tags/rice-portal/portalResearcherBody.tag
+@@ -20,15 +20,15 @@
+       <channel:researcherProposals />
+       <channel:researcherAwards />
+       <channel:researcherNegotiations />
++      <channel:researcherPersonnel />
+ </td>
+ <td class="content" valign="top">
+-      <channel:researcherIRBProtocols/>
+       <channel:researcherCompliance/>
+-      <channel:researcherIACUCProtocols/>   
++      <channel:researcherIRBProtocols/>
+ </td>
+-
++<!-- AAP: report links -->
+ <td class="content" valign="top">
+-      <channel:researcherQuicklinks />
+-      <channel:researcherPersonnel />
++      <channel:researcherReportLinks />
++      <channel:researcherIACUCProtocols/>
+       <channel:researcherWorkflow />
+ </td>
+\ No newline at end of file

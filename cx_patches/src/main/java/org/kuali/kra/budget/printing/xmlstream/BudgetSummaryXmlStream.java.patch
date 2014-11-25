@@ -1,0 +1,12 @@
+diff --git a/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetSummaryXmlStream.java b/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetSummaryXmlStream.java
+index ed53d75..fece5c9 100644
+--- a/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetSummaryXmlStream.java
++++ b/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetSummaryXmlStream.java
+@@ -298,6 +298,7 @@ public class BudgetSummaryXmlStream extends BudgetBaseStream {
+ 			}
+ 			ReportType reportType = getReportTypeForNonPersonnel(categoryDesc,
+ 					costElementDesc, calculatedCost, costSharingAmount);
++	         if(calculatedCost.doubleValue()>0.0d)
+ 	             reportTypeList.add(reportType);
+ 		}
+ 		setReportTypeForBudgetSummaryNonPersonnel(reportTypeList);

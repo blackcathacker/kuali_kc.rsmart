@@ -1,0 +1,37 @@
+diff --git a/src/main/java/org/kuali/kra/award/printing/xmlstream/AwardBaseStream.java b/src/main/java/org/kuali/kra/award/printing/xmlstream/AwardBaseStream.java
+index 347ebc6..4a50aef 100644
+--- a/src/main/java/org/kuali/kra/award/printing/xmlstream/AwardBaseStream.java
++++ b/src/main/java/org/kuali/kra/award/printing/xmlstream/AwardBaseStream.java
+@@ -32,6 +32,8 @@ import noNamespace.AwardType.AwardSpecialItems.ForeignTravel;
+ import noNamespace.AwardType.AwardSpecialItems.Subcontract;
+ import noNamespace.AwardType.AwardTransferringSponsors.TransferringSponsor;
+ import noNamespace.SpecialReviewType;
++
++import org.apache.commons.lang.StringUtils;
+ import org.apache.commons.logging.Log;
+ import org.apache.commons.logging.LogFactory;
+ import org.kuali.kra.award.awardhierarchy.AwardHierarchy;
+@@ -1637,11 +1639,13 @@ public abstract class AwardBaseStream implements XmlStream {
+ 	 */
+ 	private String getState(Rolodex rolodex) {
+ 		String stateDesc = null;
+-		if (rolodex.getState() != null) {
++		if (StringUtils.isNotBlank(rolodex.getState()) && StringUtils.isNotBlank(rolodex.getCountryCode())) {
+ 			State state = PrintingUtils.getStateFromName(rolodex.getCountryCode(), rolodex.getState());
+ 			if (state != null) {
+ 				stateDesc = state.getName();
+ 			}
++		} else if (StringUtils.isNotBlank(rolodex.getState())) {
++			return rolodex.getState();
+ 		}
+ 		return stateDesc;
+ 	}
+@@ -1677,7 +1681,7 @@ public abstract class AwardBaseStream implements XmlStream {
+ 	 */
+ 	private String getCountryDescription(Rolodex rolodex) {
+ 		String countryDesc = null;
+-		if (rolodex.getCountryCode() != null) {
++		if (StringUtils.isNotBlank(rolodex.getCountryCode())) {
+ 			Country country = PrintingUtils.getCountryFromCode(rolodex
+ 					.getCountryCode(), businessObjectService);
+ 			if (country != null) {

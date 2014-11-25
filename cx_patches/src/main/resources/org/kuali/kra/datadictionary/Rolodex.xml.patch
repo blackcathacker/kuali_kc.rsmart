@@ -1,0 +1,38 @@
+diff --git a/src/main/resources/org/kuali/kra/datadictionary/Rolodex.xml b/src/main/resources/org/kuali/kra/datadictionary/Rolodex.xml
+index adcd602..b1bf30f 100644
+--- a/src/main/resources/org/kuali/kra/datadictionary/Rolodex.xml
++++ b/src/main/resources/org/kuali/kra/datadictionary/Rolodex.xml
+@@ -32,6 +32,7 @@
+         <ref bean="Rolodex-phoneNumber"/>
+         <ref bean="Rolodex-postalCode"/>
+         <ref bean="Rolodex-prefix"/>
++        <ref bean="Rolodex-isSponsorAddress"/>
+         <ref bean="Rolodex-sponsorAddressFlag"/>
+         <ref bean="Rolodex-sponsorCode"/>
+         <ref bean="Rolodex-sponsor.sponsorName"/>
+@@ -356,6 +357,25 @@
+     <property name="summary" value="Prefix"/>
+     <property name="description" value="Prefix"/>
+   </bean>
++  <bean id="Rolodex-isSponsorAddress" parent="Rolodex-isSponsorAddress-parentBean"/>
++
++  <bean abstract="true" id="Rolodex-isSponsorAddress-parentBean" parent="AttributeDefinition">
++    <property name="name" value="isSponsorAddress"/>
++    <property name="forceUppercase" value="false"/>
++    <property name="label" value="Sponsor Address Flag"/>
++    <property name="shortLabel" value="Sponsor Address Flag"/>
++    <property name="maxLength" value="1"/>
++    <property name="validationPattern">
++      <bean parent="AlphaNumericValidationPattern"/>
++    </property>
++    <property name="control">
++      <bean parent="SelectControlDefinition" 
++      p:valuesFinderClass="org.kuali.kra.lookup.keyvalue.RolodexAddressFlagValuesFinder"
++      p:script="updateOrganizationLookupReturn(this)"/>
++    </property>
++    <property name="summary" value="Sponsor Address Flag"/>
++    <property name="description" value="Sponsor Address Flag"/>
++  </bean>
+   <bean id="Rolodex-sponsorAddressFlag" parent="Rolodex-sponsorAddressFlag-parentBean"/>
+ 
+   <bean abstract="true" id="Rolodex-sponsorAddressFlag-parentBean" parent="AttributeDefinition">

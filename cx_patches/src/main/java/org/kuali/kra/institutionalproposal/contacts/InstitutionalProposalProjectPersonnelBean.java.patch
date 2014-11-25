@@ -1,0 +1,26 @@
+diff --git a/src/main/java/org/kuali/kra/institutionalproposal/contacts/InstitutionalProposalProjectPersonnelBean.java b/src/main/java/org/kuali/kra/institutionalproposal/contacts/InstitutionalProposalProjectPersonnelBean.java
+index a6f96d6..ba915a5 100644
+--- a/src/main/java/org/kuali/kra/institutionalproposal/contacts/InstitutionalProposalProjectPersonnelBean.java
++++ b/src/main/java/org/kuali/kra/institutionalproposal/contacts/InstitutionalProposalProjectPersonnelBean.java
+@@ -33,6 +33,7 @@ public class InstitutionalProposalProjectPersonnelBean extends InstitutionalProp
+      * Comment for <code>serialVersionUID</code>
+      */
+     private static final long serialVersionUID = 6251507517307475952L;
++    private static final org.apache.log4j.Logger LOG = org.apache.log4j.Logger.getLogger(InstitutionalProposalProjectPersonnelBean.class);
+ 
+     private InstitutionalProposalPersonUnit[] newInstitutionalProposalPersonUnits;
+ 
+@@ -250,8 +251,13 @@ public class InstitutionalProposalProjectPersonnelBean extends InstitutionalProp
+     
+     private void setLeadUnitSelectionStates(String unitName) {
+         InstitutionalProposalPerson institutionalProposalPerson = findPrincipalInvestigator();
++        if (institutionalProposalPerson != null) {
+           for(InstitutionalProposalPersonUnit associatedUnit: institutionalProposalPerson.getUnits()) {
+             associatedUnit.setLeadUnit(associatedUnit.getUnit().getUnitName().equals(unitName));
+           }
++        } else {
++          final IllegalStateException e = new IllegalStateException("institutionalProposalPerson == null");
++          LOG.warn(e.getMessage(), e);
++        }
+     }    
+ }

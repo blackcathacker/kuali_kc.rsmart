@@ -1,0 +1,12 @@
+diff --git a/src/main/resources/org/kuali/kra/datadictionary/LookupableDevelopmentProposal.xml b/src/main/resources/org/kuali/kra/datadictionary/LookupableDevelopmentProposal.xml
+index 939eb0c..a2af835 100644
+--- a/src/main/resources/org/kuali/kra/datadictionary/LookupableDevelopmentProposal.xml
++++ b/src/main/resources/org/kuali/kra/datadictionary/LookupableDevelopmentProposal.xml
+@@ -281,6 +281,6 @@
+                 p:attributeName="deadlineDate" />
+         </list>
+       </property>
+-      <property name="resultSetLimit" value="50" />
++      <!-- <property name="resultSetLimit" value="500" /> -->
+     </bean>
+ </beans>
