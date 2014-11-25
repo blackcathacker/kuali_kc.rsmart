@@ -1,180 +1,180 @@
- pom.xml                                                                                                                                 |   142 ++++----
- src/main/config/kew/xml/2/AwardDocument.xml                                                                                             |     6 +-
- src/main/config/sql/RELEASE-SCRIPTS/KC_Install.sh                                                                                       |    63 ++++
- src/main/config/sql/current/5.2.1/dml/KR_DML_01_KRACOEUS-6640_B000.sql                                                                  |     4 +
- src/main/config/sql/current/5.2.1/sequences/KC_SEQ_S2S_USER_ATTACHED_FORM_ID.sql                                                        |     2 +
- src/main/config/sql/current/5.2.1/sequences/KC_SEQ_S2S_USER_ATTD_FORM_ATT_ID.sql                                                        |     2 +
- src/main/config/sql/current_mysql/0.0.0/dml/KR_DML_01_KCINFR-1018_B000.sql                                                              |     5 +-
- src/main/config/sql/current_mysql/5.2.1/dml/KR_DML_01_KRACOEUS-6640_B000.sql                                                            |     5 +
- src/main/config/sql/current_mysql/5.2.1/sequences/KC_SEQ_S2S_USER_ATTACHED_FORM_ATT_ID.sql                                              |    10 +
- src/main/config/sql/current_mysql/5.2.1/sequences/KC_SEQ_S2S_USER_ATTACHED_FORM_ID.sql                                                  |    10 +
- src/main/config/sql/current_mysql/5.2.1/tables/KC_TBL_CONTACT_USAGE.sql                                                                 |     2 +-
- src/main/java/com/rsmart/kuali/kra/reporting/web/struts/action/ReportForwardAction.java                                                 |   123 +++++++
- src/main/java/com/rsmart/kuali/kra/reporting/web/struts/form/ReportFormwardForm.java                                                    |    23 ++
- src/main/java/com/rsmart/kuali/kra/web/jstl/PortalFunctions.java                                                                        |    88 +++++
- src/main/java/com/rsmart/kuali/kra/workflow/UnitAdministratorRoleAttribute.java                                                         |   153 ++++++++
- src/main/java/org/kuali/kra/award/contacts/AwardSponsorContactAuditRule.java                                                            |    26 ++
- src/main/java/org/kuali/kra/award/document/authorization/AwardDocumentAuthorizer.java                                                   |     2 +-
- src/main/java/org/kuali/kra/award/home/Award.java                                                                                       |    25 +-
- src/main/java/org/kuali/kra/award/home/AwardAmountInfo.java                                                                             |    64 +++-
- src/main/java/org/kuali/kra/award/lookup/AwardLookupableHelperServiceImpl.java                                                          |     6 +
- src/main/java/org/kuali/kra/award/printing/xmlstream/AwardBaseStream.java                                                               |     8 +-
- src/main/java/org/kuali/kra/award/web/struts/action/AwardActionsAction.java                                                             |    38 +-
- src/main/java/org/kuali/kra/award/web/struts/action/AwardHomeAction.java                                                                |    24 +-
- src/main/java/org/kuali/kra/bo/KcPerson.java                                                                                            |     8 +-
- src/main/java/org/kuali/kra/bo/Rolodex.java                                                                                             |    65 ++++
- src/main/java/org/kuali/kra/bo/RolodexMaintainableImpl.java                                                                             |    17 +
- src/main/java/org/kuali/kra/bo/UnitAdministrator.java                                                                                   |    10 +-
- src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetBaseStream.java                                                             |    70 ++--
- src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetCumilativeXmlStream.java                                                    |    25 +-
- src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetSummaryXmlStream.java                                                       |     1 +
- src/main/java/org/kuali/kra/budget/printing/xmlstream/IndustrialBudgetXmlStream.java                                                    |     1 +
- src/main/java/org/kuali/kra/budget/web/struts/action/BudgetAction.java                                                                  |     8 +-
- src/main/java/org/kuali/kra/coi/disclosure/CoiDisclosureServiceImpl.java                                                                |    10 +-
- src/main/java/org/kuali/kra/coi/notification/CoiNotificationRoleQualifierServiceImpl.java                                               |     6 +-
- src/main/java/org/kuali/kra/coi/notification/FinancialEntityNotificationRenderer.java                                                   |     6 +-
- src/main/java/org/kuali/kra/coi/service/impl/CoiMessagesServiceImpl.java                                                                |    29 +-
- src/main/java/org/kuali/kra/committee/lookup/CommitteeLookupableHelperServiceImpl.java                                                  |    11 +
- src/main/java/org/kuali/kra/common/committee/bo/CommitteeBase.java                                                                      |     7 +
- src/main/java/org/kuali/kra/common/committee/lookup/CommitteeLookupableHelperServiceImplBase.java                                       |     3 +-
- src/main/java/org/kuali/kra/common/committee/meeting/CommitteeScheduleAttachmentsBase.java                                              |     9 +
- src/main/java/org/kuali/kra/common/committee/meeting/MeetingActionBase.java                                                             |     9 +
- src/main/java/org/kuali/kra/common/committee/meeting/MeetingActionsActionBase.java                                                      |    10 +-
- src/main/java/org/kuali/kra/common/committee/notification/AgendaCreatedNotificationRenderer.java                                        |     2 +-
- src/main/java/org/kuali/kra/common/notification/service/impl/KcNotificationServiceImpl.java                                             |    29 +-
- src/main/java/org/kuali/kra/iacuc/actions/IacucProtocolActionsAction.java                                                               |     6 +
- src/main/java/org/kuali/kra/iacuc/committee/lookup/IacucCommitteeLookupableHelperServiceImpl.java                                       |    10 +
- src/main/java/org/kuali/kra/iacuc/protocol/IacucProtocolProtocolAction.java                                                             |     5 +
- src/main/java/org/kuali/kra/institutionalproposal/contacts/InstitutionalProposalPerson.java                                             |    10 +-
- src/main/java/org/kuali/kra/institutionalproposal/contacts/InstitutionalProposalProjectPersonnelBean.java                               |     6 +
- src/main/java/org/kuali/kra/institutionalproposal/proposallog/ProposalLogMergeAction.java                                               |    23 +-
- src/main/java/org/kuali/kra/institutionalproposal/proposallog/service/impl/ProposalLogServiceImpl.java                                  |     7 +
- src/main/java/org/kuali/kra/institutionalproposal/service/impl/InstitutionalProposalLookupableHelperServiceImpl.java                    |    13 +
- src/main/java/org/kuali/kra/institutionalproposal/service/impl/InstitutionalProposalServiceImpl.java                                    |     4 +-
- src/main/java/org/kuali/kra/irb/actions/IrbProtocolActionRequestServiceImpl.java                                                        |     9 +-
- src/main/java/org/kuali/kra/irb/actions/ProtocolProtocolActionsAction.java                                                              |     5 +
- src/main/java/org/kuali/kra/irb/actions/notification/ProtocolWithdrawnNotificationRenderer.java                                         |    77 ++++
- src/main/java/org/kuali/kra/irb/protocol/ProtocolProtocolAction.java                                                                    |     5 +
- src/main/java/org/kuali/kra/negotiations/notifications/NegotiationNotificationRenderer.java                                             |     4 +-
- src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/NarrativeReplaceAuthorizer.java                                     |     4 +
- src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/PersonnelAttachmentReplaceAuthorizer.java                           |     4 +
- src/main/java/org/kuali/kra/proposaldevelopment/notification/ProposalDevelopmentNotificationRenderer.java                               |     2 +
- src/main/java/org/kuali/kra/proposaldevelopment/rules/ProposalDevelopmentDocumentRule.java                                              |     6 +
- src/main/java/org/kuali/kra/proposaldevelopment/service/impl/ProposalCopyServiceImpl.java                                               |     1 +
- src/main/java/org/kuali/kra/proposaldevelopment/web/struts/form/ProposalDevelopmentForm.java                                            |     9 +-
- src/main/java/org/kuali/kra/protocol/actions/ActionHelperBase.java                                                                      |     3 +
- src/main/java/org/kuali/kra/protocol/notification/ProtocolReplacementParameters.java                                                    |     4 +-
- src/main/java/org/kuali/kra/questionnaire/answer/QuestionnaireAnswerServiceImpl.java                                                    |     2 +-
- src/main/java/org/kuali/kra/s2s/service/impl/S2SUtilServiceImpl.java                                                                    |     4 +-
- src/main/java/org/kuali/kra/service/impl/KraAuthorizationServiceImpl.java                                                               |    19 +-
- src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardAction.java                                                              |    12 +-
- src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardActionsAction.java                                                       |    28 +-
- src/main/java/org/kuali/kra/subawardReporting/printing/service/impl/SubAwardPrintingServiceImpl.java                                    |     4 +-
- src/main/java/org/kuali/kra/subawardReporting/printing/xmlstream/SubAwardFDPPrintXmlStream.java                                         |     1 +
- src/main/java/org/kuali/kra/timeandmoney/transactions/TransactionRuleImpl.java                                                          |     2 +-
- src/main/java/org/kuali/kra/web/filter/PerformanceLoggingFilter.java                                                                    |    39 +-
- src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java                                                   |    12 +
- src/main/resources/ApplicationResources.properties                                                                                      |     7 +-
- src/main/resources/META-INF/kc-config-defaults.xml                                                                                      |     8 +-
- src/main/resources/org/kuali/kra/CoreSpringBeans.xml                                                                                    |     8 +
- src/main/resources/org/kuali/kra/RiceOverridesSpringBeans.xml                                                                           |     6 +-
- src/main/resources/org/kuali/kra/datadictionary/Award.xml                                                                               |     5 +-
- src/main/resources/org/kuali/kra/datadictionary/AwardPerson.xml                                                                         |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/Budget.xml                                                                              |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/CustReportDetails.xml                                                                   |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/CustReportType.xml                                                                      |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/CustRptDefaultParms.xml                                                                 |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/CustRptTypeDocument.xml                                                                 |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/DevelopmentProposal.xml                                                                 |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/IacucProtocol.xml                                                                       |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposal.xml                                                               |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposalPerson.xml                                                         |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/LookupableDevelopmentProposal.xml                                                       |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/Negotiation.xml                                                                         |     5 +-
- src/main/resources/org/kuali/kra/datadictionary/NegotiationActivity.xml                                                                 |     3 +
- src/main/resources/org/kuali/kra/datadictionary/NegotiationUnassociatedDetail.xml                                                       |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/ProposalDevelopmentDocument.xml                                                         |     4 +
- src/main/resources/org/kuali/kra/datadictionary/Protocol.xml                                                                            |     4 +-
- src/main/resources/org/kuali/kra/datadictionary/Rolodex.xml                                                                             |    20 ++
- src/main/resources/org/kuali/kra/datadictionary/Sponsor.xml                                                                             |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/SponsorSpecial.xml                                                                      |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/SubAward.xml                                                                            |     4 +-
- src/main/resources/org/kuali/kra/datadictionary/SubAwardCopyRightsType.xml                                                              |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/SubAwardCostType.xml                                                                    |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/SubAwardFundingSource.xml                                                               |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/docs/RolodexMaintenanceDocument.xml                                                     |     2 +-
- src/main/resources/org/kuali/kra/datadictionary/docs/SponsorMaintenanceDocument.xml                                                     |    59 ---
- src/main/resources/org/kuali/kra/printing/stylesheet/AwardNotice.xsl                                                                    |    69 ++--
- src/main/resources/org/kuali/kra/printing/stylesheet/BudgetSummaryTotalPage.xsl                                                         |   398 ++++++++++----------
- src/main/resources/org/kuali/kra/printing/stylesheet/FDP_Modification_Template.xsl                                                      |     2 +-
- src/main/resources/org/kuali/kra/printing/stylesheet/FDP_Template_Agreement.xsl                                                         |     2 +-
- src/main/resources/repository.xml                                                                                                       |     4 +
- src/main/webapp/WEB-INF/jsp/award/awardHierarchyAwardActionsAjax.jsp                                                                    |     2 +-
- src/main/webapp/WEB-INF/jsp/coi/FinancialEntityEditList.jsp                                                                             |     6 +-
- src/main/webapp/WEB-INF/jsp/coi/FinancialEntityEditNew.jsp                                                                              |     6 +-
- src/main/webapp/WEB-INF/jsp/coi/FinancialEntityManagement.jsp                                                                           |     6 +-
- src/main/webapp/WEB-INF/jsp/coi/FinancialEntityView.jsp                                                                                 |     6 +-
- src/main/webapp/WEB-INF/jsp/coi/ViewNotification.jsp                                                                                    |     6 +-
- src/main/webapp/WEB-INF/jsp/iacuc/IacucResearchAreaAjax.jsp                                                                             |     2 +-
- src/main/webapp/WEB-INF/jsp/irb/researchAreaAjax.jsp                                                                                    |     2 +-
- src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingActions.jsp                                                                             |     6 +-
- src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingCorrespondenceAction.jsp                                                                |     6 +-
- src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingManagement.jsp                                                                          |     6 +-
- src/main/webapp/WEB-INF/jsp/meeting/meetingActions.jsp                                                                                  |     6 +-
- src/main/webapp/WEB-INF/jsp/meeting/meetingCorrespondenceAction.jsp                                                                     |     6 +-
- src/main/webapp/WEB-INF/jsp/meeting/meetingManagement.jsp                                                                               |     6 +-
- src/main/webapp/WEB-INF/jsp/multicampus_dummy_login.jsp                                                                                 |    44 ---
- src/main/webapp/WEB-INF/jsp/proposaldevelopment/ProposalDevelopmentKeyPersonnel.jsp                                                     |    17 -
- src/main/webapp/WEB-INF/jsp/proposaldevelopment/ProposalDevelopmentProposal.jsp                                                         |     4 +-
- src/main/webapp/WEB-INF/jsp/timeandmoney/awardHierarchyTimeAndMoneyAjax.jsp                                                             |     2 +-
- src/main/webapp/WEB-INF/struts-config.xml                                                                                               |    14 +-
- src/main/webapp/WEB-INF/tags/budget/budgetVersions.tag                                                                                  |     2 +-
- src/main/webapp/WEB-INF/tags/coi/approveAction.tag                                                                                      |     4 +-
- src/main/webapp/WEB-INF/tags/iacuc/onlinereview/onlineReview.tag                                                                        |     2 +-
- src/main/webapp/WEB-INF/tags/infopage.tag                                                                                               |     6 +-
- src/main/webapp/WEB-INF/tags/irb/onlinereview/onlineReview.tag                                                                          |     2 +-
- src/main/webapp/WEB-INF/tags/medusa/medusaNegotiationSummary.tag                                                                        |     2 +-
- src/main/webapp/WEB-INF/tags/questionnaire/qnInfopage.tag                                                                               |     6 +-
- src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherAwards.tag                                                                   |     2 +-
- src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherCompliance.tag                                                               |     4 +-
- src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherPersonnel.tag                                                                |     3 -
- src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherQuicklinks.tag                                                               |     3 -
- src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherReportLinks.tag                                                              |    41 +++
- src/main/webapp/WEB-INF/tags/rice-portal/channel/unitQuicklinks.tag                                                                     |     1 -
- src/main/webapp/WEB-INF/tags/rice-portal/portalBody.tag                                                                                 |     9 +-
- src/main/webapp/WEB-INF/tags/rice-portal/portalResearcherBody.tag                                                                       |    10 +-
- src/main/webapp/WEB-INF/tags/rice-portal/portalTabs.tag                                                                                 |   115 +++++-
- src/main/webapp/WEB-INF/tlds/portal-func.tld                                                                                            |    43 +++
- src/main/webapp/WEB-INF/web.xml                                                                                                         |    24 ++
- src/main/webapp/css/bootstrap/css/bootstrap-skinned.css                                                                                 |  8450 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- src/main/webapp/css/bootstrap/css/bootstrap.css                                                                                         |  6158 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- src/main/webapp/css/bootstrap/css/icons/Read Me.txt                                                                                     |     3 +
- src/main/webapp/css/bootstrap/css/icons/fonts/FontAwesome.otf                                                                           |   Bin 0 -> 75188 bytes
- src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome-webfont.eot                                                                   |   Bin 0 -> 72449 bytes
- src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome-webfont.svg                                                                   |   504 ++++++++++++++++++++++++++
- src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome-webfont.ttf                                                                   |   Bin 0 -> 141564 bytes
- src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome-webfont.woff                                                                  |   Bin 0 -> 83760 bytes
- src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome.eot                                                                           |     1 +
- src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome.svg                                                                           |     1 +
- src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome.ttf                                                                           |     1 +
- src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.dev.svg                                                                        |   374 +++++++++++++++++++
- src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.svg                                                                            |     1 +
- src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.ttf                                                                            |     1 +
- src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.woff                                                                           |     1 +
- src/main/webapp/css/bootstrap/css/icons/index.html                                                                                      |  2991 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- src/main/webapp/css/bootstrap/css/icons/license.txt                                                                                     |     2 +
- src/main/webapp/css/bootstrap/css/icons/lte-ie7.js                                                                                      |   387 ++++++++++++++++++++
- src/main/webapp/css/bootstrap/css/icons/lte-ie7.txt                                                                                     |     5 +
- src/main/webapp/css/bootstrap/css/icons/style.css                                                                                       |  1120 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- src/main/webapp/css/bootstrap/img/glyphicons-halflings.png                                                                              |   Bin 0 -> 12799 bytes
- src/main/webapp/css/bootstrap/img/logo-login.png                                                                                        |   Bin 0 -> 4094 bytes
- src/main/webapp/css/bootstrap/img/logo-watermark.png                                                                                    |   Bin 0 -> 3604 bytes
- src/main/webapp/css/bootstrap/img/logo.png                                                                                              |   Bin 0 -> 11404 bytes
- src/main/webapp/css/images/bl-bevel-focus.gif                                                                                           |   Bin 0 -> 1026 bytes
- src/main/webapp/css/rsmart.css                                                                                                          |   368 +++++++++++++++++++
- src/main/webapp/rice-portal/scripts/easyXDM/resize_intermediate.html                                                                    |     4 +-
- src/main/webapp/scripts/bootstrap/bootstrap.js                                                                                          |  2276 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- src/main/webapp/sponsorHierarchyMaint.jsp                                                                                               |     2 +-
- src/main/webapp/static/images/checkbox.gif                                                                                              |   Bin 56 -> 0 bytes
- src/main/webapp/static/images/checked.gif                                                                                               |   Bin 97 -> 0 bytes
- src/main/webapp/unitHierarchy.jsp                                                                                                       |     2 +-
+pom.xml
+src/main/config/kew/xml/2/AwardDocument.xml
+src/main/config/sql/RELEASE-SCRIPTS/KC_Install.sh
+src/main/config/sql/current/5.2.1/dml/KR_DML_01_KRACOEUS-6640_B000.sql
+src/main/config/sql/current/5.2.1/sequences/KC_SEQ_S2S_USER_ATTACHED_FORM_ID.sql
+src/main/config/sql/current/5.2.1/sequences/KC_SEQ_S2S_USER_ATTD_FORM_ATT_ID.sql
+src/main/config/sql/current_mysql/0.0.0/dml/KR_DML_01_KCINFR-1018_B000.sql
+src/main/config/sql/current_mysql/5.2.1/dml/KR_DML_01_KRACOEUS-6640_B000.sql
+src/main/config/sql/current_mysql/5.2.1/sequences/KC_SEQ_S2S_USER_ATTACHED_FORM_ATT_ID.sql
+src/main/config/sql/current_mysql/5.2.1/sequences/KC_SEQ_S2S_USER_ATTACHED_FORM_ID.sql
+src/main/config/sql/current_mysql/5.2.1/tables/KC_TBL_CONTACT_USAGE.sql
+src/main/java/com/rsmart/kuali/kra/reporting/web/struts/action/ReportForwardAction.java
+src/main/java/com/rsmart/kuali/kra/reporting/web/struts/form/ReportFormwardForm.java
+src/main/java/com/rsmart/kuali/kra/web/jstl/PortalFunctions.java
+src/main/java/com/rsmart/kuali/kra/workflow/UnitAdministratorRoleAttribute.java
+src/main/java/org/kuali/kra/award/contacts/AwardSponsorContactAuditRule.java
+src/main/java/org/kuali/kra/award/document/authorization/AwardDocumentAuthorizer.java
+src/main/java/org/kuali/kra/award/home/Award.java
+src/main/java/org/kuali/kra/award/home/AwardAmountInfo.java
+src/main/java/org/kuali/kra/award/lookup/AwardLookupableHelperServiceImpl.java
+src/main/java/org/kuali/kra/award/printing/xmlstream/AwardBaseStream.java
+src/main/java/org/kuali/kra/award/web/struts/action/AwardActionsAction.java
+src/main/java/org/kuali/kra/award/web/struts/action/AwardHomeAction.java
+src/main/java/org/kuali/kra/bo/KcPerson.java
+src/main/java/org/kuali/kra/bo/Rolodex.java
+src/main/java/org/kuali/kra/bo/RolodexMaintainableImpl.java
+src/main/java/org/kuali/kra/bo/UnitAdministrator.java
+src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetBaseStream.java
+src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetCumilativeXmlStream.java
+src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetSummaryXmlStream.java
+src/main/java/org/kuali/kra/budget/printing/xmlstream/IndustrialBudgetXmlStream.java
+src/main/java/org/kuali/kra/budget/web/struts/action/BudgetAction.java
+src/main/java/org/kuali/kra/coi/disclosure/CoiDisclosureServiceImpl.java
+src/main/java/org/kuali/kra/coi/notification/CoiNotificationRoleQualifierServiceImpl.java
+src/main/java/org/kuali/kra/coi/notification/FinancialEntityNotificationRenderer.java
+src/main/java/org/kuali/kra/coi/service/impl/CoiMessagesServiceImpl.java
+src/main/java/org/kuali/kra/committee/lookup/CommitteeLookupableHelperServiceImpl.java
+src/main/java/org/kuali/kra/common/committee/bo/CommitteeBase.java
+src/main/java/org/kuali/kra/common/committee/lookup/CommitteeLookupableHelperServiceImplBase.java
+src/main/java/org/kuali/kra/common/committee/meeting/CommitteeScheduleAttachmentsBase.java
+src/main/java/org/kuali/kra/common/committee/meeting/MeetingActionBase.java
+src/main/java/org/kuali/kra/common/committee/meeting/MeetingActionsActionBase.java
+src/main/java/org/kuali/kra/common/committee/notification/AgendaCreatedNotificationRenderer.java
+src/main/java/org/kuali/kra/common/notification/service/impl/KcNotificationServiceImpl.java
+src/main/java/org/kuali/kra/iacuc/actions/IacucProtocolActionsAction.java
+src/main/java/org/kuali/kra/iacuc/committee/lookup/IacucCommitteeLookupableHelperServiceImpl.java
+src/main/java/org/kuali/kra/iacuc/protocol/IacucProtocolProtocolAction.java
+src/main/java/org/kuali/kra/institutionalproposal/contacts/InstitutionalProposalPerson.java
+src/main/java/org/kuali/kra/institutionalproposal/contacts/InstitutionalProposalProjectPersonnelBean.java
+src/main/java/org/kuali/kra/institutionalproposal/proposallog/ProposalLogMergeAction.java
+src/main/java/org/kuali/kra/institutionalproposal/proposallog/service/impl/ProposalLogServiceImpl.java
+src/main/java/org/kuali/kra/institutionalproposal/service/impl/InstitutionalProposalLookupableHelperServiceImpl.java
+src/main/java/org/kuali/kra/institutionalproposal/service/impl/InstitutionalProposalServiceImpl.java
+src/main/java/org/kuali/kra/irb/actions/IrbProtocolActionRequestServiceImpl.java
+src/main/java/org/kuali/kra/irb/actions/ProtocolProtocolActionsAction.java
+src/main/java/org/kuali/kra/irb/actions/notification/ProtocolWithdrawnNotificationRenderer.java
+src/main/java/org/kuali/kra/irb/protocol/ProtocolProtocolAction.java
+src/main/java/org/kuali/kra/negotiations/notifications/NegotiationNotificationRenderer.java
+src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/NarrativeReplaceAuthorizer.java
+src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/PersonnelAttachmentReplaceAuthorizer.java
+src/main/java/org/kuali/kra/proposaldevelopment/notification/ProposalDevelopmentNotificationRenderer.java
+src/main/java/org/kuali/kra/proposaldevelopment/rules/ProposalDevelopmentDocumentRule.java
+src/main/java/org/kuali/kra/proposaldevelopment/service/impl/ProposalCopyServiceImpl.java
+src/main/java/org/kuali/kra/proposaldevelopment/web/struts/form/ProposalDevelopmentForm.java
+src/main/java/org/kuali/kra/protocol/actions/ActionHelperBase.java
+src/main/java/org/kuali/kra/protocol/notification/ProtocolReplacementParameters.java
+src/main/java/org/kuali/kra/questionnaire/answer/QuestionnaireAnswerServiceImpl.java
+src/main/java/org/kuali/kra/s2s/service/impl/S2SUtilServiceImpl.java
+src/main/java/org/kuali/kra/service/impl/KraAuthorizationServiceImpl.java
+src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardAction.java
+src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardActionsAction.java
+src/main/java/org/kuali/kra/subawardReporting/printing/service/impl/SubAwardPrintingServiceImpl.java
+src/main/java/org/kuali/kra/subawardReporting/printing/xmlstream/SubAwardFDPPrintXmlStream.java
+src/main/java/org/kuali/kra/timeandmoney/transactions/TransactionRuleImpl.java
+src/main/java/org/kuali/kra/web/filter/PerformanceLoggingFilter.java
+src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java
+src/main/resources/ApplicationResources.properties
+src/main/resources/META-INF/kc-config-defaults.xml
+src/main/resources/org/kuali/kra/CoreSpringBeans.xml
+src/main/resources/org/kuali/kra/RiceOverridesSpringBeans.xml
+src/main/resources/org/kuali/kra/datadictionary/Award.xml
+src/main/resources/org/kuali/kra/datadictionary/AwardPerson.xml
+src/main/resources/org/kuali/kra/datadictionary/Budget.xml
+src/main/resources/org/kuali/kra/datadictionary/CustReportDetails.xml
+src/main/resources/org/kuali/kra/datadictionary/CustReportType.xml
+src/main/resources/org/kuali/kra/datadictionary/CustRptDefaultParms.xml
+src/main/resources/org/kuali/kra/datadictionary/CustRptTypeDocument.xml
+src/main/resources/org/kuali/kra/datadictionary/DevelopmentProposal.xml
+src/main/resources/org/kuali/kra/datadictionary/IacucProtocol.xml
+src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposal.xml
+src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposalPerson.xml
+src/main/resources/org/kuali/kra/datadictionary/LookupableDevelopmentProposal.xml
+src/main/resources/org/kuali/kra/datadictionary/Negotiation.xml
+src/main/resources/org/kuali/kra/datadictionary/NegotiationActivity.xml
+src/main/resources/org/kuali/kra/datadictionary/NegotiationUnassociatedDetail.xml
+src/main/resources/org/kuali/kra/datadictionary/ProposalDevelopmentDocument.xml
+src/main/resources/org/kuali/kra/datadictionary/Protocol.xml
+src/main/resources/org/kuali/kra/datadictionary/Rolodex.xml
+src/main/resources/org/kuali/kra/datadictionary/Sponsor.xml
+src/main/resources/org/kuali/kra/datadictionary/SponsorSpecial.xml
+src/main/resources/org/kuali/kra/datadictionary/SubAward.xml
+src/main/resources/org/kuali/kra/datadictionary/SubAwardCopyRightsType.xml
+src/main/resources/org/kuali/kra/datadictionary/SubAwardCostType.xml
+src/main/resources/org/kuali/kra/datadictionary/SubAwardFundingSource.xml
+src/main/resources/org/kuali/kra/datadictionary/docs/RolodexMaintenanceDocument.xml
+src/main/resources/org/kuali/kra/datadictionary/docs/SponsorMaintenanceDocument.xml
+src/main/resources/org/kuali/kra/printing/stylesheet/AwardNotice.xsl
+src/main/resources/org/kuali/kra/printing/stylesheet/BudgetSummaryTotalPage.xsl
+src/main/resources/org/kuali/kra/printing/stylesheet/FDP_Modification_Template.xsl
+src/main/resources/org/kuali/kra/printing/stylesheet/FDP_Template_Agreement.xsl
+src/main/resources/repository.xml
+src/main/webapp/WEB-INF/jsp/award/awardHierarchyAwardActionsAjax.jsp
+src/main/webapp/WEB-INF/jsp/coi/FinancialEntityEditList.jsp
+src/main/webapp/WEB-INF/jsp/coi/FinancialEntityEditNew.jsp
+src/main/webapp/WEB-INF/jsp/coi/FinancialEntityManagement.jsp
+src/main/webapp/WEB-INF/jsp/coi/FinancialEntityView.jsp
+src/main/webapp/WEB-INF/jsp/coi/ViewNotification.jsp
+src/main/webapp/WEB-INF/jsp/iacuc/IacucResearchAreaAjax.jsp
+src/main/webapp/WEB-INF/jsp/irb/researchAreaAjax.jsp
+src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingActions.jsp
+src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingCorrespondenceAction.jsp
+src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingManagement.jsp
+src/main/webapp/WEB-INF/jsp/meeting/meetingActions.jsp
+src/main/webapp/WEB-INF/jsp/meeting/meetingCorrespondenceAction.jsp
+src/main/webapp/WEB-INF/jsp/meeting/meetingManagement.jsp
+src/main/webapp/WEB-INF/jsp/multicampus_dummy_login.jsp
+src/main/webapp/WEB-INF/jsp/proposaldevelopment/ProposalDevelopmentKeyPersonnel.jsp
+src/main/webapp/WEB-INF/jsp/proposaldevelopment/ProposalDevelopmentProposal.jsp
+src/main/webapp/WEB-INF/jsp/timeandmoney/awardHierarchyTimeAndMoneyAjax.jsp
+src/main/webapp/WEB-INF/struts-config.xml
+src/main/webapp/WEB-INF/tags/budget/budgetVersions.tag
+src/main/webapp/WEB-INF/tags/coi/approveAction.tag
+src/main/webapp/WEB-INF/tags/iacuc/onlinereview/onlineReview.tag
+src/main/webapp/WEB-INF/tags/infopage.tag
+src/main/webapp/WEB-INF/tags/irb/onlinereview/onlineReview.tag
+src/main/webapp/WEB-INF/tags/medusa/medusaNegotiationSummary.tag
+src/main/webapp/WEB-INF/tags/questionnaire/qnInfopage.tag
+src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherAwards.tag
+src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherCompliance.tag
+src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherPersonnel.tag
+src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherQuicklinks.tag
+src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherReportLinks.tag
+src/main/webapp/WEB-INF/tags/rice-portal/channel/unitQuicklinks.tag
+src/main/webapp/WEB-INF/tags/rice-portal/portalBody.tag
+src/main/webapp/WEB-INF/tags/rice-portal/portalResearcherBody.tag
+src/main/webapp/WEB-INF/tags/rice-portal/portalTabs.tag
+src/main/webapp/WEB-INF/tlds/portal-func.tld
+src/main/webapp/WEB-INF/web.xml
+src/main/webapp/css/bootstrap/css/bootstrap-skinned.css
+src/main/webapp/css/bootstrap/css/bootstrap.css
+src/main/webapp/css/bootstrap/css/icons/Read Me.txt
+src/main/webapp/css/bootstrap/css/icons/fonts/FontAwesome.otf
+src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome-webfont.eot
+src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome-webfont.svg
+src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome-webfont.ttf
+src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome-webfont.woff
+src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome.eot
+src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome.svg
+src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome.ttf
+src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.dev.svg
+src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.svg
+src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.ttf
+src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.woff
+src/main/webapp/css/bootstrap/css/icons/index.html
+src/main/webapp/css/bootstrap/css/icons/license.txt
+src/main/webapp/css/bootstrap/css/icons/lte-ie7.js
+src/main/webapp/css/bootstrap/css/icons/lte-ie7.txt
+src/main/webapp/css/bootstrap/css/icons/style.css
+src/main/webapp/css/bootstrap/img/glyphicons-halflings.png
+src/main/webapp/css/bootstrap/img/logo-login.png
+src/main/webapp/css/bootstrap/img/logo-watermark.png
+src/main/webapp/css/bootstrap/img/logo.png
+src/main/webapp/css/images/bl-bevel-focus.gif
+src/main/webapp/css/rsmart.css
+src/main/webapp/rice-portal/scripts/easyXDM/resize_intermediate.html
+src/main/webapp/scripts/bootstrap/bootstrap.js
+src/main/webapp/sponsorHierarchyMaint.jsp
+src/main/webapp/static/images/checkbox.gif
+src/main/webapp/static/images/checked.gif
+src/main/webapp/unitHierarchy.jsp
