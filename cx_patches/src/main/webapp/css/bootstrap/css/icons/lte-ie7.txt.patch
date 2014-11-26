@@ -1,0 +1,12 @@
+diff --git a/src/main/webapp/css/bootstrap/css/icons/lte-ie7.txt b/src/main/webapp/css/bootstrap/css/icons/lte-ie7.txt
+new file mode 100644
+index 0000000..5558e5f
+--- /dev/null
++++ b/src/main/webapp/css/bootstrap/css/icons/lte-ie7.txt
+@@ -0,0 +1,5 @@
++FILE DELETED
++
++Microsoft Forefront Protection for Exchange Server removed a file since it was found to match a filter.
++File name: "winmail.dat->resources-KCskin2013.11.11.zip->lte-ie7.js"
++Filter name: "FILE FILTER= IU File Filter List: *.js"
+\ No newline at end of file

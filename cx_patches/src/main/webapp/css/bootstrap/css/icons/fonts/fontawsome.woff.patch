@@ -1,0 +1,8 @@
+diff --git a/src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.woff b/src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.woff
+new file mode 120000
+index 0000000..5b1f2a9
+--- /dev/null
++++ b/src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.woff
+@@ -0,0 +1 @@
++fontawesome-webfont.woff
+\ No newline at end of file
