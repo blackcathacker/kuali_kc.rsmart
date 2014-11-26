@@ -2,7 +2,7 @@ diff --git a/src/main/webapp/css/bootstrap/css/icons/Read Me.txt b/src/main/weba
 new file mode 100644
 index 0000000..9d2b9e5
 --- /dev/null
-+++ b/src/main/webapp/css/bootstrap/css/icons/Read Me.txt	
++++ b/src/main/webapp/css/bootstrap/css/icons/Read Me.txt
 @@ -0,0 +1,3 @@
 +To modify your generated font, use the *dev.svg* file, located in the *fonts* folder in this package. You can import this dev.svg file to the IcoMoon app. All the tags (class names) and the Unicode points of your glyphs are saved in this file.
 +
