@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/datadictionary/Sponsor.xml b/src/main/resources/org/kuali/kra/datadictionary/Sponsor.xml
 index 3f2f2d7..0ef2f37 100644
---- a/src/main/resources/org/kuali/kra/datadictionary/Sponsor.xml
-+++ b/src/main/resources/org/kuali/kra/datadictionary/Sponsor.xml
+--- a/coeus-impl/src/main/resources/org/kuali/coeus/common/impl/sponsor/Sponsor.xml
++++ b/coeus-impl/src/main/resources/org/kuali/coeus/common/impl/sponsor/Sponsor.xml
 @@ -463,7 +463,7 @@
        </list>
      </property>

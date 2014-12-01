@@ -1,7 +1,7 @@
 diff --git a/src/main/config/sql/current_mysql/5.2.1/tables/KC_TBL_CONTACT_USAGE.sql b/src/main/config/sql/current_mysql/5.2.1/tables/KC_TBL_CONTACT_USAGE.sql
 index ebab761..9cc8a39 100644
---- a/src/main/config/sql/current_mysql/5.2.1/tables/KC_TBL_CONTACT_USAGE.sql
-+++ b/src/main/config/sql/current_mysql/5.2.1/tables/KC_TBL_CONTACT_USAGE.sql
+--- a/coeus-db/coeus-db-sql/src/main/resources/org/kuali/coeus/coeus-sql/current_mysql/5.2.1/tables/KC_TBL_CONTACT_USAGE.sql
++++ b/coeus-db/coeus-db-sql/src/main/resources/org/kuali/coeus/coeus-sql/current_mysql/5.2.1/tables/KC_TBL_CONTACT_USAGE.sql
 @@ -2,7 +2,7 @@ DELIMITER /
  
  CREATE TABLE CONTACT_USAGE (

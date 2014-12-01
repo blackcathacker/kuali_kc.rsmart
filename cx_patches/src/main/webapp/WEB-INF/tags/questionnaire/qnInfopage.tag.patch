@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/tags/questionnaire/qnInfopage.tag b/src/main/webapp/WEB-INF/tags/questionnaire/qnInfopage.tag
 index ad63d12..0efd601 100644
---- a/src/main/webapp/WEB-INF/tags/questionnaire/qnInfopage.tag
-+++ b/src/main/webapp/WEB-INF/tags/questionnaire/qnInfopage.tag
+--- a/coeus-webapp/src/main/webapp/WEB-INF/tags/questionnaire/qnInfopage.tag
++++ b/coeus-webapp/src/main/webapp/WEB-INF/tags/questionnaire/qnInfopage.tag
 @@ -18,8 +18,8 @@
  <%@ attribute name="action" required="true" %>
  <%@ attribute name="htmlFormAction" required="true" %>

@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/datadictionary/ProposalDevelopmentDocument.xml b/src/main/resources/org/kuali/kra/datadictionary/ProposalDevelopmentDocument.xml
 index 821aa4e..19be724 100644
---- a/src/main/resources/org/kuali/kra/datadictionary/ProposalDevelopmentDocument.xml
-+++ b/src/main/resources/org/kuali/kra/datadictionary/ProposalDevelopmentDocument.xml
+--- a/coeus-impl/src/main/resources/org/kuali/coeus/propdev/impl/core/ProposalDevelopmentDocument.xml
++++ b/coeus-impl/src/main/resources/org/kuali/coeus/propdev/impl/core/ProposalDevelopmentDocument.xml
 @@ -146,6 +146,10 @@
                <bean parent="WorkflowProperty" p:path="developmentProposalList.principalInvestigatorName"/>
                <bean parent="WorkflowProperty" p:path="developmentProposalList.title"/>

@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherPersonnel.tag b/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherPersonnel.tag
 index 5ef7997..1dad6c0 100644
---- a/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherPersonnel.tag
-+++ b/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherPersonnel.tag
+--- a/coeus-webapp/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherPersonnel.tag
++++ b/coeus-webapp/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherPersonnel.tag
 @@ -18,10 +18,7 @@
  <channel:portalChannelTop channelTitle="Personnel" />
  <div class="body">

@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/coi/notification/CoiNotificationRoleQualifierServiceImpl.java b/src/main/java/org/kuali/kra/coi/notification/CoiNotificationRoleQualifierServiceImpl.java
 index c6c6b4a..29f3dcf 100644
---- a/src/main/java/org/kuali/kra/coi/notification/CoiNotificationRoleQualifierServiceImpl.java
-+++ b/src/main/java/org/kuali/kra/coi/notification/CoiNotificationRoleQualifierServiceImpl.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/coi/notification/CoiNotificationRoleQualifierServiceImpl.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/coi/notification/CoiNotificationRoleQualifierServiceImpl.java
 @@ -17,6 +17,7 @@ package org.kuali.kra.coi.notification;
  
  import org.apache.commons.lang.StringUtils;

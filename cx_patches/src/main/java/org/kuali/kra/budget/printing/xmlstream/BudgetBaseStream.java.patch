@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetBaseStream.java b/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetBaseStream.java
 index 3ba4fa5..5380745 100644
---- a/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetBaseStream.java
-+++ b/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetBaseStream.java
+--- a/coeus-impl/src/main/java/org/kuali/coeus/common/budget/impl/print/BudgetBaseStream.java
++++ b/coeus-impl/src/main/java/org/kuali/coeus/common/budget/impl/print/BudgetBaseStream.java
 @@ -46,6 +46,7 @@ import java.lang.reflect.Method;
  import java.sql.Date;
  import java.util.ArrayList;

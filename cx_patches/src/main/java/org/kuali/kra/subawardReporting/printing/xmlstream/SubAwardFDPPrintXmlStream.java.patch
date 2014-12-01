@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/subawardReporting/printing/xmlstream/SubAwardFDPPrintXmlStream.java b/src/main/java/org/kuali/kra/subawardReporting/printing/xmlstream/SubAwardFDPPrintXmlStream.java
 index 41f8e2b..9826fcb 100644
---- a/src/main/java/org/kuali/kra/subawardReporting/printing/xmlstream/SubAwardFDPPrintXmlStream.java
-+++ b/src/main/java/org/kuali/kra/subawardReporting/printing/xmlstream/SubAwardFDPPrintXmlStream.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/subawardReporting/printing/xmlstream/SubAwardFDPPrintXmlStream.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/subawardReporting/printing/xmlstream/SubAwardFDPPrintXmlStream.java
 @@ -394,6 +394,7 @@ public class SubAwardFDPPrintXmlStream implements XmlStream  {
                  rolodexDetails.setEmail(subaward.getRolodex().getEmailAddress());
              }

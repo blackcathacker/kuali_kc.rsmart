@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/common/committee/meeting/MeetingActionsActionBase.java b/src/main/java/org/kuali/kra/common/committee/meeting/MeetingActionsActionBase.java
 index ba07b62..c1a0527 100644
---- a/src/main/java/org/kuali/kra/common/committee/meeting/MeetingActionsActionBase.java
-+++ b/src/main/java/org/kuali/kra/common/committee/meeting/MeetingActionsActionBase.java
+--- a/coeus-impl/src/main/java/org/kuali/coeus/common/committee/impl/meeting/MeetingActionsActionBase.java
++++ b/coeus-impl/src/main/java/org/kuali/coeus/common/committee/impl/meeting/MeetingActionsActionBase.java
 @@ -197,13 +197,15 @@ public abstract class MeetingActionsActionBase extends MeetingActionBase {
          MeetingHelperBase meetingHelper = ((MeetingFormBase) form).getMeetingHelper();
          PrintableAttachment source = new PrintableAttachment();

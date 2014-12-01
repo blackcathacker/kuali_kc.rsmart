@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/tags/rice-portal/portalBody.tag b/src/main/webapp/WEB-INF/tags/rice-portal/portalBody.tag
 index afeb0f6..93cfb17 100644
---- a/src/main/webapp/WEB-INF/tags/rice-portal/portalBody.tag
-+++ b/src/main/webapp/WEB-INF/tags/rice-portal/portalBody.tag
+--- a/coeus-webapp/src/main/webapp/WEB-INF/tags/rice-portal/portalBody.tag
++++ b/coeus-webapp/src/main/webapp/WEB-INF/tags/rice-portal/portalBody.tag
 @@ -19,8 +19,6 @@
  <%@ attribute name="channelUrl" required="true" %>
  <%@ attribute name="selectedTab" required="true" %>

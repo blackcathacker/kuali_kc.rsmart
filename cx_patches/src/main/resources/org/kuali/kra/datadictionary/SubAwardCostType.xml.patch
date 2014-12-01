@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/datadictionary/SubAwardCostType.xml b/src/main/resources/org/kuali/kra/datadictionary/SubAwardCostType.xml
 index 8fdb0fa..23a8315 100644
---- a/src/main/resources/org/kuali/kra/datadictionary/SubAwardCostType.xml
-+++ b/src/main/resources/org/kuali/kra/datadictionary/SubAwardCostType.xml
+--- a/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/SubAwardCostType.xml
++++ b/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/SubAwardCostType.xml
 @@ -88,7 +88,7 @@
          
        </list>

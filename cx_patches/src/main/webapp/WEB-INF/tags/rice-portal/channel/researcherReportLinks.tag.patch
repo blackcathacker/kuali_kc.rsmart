@@ -2,7 +2,7 @@ diff --git a/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherReportLi
 new file mode 100644
 index 0000000..bb5805a
 --- /dev/null
-+++ b/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherReportLinks.tag
++++ b/coeus-webapp/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherReportLinks.tag
 @@ -0,0 +1,41 @@
 +<%--
 + Copyright 2005-2010 The Kuali Foundation

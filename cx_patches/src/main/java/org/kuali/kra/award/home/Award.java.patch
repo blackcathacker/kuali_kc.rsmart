@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/award/home/Award.java b/src/main/java/org/kuali/kra/award/home/Award.java
 index 3af2d42..6eda3c2 100644
---- a/src/main/java/org/kuali/kra/award/home/Award.java
-+++ b/src/main/java/org/kuali/kra/award/home/Award.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/award/home/Award.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/award/home/Award.java
 @@ -107,6 +107,7 @@ public class Award extends KraPersistableBusinessObjectBase implements KeywordsM
      public static final String NOTIFICATION_IACUC_SPECIAL_REVIEW_LINK_DELETED = "555";
      

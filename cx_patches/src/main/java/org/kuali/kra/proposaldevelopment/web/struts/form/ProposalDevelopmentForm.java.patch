@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/proposaldevelopment/web/struts/form/ProposalDevelopmentForm.java b/src/main/java/org/kuali/kra/proposaldevelopment/web/struts/form/ProposalDevelopmentForm.java
 index 8e63c45..145ffbb 100644
---- a/src/main/java/org/kuali/kra/proposaldevelopment/web/struts/form/ProposalDevelopmentForm.java
-+++ b/src/main/java/org/kuali/kra/proposaldevelopment/web/struts/form/ProposalDevelopmentForm.java
+--- a/coeus-impl/src/main/java/org/kuali/coeus/propdev/impl/core/ProposalDevelopmentForm.java
++++ b/coeus-impl/src/main/java/org/kuali/coeus/propdev/impl/core/ProposalDevelopmentForm.java
 @@ -547,8 +547,8 @@ public class ProposalDevelopmentForm extends BudgetVersionFormBase implements Re
       * @return the value of newProposalPersonUnit
       */

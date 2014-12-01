@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/jsp/coi/FinancialEntityEditList.jsp b/src/main/webapp/WEB-INF/jsp/coi/FinancialEntityEditList.jsp
 index 75dcfff..73e1358 100644
---- a/src/main/webapp/WEB-INF/jsp/coi/FinancialEntityEditList.jsp
-+++ b/src/main/webapp/WEB-INF/jsp/coi/FinancialEntityEditList.jsp
+--- a/coeus-webapp/src/main/webapp/WEB-INF/jsp/coi/FinancialEntityEditList.jsp
++++ b/coeus-webapp/src/main/webapp/WEB-INF/jsp/coi/FinancialEntityEditList.jsp
 @@ -16,8 +16,8 @@
  
  <%@ include file="/WEB-INF/jsp/kraTldHeader.jsp"%>

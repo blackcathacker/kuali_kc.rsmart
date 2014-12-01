@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/jsp/coi/ViewNotification.jsp b/src/main/webapp/WEB-INF/jsp/coi/ViewNotification.jsp
 index 0d6f7e3..57608bb 100644
---- a/src/main/webapp/WEB-INF/jsp/coi/ViewNotification.jsp
-+++ b/src/main/webapp/WEB-INF/jsp/coi/ViewNotification.jsp
+--- a/coeus-webapp/src/main/webapp/WEB-INF/jsp/coi/ViewNotification.jsp
++++ b/coeus-webapp/src/main/webapp/WEB-INF/jsp/coi/ViewNotification.jsp
 @@ -1,10 +1,10 @@
  <%@ include file="/WEB-INF/jsp/kraTldHeader.jsp"%>
 -<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">

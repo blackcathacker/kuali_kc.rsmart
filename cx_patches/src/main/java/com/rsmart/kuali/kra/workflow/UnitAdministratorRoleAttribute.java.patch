@@ -2,7 +2,7 @@ diff --git a/src/main/java/com/rsmart/kuali/kra/workflow/UnitAdministratorRoleAt
 new file mode 100644
 index 0000000..d6d4cde
 --- /dev/null
-+++ b/src/main/java/com/rsmart/kuali/kra/workflow/UnitAdministratorRoleAttribute.java
++++ b/coeus-impl/src/main/java/org/kuali/coeus/common/framework/unit/admin/UnitAdministratorRoleAttribute.java
 @@ -0,0 +1,153 @@
 +package com.rsmart.kuali.kra.workflow;
 +

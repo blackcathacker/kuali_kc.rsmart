@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/printing/stylesheet/FDP_Template_Agreement.xsl b/src/main/resources/org/kuali/kra/printing/stylesheet/FDP_Template_Agreement.xsl
 index b0f7c3e..db5a3cf 100644
---- a/src/main/resources/org/kuali/kra/printing/stylesheet/FDP_Template_Agreement.xsl
-+++ b/src/main/resources/org/kuali/kra/printing/stylesheet/FDP_Template_Agreement.xsl
+--- a/coeus-impl/src/main/resources/org/kuali/kra/printing/stylesheet/FDP_Template_Agreement.xsl
++++ b/coeus-impl/src/main/resources/org/kuali/kra/printing/stylesheet/FDP_Template_Agreement.xsl
 @@ -237,7 +237,7 @@
  																	</fo:inline>
  																	<xsl:for-each select="subcontract:SubContractData">

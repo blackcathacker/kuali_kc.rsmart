@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/tags/irb/onlinereview/onlineReview.tag b/src/main/webapp/WEB-INF/tags/irb/onlinereview/onlineReview.tag
 index 901512e..c1798de 100644
---- a/src/main/webapp/WEB-INF/tags/irb/onlinereview/onlineReview.tag
-+++ b/src/main/webapp/WEB-INF/tags/irb/onlinereview/onlineReview.tag
+--- a/coeus-webapp/src/main/webapp/WEB-INF/tags/irb/onlinereview/onlineReview.tag
++++ b/coeus-webapp/src/main/webapp/WEB-INF/tags/irb/onlinereview/onlineReview.tag
 @@ -52,7 +52,7 @@
    	
    	    <c:if test="${ !empty KualiForm.onlineReviewsActionHelper.protocolOnlineReviewDocuments[renderIndex].protocolOnlineReview.committeeScheduleMinutes or !empty KualiForm.onlineReviewsActionHelper.protocolOnlineReviewDocuments[renderIndex].protocolOnlineReview.reviewAttachments }">

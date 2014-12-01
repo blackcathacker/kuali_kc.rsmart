@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/repository.xml b/src/main/resources/repository.xml
 index d107442..323948d 100755
---- a/src/main/resources/repository.xml
-+++ b/src/main/resources/repository.xml
+--- a/coeus-impl/src/main/resources/repository.xml
++++ b/coeus-impl/src/main/resources/repository.xml
 @@ -435,6 +435,10 @@
          	<foreignkey field-ref="ownedByUnit" />
      	</reference-descriptor>

@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/ApplicationResources.properties b/src/main/resources/ApplicationResources.properties
 index e7f79e4..2a27fab 100644
---- a/src/main/resources/ApplicationResources.properties
-+++ b/src/main/resources/ApplicationResources.properties
+--- a/coeus-impl/src/main/resources/ApplicationResources.properties
++++ b/coeus-impl/src/main/resources/ApplicationResources.properties
 @@ -350,6 +350,7 @@ error.invalid.date.required.for=There is a conflict between Valid Answers and Da
  error.invalid.explanation.required.for=There is a conflict between Valid Answers and Explanation Required For configuration.
  error.invalid.primeSponsorCode=Prime Sponsor ID is invalid.

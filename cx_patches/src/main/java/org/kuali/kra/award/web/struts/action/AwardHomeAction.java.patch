@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/award/web/struts/action/AwardHomeAction.java b/src/main/java/org/kuali/kra/award/web/struts/action/AwardHomeAction.java
 index c944664..68c4433 100644
---- a/src/main/java/org/kuali/kra/award/web/struts/action/AwardHomeAction.java
-+++ b/src/main/java/org/kuali/kra/award/web/struts/action/AwardHomeAction.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/award/web/struts/action/AwardHomeAction.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/award/web/struts/action/AwardHomeAction.java
 @@ -47,6 +47,7 @@ import org.kuali.rice.krad.util.KRADConstants;
  
  import javax.servlet.http.HttpServletRequest;

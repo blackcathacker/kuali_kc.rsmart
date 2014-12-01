@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/common/notification/service/impl/KcNotificationServiceImpl.java b/src/main/java/org/kuali/kra/common/notification/service/impl/KcNotificationServiceImpl.java
 index 468723a..d27f91b 100644
---- a/src/main/java/org/kuali/kra/common/notification/service/impl/KcNotificationServiceImpl.java
-+++ b/src/main/java/org/kuali/kra/common/notification/service/impl/KcNotificationServiceImpl.java
+--- a/coeus-impl/src/main/java/org/kuali/coeus/common/notification/impl/service/impl/KcNotificationServiceImpl.java
++++ b/coeus-impl/src/main/java/org/kuali/coeus/common/notification/impl/service/impl/KcNotificationServiceImpl.java
 @@ -46,6 +46,7 @@ import org.kuali.kra.service.KcPersonService;
  import org.kuali.kra.service.RolodexService;
  import org.kuali.kra.util.EmailAttachment;

@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/award/document/authorization/AwardDocumentAuthorizer.java b/src/main/java/org/kuali/kra/award/document/authorization/AwardDocumentAuthorizer.java
 index f40f940..29eb21c 100644
---- a/src/main/java/org/kuali/kra/award/document/authorization/AwardDocumentAuthorizer.java
-+++ b/src/main/java/org/kuali/kra/award/document/authorization/AwardDocumentAuthorizer.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/award/document/authorization/AwardDocumentAuthorizer.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/award/document/authorization/AwardDocumentAuthorizer.java
 @@ -270,7 +270,7 @@ public class AwardDocumentAuthorizer extends KcTransactionalDocumentAuthorizerBa
              Map<String, AwardHierarchyNode> awardHierarchyNodes = new HashMap<String, AwardHierarchyNode>();
              Map<String, AwardHierarchy> awardHierarchyItems = awardHierarchyService.getAwardHierarchy(awardDocument.getAward().getAwardNumber(), new ArrayList<String>());

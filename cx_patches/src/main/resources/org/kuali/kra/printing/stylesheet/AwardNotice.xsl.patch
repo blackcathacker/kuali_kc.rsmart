@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/printing/stylesheet/AwardNotice.xsl b/src/main/resources/org/kuali/kra/printing/stylesheet/AwardNotice.xsl
 index 5fb6ded..2e12b38 100644
---- a/src/main/resources/org/kuali/kra/printing/stylesheet/AwardNotice.xsl
-+++ b/src/main/resources/org/kuali/kra/printing/stylesheet/AwardNotice.xsl
+--- a/coeus-impl/src/main/resources/org/kuali/kra/printing/stylesheet/AwardNotice.xsl
++++ b/coeus-impl/src/main/resources/org/kuali/kra/printing/stylesheet/AwardNotice.xsl
 @@ -3840,27 +3840,14 @@
  									<fo:block>
  											<xsl:text>&#160;</xsl:text>											

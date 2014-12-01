@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/budget/web/struts/action/BudgetAction.java b/src/main/java/org/kuali/kra/budget/web/struts/action/BudgetAction.java
 index 036fc1e..ec694ae 100644
---- a/src/main/java/org/kuali/kra/budget/web/struts/action/BudgetAction.java
-+++ b/src/main/java/org/kuali/kra/budget/web/struts/action/BudgetAction.java
+--- a/coeus-impl/src/main/java/org/kuali/coeus/common/budget/impl/struts/BudgetAction.java
++++ b/coeus-impl/src/main/java/org/kuali/coeus/common/budget/impl/struts/BudgetAction.java
 @@ -185,11 +185,12 @@ public class BudgetAction extends BudgetActionBase {
       */
      @Override

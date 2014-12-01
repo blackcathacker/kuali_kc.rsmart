@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/tags/budget/budgetVersions.tag b/src/main/webapp/WEB-INF/tags/budget/budgetVersions.tag
 index f1c064f..3913cec 100644
---- a/src/main/webapp/WEB-INF/tags/budget/budgetVersions.tag
-+++ b/src/main/webapp/WEB-INF/tags/budget/budgetVersions.tag
+--- a/coeus-webapp/src/main/webapp/WEB-INF/tags/budget/budgetVersions.tag
++++ b/coeus-webapp/src/main/webapp/WEB-INF/tags/budget/budgetVersions.tag
 @@ -160,7 +160,7 @@
  			<kra:section permission="addBudget">
  			<tr class="addline">

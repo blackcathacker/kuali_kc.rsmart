@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherCompliance.tag b/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherCompliance.tag
 index 22e1eb1..753c264 100644
---- a/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherCompliance.tag
-+++ b/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherCompliance.tag
+--- a/coeus-webapp/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherCompliance.tag
++++ b/coeus-webapp/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherCompliance.tag
 @@ -20,8 +20,8 @@
  <c:set var="cmotd" value="<%= (org.kuali.kra.infrastructure.KraServiceLocator.getService(org.kuali.kra.coi.service.CoiMessagesService.class)).getMessages() %>" scope="page"/>
  <c:if test="${!empty pageScope.cmotd}">

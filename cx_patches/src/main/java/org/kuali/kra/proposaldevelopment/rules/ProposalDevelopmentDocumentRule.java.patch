@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/proposaldevelopment/rules/ProposalDevelopmentDocumentRule.java b/src/main/java/org/kuali/kra/proposaldevelopment/rules/ProposalDevelopmentDocumentRule.java
 index 6b528e7..e6e4a0e 100644
---- a/src/main/java/org/kuali/kra/proposaldevelopment/rules/ProposalDevelopmentDocumentRule.java
-+++ b/src/main/java/org/kuali/kra/proposaldevelopment/rules/ProposalDevelopmentDocumentRule.java
+--- a/coeus-impl/src/main/java/org/kuali/coeus/propdev/impl/core/ProposalDevelopmentDocumentRule.java
++++ b/coeus-impl/src/main/java/org/kuali/coeus/propdev/impl/core/ProposalDevelopmentDocumentRule.java
 @@ -543,7 +543,13 @@ public class ProposalDevelopmentDocumentRule extends ResearchDocumentRuleBase im
      }
      

@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherQuicklinks.tag b/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherQuicklinks.tag
 index c034a2c..c84be0f 100644
---- a/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherQuicklinks.tag
-+++ b/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherQuicklinks.tag
+--- a/coeus-webapp/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherQuicklinks.tag
++++ b/coeus-webapp/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherQuicklinks.tag
 @@ -18,10 +18,7 @@
  <channel:portalChannelTop channelTitle="Quicklinks" />
  <div class="body">

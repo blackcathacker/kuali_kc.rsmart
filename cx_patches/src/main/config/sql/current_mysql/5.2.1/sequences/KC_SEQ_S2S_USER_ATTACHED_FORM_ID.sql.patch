@@ -2,7 +2,7 @@ diff --git a/src/main/config/sql/current_mysql/5.2.1/sequences/KC_SEQ_S2S_USER_A
 new file mode 100644
 index 0000000..628fd97
 --- /dev/null
-+++ b/src/main/config/sql/current_mysql/5.2.1/sequences/KC_SEQ_S2S_USER_ATTACHED_FORM_ID.sql
++++ b/coeus-db/coeus-db-sql/src/main/resources/org/kuali/coeus/coeus-sql/current_mysql/5.2.1/sequences/KC_SEQ_S2S_USER_ATTACHED_FORM_ID.sql
 @@ -0,0 +1,10 @@
 +DELIMITER /
 +

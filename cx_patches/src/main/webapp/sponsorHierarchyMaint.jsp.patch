@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/sponsorHierarchyMaint.jsp b/src/main/webapp/sponsorHierarchyMaint.jsp
 index a1ec500..4ae5d15 100644
---- a/src/main/webapp/sponsorHierarchyMaint.jsp
-+++ b/src/main/webapp/sponsorHierarchyMaint.jsp
+--- a/coeus-webapp/src/main/webapp/sponsorHierarchyMaint.jsp
++++ b/coeus-webapp/src/main/webapp/sponsorHierarchyMaint.jsp
 @@ -14,7 +14,7 @@
   limitations under the License.
  --%>

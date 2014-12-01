@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/bo/Rolodex.java b/src/main/java/org/kuali/kra/bo/Rolodex.java
 index 8b8935a..5b354d3 100644
---- a/src/main/java/org/kuali/kra/bo/Rolodex.java
-+++ b/src/main/java/org/kuali/kra/bo/Rolodex.java
+--- a/coeus-impl/src/main/java/org/kuali/coeus/common/framework/rolodex/Rolodex.java
++++ b/coeus-impl/src/main/java/org/kuali/coeus/common/framework/rolodex/Rolodex.java
 @@ -63,6 +63,8 @@ public class Rolodex extends KraPersistableBusinessObjectBase implements Contact
  
      private Boolean sponsorAddressFlag;

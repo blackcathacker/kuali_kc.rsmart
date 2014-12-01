@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/award/home/AwardAmountInfo.java b/src/main/java/org/kuali/kra/award/home/AwardAmountInfo.java
 index 988187e..5052f91 100644
---- a/src/main/java/org/kuali/kra/award/home/AwardAmountInfo.java
-+++ b/src/main/java/org/kuali/kra/award/home/AwardAmountInfo.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/award/home/AwardAmountInfo.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/award/home/AwardAmountInfo.java
 @@ -80,14 +80,20 @@ public class AwardAmountInfo extends AwardAssociate {
      // private AwardBudgetInfo awardBudgetInfo;   
      // private AwardAmtFnaDistribution awardAmtFnaDistribution;   

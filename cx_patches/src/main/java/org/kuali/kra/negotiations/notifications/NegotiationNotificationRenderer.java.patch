@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/negotiations/notifications/NegotiationNotificationRenderer.java b/src/main/java/org/kuali/kra/negotiations/notifications/NegotiationNotificationRenderer.java
 index e0e0e0e..d917ec1 100644
---- a/src/main/java/org/kuali/kra/negotiations/notifications/NegotiationNotificationRenderer.java
-+++ b/src/main/java/org/kuali/kra/negotiations/notifications/NegotiationNotificationRenderer.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/negotiations/notifications/NegotiationNotificationRenderer.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/negotiations/notifications/NegotiationNotificationRenderer.java
 @@ -18,8 +18,8 @@ package org.kuali.kra.negotiations.notifications;
  import org.apache.commons.lang.StringUtils;
  import org.kuali.kra.common.notification.NotificationRendererBase;

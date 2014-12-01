@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposal.xml b/src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposal.xml
 index 2f2a01a..6a42212 100644
---- a/src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposal.xml
-+++ b/src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposal.xml
+--- a/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposal.xml
++++ b/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposal.xml
 @@ -1010,7 +1010,7 @@
              <bean parent="SortDefinition" >
          </bean>

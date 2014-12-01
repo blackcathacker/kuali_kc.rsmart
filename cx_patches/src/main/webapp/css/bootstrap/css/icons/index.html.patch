@@ -2,7 +2,7 @@ diff --git a/src/main/webapp/css/bootstrap/css/icons/index.html b/src/main/webap
 new file mode 100644
 index 0000000..19fadcc
 --- /dev/null
-+++ b/src/main/webapp/css/bootstrap/css/icons/index.html
++++ b/coeus-webapp/src/main/webapp/css/bootstrap/css/icons/index.html
 @@ -0,0 +1,2991 @@
 +<!doctype html>
 +<html>

@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/tags/rice-portal/portalTabs.tag b/src/main/webapp/WEB-INF/tags/rice-portal/portalTabs.tag
 index ebd2018..8ccda73 100644
---- a/src/main/webapp/WEB-INF/tags/rice-portal/portalTabs.tag
-+++ b/src/main/webapp/WEB-INF/tags/rice-portal/portalTabs.tag
+--- a/coeus-webapp/src/main/webapp/WEB-INF/tags/rice-portal/portalTabs.tag
++++ b/coeus-webapp/src/main/webapp/WEB-INF/tags/rice-portal/portalTabs.tag
 @@ -14,56 +14,141 @@
   limitations under the License.
  --%>

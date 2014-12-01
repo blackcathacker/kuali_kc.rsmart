@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/datadictionary/NegotiationActivity.xml b/src/main/resources/org/kuali/kra/datadictionary/NegotiationActivity.xml
 index 1357682..3cc12e3 100644
---- a/src/main/resources/org/kuali/kra/datadictionary/NegotiationActivity.xml
-+++ b/src/main/resources/org/kuali/kra/datadictionary/NegotiationActivity.xml
+--- a/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/NegotiationActivity.xml
++++ b/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/NegotiationActivity.xml
 @@ -174,6 +174,9 @@
      <property name="required" value="false" />
      <property name="summary" value="Last Update By" />

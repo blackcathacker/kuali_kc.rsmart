@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/jsp/award/awardHierarchyAwardActionsAjax.jsp b/src/main/webapp/WEB-INF/jsp/award/awardHierarchyAwardActionsAjax.jsp
 index b9a26ae..b4e6d50 100644
---- a/src/main/webapp/WEB-INF/jsp/award/awardHierarchyAwardActionsAjax.jsp
-+++ b/src/main/webapp/WEB-INF/jsp/award/awardHierarchyAwardActionsAjax.jsp
+--- a/coeus-webapp/src/main/webapp/WEB-INF/jsp/award/awardHierarchyAwardActionsAjax.jsp
++++ b/coeus-webapp/src/main/webapp/WEB-INF/jsp/award/awardHierarchyAwardActionsAjax.jsp
 @@ -14,7 +14,7 @@
   limitations under the License.
  --%>

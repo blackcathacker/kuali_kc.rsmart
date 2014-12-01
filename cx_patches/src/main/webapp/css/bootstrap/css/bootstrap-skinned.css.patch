@@ -2,7 +2,7 @@ diff --git a/src/main/webapp/css/bootstrap/css/bootstrap-skinned.css b/src/main/
 new file mode 100644
 index 0000000..fca9363
 --- /dev/null
-+++ b/src/main/webapp/css/bootstrap/css/bootstrap-skinned.css
++++ b/coeus-webapp/src/main/webapp/css/bootstrap/css/bootstrap-skinned.css
 @@ -0,0 +1,8450 @@
 +@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 +/*!

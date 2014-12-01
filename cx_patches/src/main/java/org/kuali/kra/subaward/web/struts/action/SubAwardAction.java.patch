@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardAction.java b/src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardAction.java
 index b88e0e0..8058eaf 100644
---- a/src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardAction.java
-+++ b/src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardAction.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardAction.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardAction.java
 @@ -457,15 +457,15 @@ public ActionForward route(ActionMapping mapping, ActionForm form, HttpServletRe
      String methodToCall = ((KualiForm) form).getMethodToCall();
      

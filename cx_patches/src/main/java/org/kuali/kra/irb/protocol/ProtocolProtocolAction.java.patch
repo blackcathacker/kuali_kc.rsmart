@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/irb/protocol/ProtocolProtocolAction.java b/src/main/java/org/kuali/kra/irb/protocol/ProtocolProtocolAction.java
 index b2d0dfa..9b53d41 100644
---- a/src/main/java/org/kuali/kra/irb/protocol/ProtocolProtocolAction.java
-+++ b/src/main/java/org/kuali/kra/irb/protocol/ProtocolProtocolAction.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/irb/protocol/ProtocolProtocolAction.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/irb/protocol/ProtocolProtocolAction.java
 @@ -96,6 +96,11 @@ public class ProtocolProtocolAction extends ProtocolAction {
              }
          }

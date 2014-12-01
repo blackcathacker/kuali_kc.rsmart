@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/jsp/iacuc/IacucResearchAreaAjax.jsp b/src/main/webapp/WEB-INF/jsp/iacuc/IacucResearchAreaAjax.jsp
 index 6db26fd..48ab728 100644
---- a/src/main/webapp/WEB-INF/jsp/iacuc/IacucResearchAreaAjax.jsp
-+++ b/src/main/webapp/WEB-INF/jsp/iacuc/IacucResearchAreaAjax.jsp
+--- a/coeus-webapp/src/main/webapp/WEB-INF/jsp/iacuc/IacucResearchAreaAjax.jsp
++++ b/coeus-webapp/src/main/webapp/WEB-INF/jsp/iacuc/IacucResearchAreaAjax.jsp
 @@ -14,7 +14,7 @@
   limitations under the License.
  --%>

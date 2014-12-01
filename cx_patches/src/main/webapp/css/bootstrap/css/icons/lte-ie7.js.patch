@@ -2,7 +2,7 @@ diff --git a/src/main/webapp/css/bootstrap/css/icons/lte-ie7.js b/src/main/webap
 new file mode 100644
 index 0000000..49c8a81
 --- /dev/null
-+++ b/src/main/webapp/css/bootstrap/css/icons/lte-ie7.js
++++ b/coeus-webapp/src/main/webapp/css/bootstrap/css/icons/lte-ie7.js
 @@ -0,0 +1,387 @@
 +/* Load this script using conditional IE comments if you need to support IE 7 and IE 6. */
 +

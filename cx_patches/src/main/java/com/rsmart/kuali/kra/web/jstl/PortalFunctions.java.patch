@@ -2,7 +2,7 @@ diff --git a/src/main/java/com/rsmart/kuali/kra/web/jstl/PortalFunctions.java b/
 new file mode 100644
 index 0000000..099f680
 --- /dev/null
-+++ b/src/main/java/com/rsmart/kuali/kra/web/jstl/PortalFunctions.java
++++ b/coeus-impl/src/main/java/com/rsmart/kuali/kra/web/jstl/PortalFunctions.java
 @@ -0,0 +1,88 @@
 +/*
 + * Copyright 2005-2014 The Kuali Foundation

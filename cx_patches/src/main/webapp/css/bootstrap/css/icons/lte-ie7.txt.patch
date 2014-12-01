@@ -2,7 +2,7 @@ diff --git a/src/main/webapp/css/bootstrap/css/icons/lte-ie7.txt b/src/main/weba
 new file mode 100644
 index 0000000..5558e5f
 --- /dev/null
-+++ b/src/main/webapp/css/bootstrap/css/icons/lte-ie7.txt
++++ b/coeus-webapp/src/main/webapp/css/bootstrap/css/icons/lte-ie7.txt
 @@ -0,0 +1,5 @@
 +FILE DELETED
 +

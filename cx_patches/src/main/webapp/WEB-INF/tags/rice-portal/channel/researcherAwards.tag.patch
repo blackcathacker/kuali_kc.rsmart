@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherAwards.tag b/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherAwards.tag
 index b6fbde8..3b743da 100644
---- a/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherAwards.tag
-+++ b/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherAwards.tag
+--- a/coeus-webapp/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherAwards.tag
++++ b/coeus-webapp/src/main/webapp/WEB-INF/tags/rice-portal/channel/researcherAwards.tag
 @@ -18,8 +18,8 @@
  <channel:portalChannelTop channelTitle="Awards" />
  <div class="body">

@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/jsp/meeting/meetingActions.jsp b/src/main/webapp/WEB-INF/jsp/meeting/meetingActions.jsp
 index 1effaf9..184069e 100644
---- a/src/main/webapp/WEB-INF/jsp/meeting/meetingActions.jsp
-+++ b/src/main/webapp/WEB-INF/jsp/meeting/meetingActions.jsp
+--- a/coeus-webapp/src/main/webapp/WEB-INF/jsp/meeting/meetingActions.jsp
++++ b/coeus-webapp/src/main/webapp/WEB-INF/jsp/meeting/meetingActions.jsp
 @@ -16,8 +16,8 @@
  
  <%@ include file="/WEB-INF/jsp/kraTldHeader.jsp"%>

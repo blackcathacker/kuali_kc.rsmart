@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/jsp/irb/researchAreaAjax.jsp b/src/main/webapp/WEB-INF/jsp/irb/researchAreaAjax.jsp
 index a80e54a..ffa239c 100644
---- a/src/main/webapp/WEB-INF/jsp/irb/researchAreaAjax.jsp
-+++ b/src/main/webapp/WEB-INF/jsp/irb/researchAreaAjax.jsp
+--- a/coeus-webapp/src/main/webapp/WEB-INF/jsp/irb/researchAreaAjax.jsp
++++ b/coeus-webapp/src/main/webapp/WEB-INF/jsp/irb/researchAreaAjax.jsp
 @@ -14,7 +14,7 @@
   limitations under the License.
  --%>

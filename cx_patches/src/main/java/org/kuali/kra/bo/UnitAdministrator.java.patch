@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/bo/UnitAdministrator.java b/src/main/java/org/kuali/kra/bo/UnitAdministrator.java
 index 3a43195..5caf00b 100644
---- a/src/main/java/org/kuali/kra/bo/UnitAdministrator.java
-+++ b/src/main/java/org/kuali/kra/bo/UnitAdministrator.java
+--- a/coeus-impl/src/main/java/org/kuali/coeus/common/framework/unit/admin/UnitAdministrator.java
++++ b/coeus-impl/src/main/java/org/kuali/coeus/common/framework/unit/admin/UnitAdministrator.java
 @@ -20,6 +20,7 @@ import org.kuali.kra.infrastructure.KraServiceLocator;
  import org.kuali.kra.service.KcPersonService;
  

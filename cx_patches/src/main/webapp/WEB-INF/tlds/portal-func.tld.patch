@@ -2,7 +2,7 @@ diff --git a/src/main/webapp/WEB-INF/tlds/portal-func.tld b/src/main/webapp/WEB-
 new file mode 100644
 index 0000000..9173256
 --- /dev/null
-+++ b/src/main/webapp/WEB-INF/tlds/portal-func.tld
++++ b/coeus-webapp/src/main/webapp/WEB-INF/tlds/portal-func.tld
 @@ -0,0 +1,43 @@
 +<?xml version="1.0" encoding="UTF-8" ?>
 +<!--

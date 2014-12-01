@@ -2,7 +2,7 @@ diff --git a/src/main/java/com/rsmart/kuali/kra/reporting/web/struts/form/Report
 new file mode 100644
 index 0000000..975237c
 --- /dev/null
-+++ b/src/main/java/com/rsmart/kuali/kra/reporting/web/struts/form/ReportFormwardForm.java
++++ b/coeus-impl/src/main/java/com/rsmart/kuali/kra/reporting/web/struts/form/ReportFormwardForm.java
 @@ -0,0 +1,23 @@
 +/*
 + * Copyright 2005-2010 The Kuali Foundation

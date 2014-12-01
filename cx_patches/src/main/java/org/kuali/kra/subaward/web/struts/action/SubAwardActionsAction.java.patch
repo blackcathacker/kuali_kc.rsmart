@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardActionsAction.java b/src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardActionsAction.java
 index b984215..42a8aa9 100644
---- a/src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardActionsAction.java
-+++ b/src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardActionsAction.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardActionsAction.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardActionsAction.java
 @@ -62,21 +62,23 @@ SubAwardAction implements AuditModeAction {
      public ActionForward blanketApprove(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response)
          throws Exception {

@@ -1,7 +1,7 @@
 diff --git a/src/main/config/kew/xml/2/AwardDocument.xml b/src/main/config/kew/xml/2/AwardDocument.xml
 index 2560a32..dc9f5fc 100644
---- a/src/main/config/kew/xml/2/AwardDocument.xml
-+++ b/src/main/config/kew/xml/2/AwardDocument.xml
+--- a/coeus-db/coeus-db-xml/src/main/resources/org/kuali/coeus/coeus-xml/2/AwardDocument.xml
++++ b/coeus-db/coeus-db-xml/src/main/resources/org/kuali/coeus/coeus-xml/2/AwardDocument.xml
 @@ -17,9 +17,9 @@
  			<label>KC Award</label>
  			<parent>KC</parent>
