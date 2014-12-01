@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/java/org/kuali/kra/bo/Rolodex.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/bo/RolodexMaintainableImpl.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/bo/UnitAdministrator.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetBaseStream.java.patch`
@@ -170,6 +169,8 @@ Needs more attention
   * TODO: Needs to be manually ported to KC6; rejects saved for reference.
     * CX Workflow Routing Not Working in ANY instance. The new code will use all Proposal Units, and will route to all Unit Heads associated with those units from the Unit Admin table. https://github.com/rSmart/issues/issues/447
     * Fixes NPE @ UnitAdministratorRoleAttribute.java:111 Caused by: java.lang.NullPointerException at com.rsmart.kuali.kra.workflow.UnitAdministratorRoleAttribute.resolveRecipients(UnitAdministratorRoleAttribute.java:111) https://github.com/rSmart/issues/issues/358
+* `cx_patches/src/main/java/org/kuali/kra/bo/Rolodex.java.patch`
+  * Patch does NOT merge clean; needs to be inspected further.
 
 Complete
 --------
