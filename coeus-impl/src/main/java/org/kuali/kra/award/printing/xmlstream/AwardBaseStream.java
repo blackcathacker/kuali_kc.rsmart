@@ -15,6 +15,7 @@
  */
 package org.kuali.kra.award.printing.xmlstream;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.kuali.coeus.common.framework.person.KcPerson;
@@ -1635,11 +1636,13 @@ public abstract class AwardBaseStream implements XmlStream {
 	 */
 	private String getState(Rolodex rolodex) {
 		String stateDesc = null;
-		if (rolodex.getState() != null) {
+		if (StringUtils.isNotBlank(rolodex.getState()) && StringUtils.isNotBlank(rolodex.getCountryCode())) {
 			State state = PrintingUtils.getStateFromName(rolodex.getCountryCode(), rolodex.getState());
 			if (state != null) {
 				stateDesc = state.getName();
 			}
+		} else if (StringUtils.isNotBlank(rolodex.getState())) {
+			return rolodex.getState();
 		}
 		return stateDesc;
 	}
@@ -1675,7 +1678,7 @@ public abstract class AwardBaseStream implements XmlStream {
 	 */
 	private String getCountryDescription(Rolodex rolodex) {
 		String countryDesc = null;
-		if (rolodex.getCountryCode() != null) {
+		if (StringUtils.isNotBlank(rolodex.getCountryCode())) {
 			Country country = PrintingUtils.getCountryFromCode(rolodex
 					.getCountryCode());
 			if (country != null) {
