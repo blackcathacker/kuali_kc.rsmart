@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/config/sql/current/5.2.1/dml/KR_DML_01_KRACOEUS-6640_B000.sql.patch`
 * `cx_patches/src/main/config/sql/current/5.2.1/sequences/KC_SEQ_S2S_USER_ATTACHED_FORM_ID.sql.patch`
 * `cx_patches/src/main/config/sql/current/5.2.1/sequences/KC_SEQ_S2S_USER_ATTD_FORM_ATT_ID.sql.patch`
 * `cx_patches/src/main/config/sql/current_mysql/0.0.0/dml/KR_DML_01_KCINFR-1018_B000.sql.patch`
@@ -191,3 +190,5 @@ Complete
   * Manually merged `cb38ce9` KualiCo pom.xml changes. `10c5684b4567511317c887261b582eb26d420816`
 * `cx_patches/src/main/config/kew/xml/2/AwardDocument.xml.patch`
   * Manually merged patch conflict.
+* `cx_patches/src/main/config/sql/current/5.2.1/dml/KR_DML_01_KRACOEUS-6640_B000.sql.patch`
+  * No change necessary AFAICT.
