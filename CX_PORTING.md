@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/java/org/kuali/kra/bo/KcPerson.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/bo/Rolodex.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/bo/RolodexMaintainableImpl.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/bo/UnitAdministrator.java.patch`
@@ -215,4 +214,6 @@ Complete
 * `cx_patches/src/main/java/org/kuali/kra/award/web/struts/action/AwardActionsAction.java.patch`
   * Manually merged patch conflicts.
 * `cx_patches/src/main/java/org/kuali/kra/award/web/struts/action/AwardHomeAction.java.patch`
+  * Manually merged patch conflicts.
+* `cx_patches/src/main/java/org/kuali/kra/bo/KcPerson.java.patch`
   * Manually merged patch conflicts.

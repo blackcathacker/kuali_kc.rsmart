@@ -58,6 +58,8 @@ import java.util.Date;
  */
 public class KcPerson extends TransientBusinessObjectBase implements Contactable, KcPersonContract {
 
+    private static final org.apache.log4j.Logger LOG = org.apache.log4j.Logger.getLogger(KcPerson.class);
+
     private static final long serialVersionUID = 1L;
 
     private String personId;
@@ -137,7 +139,12 @@ public class KcPerson extends TransientBusinessObjectBase implements Contactable
      */
     public static KcPerson fromEntityAndPersonId(final EntityContract entity, final String personId) {
         if (entity == null) {
-            throw new IllegalArgumentException("the entity is null");
+          // throw new IllegalArgumentException("the entity is null");
+          final IllegalArgumentException e = new IllegalArgumentException(
+              "the entity is null; behavior change: returning empty KcPerson reference instead of throwing an IllegalArgumentException: personId="
+                  + personId);
+          LOG.info(e.getMessage(), e);
+          return fromPersonId(personId);
         }
         
         if (StringUtils.isEmpty(personId)) {
