@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/config/sql/RELEASE-SCRIPTS/KC_Install.sh.patch`
 * `cx_patches/src/main/java/com/rsmart/kuali/kra/reporting/web/struts/action/ReportForwardAction.java.patch`
 * `cx_patches/src/main/java/com/rsmart/kuali/kra/reporting/web/struts/form/ReportFormwardForm.java.patch`
 * `cx_patches/src/main/java/com/rsmart/kuali/kra/web/jstl/PortalFunctions.java.patch`
@@ -176,6 +175,9 @@ TODO
 
 Needs more attention
 --------------------
+* `cx_patches/src/main/config/sql/RELEASE-SCRIPTS/KC_Install.sh.patch`
+  * Merge was *mostly* clean; rejects saved for reference.
+  * TODO: manually mege all new KC6 SQL scripts into Flyway migrations.
 
 Complete
 --------
