@@ -1,0 +1,98 @@
+--- coeus-db/coeus-db-sql/src/main/resources/org/kuali/coeus/coeus-sql/RELEASE-SCRIPTS/KC_Install.sh
++++ coeus-db/coeus-db-sql/src/main/resources/org/kuali/coeus/coeus-sql/RELEASE-SCRIPTS/KC_Install.sh
+@@ -400,72 +409,95 @@
+ 		
+ 
+             cd KC-RELEASE-3_0_1-SCRIPT
++            echo "mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KC-Release-3_0-3_0_1-Upgrade-Mysql-Install.sql > KC-Release-3_0-3_0_1-Upgrade-Mysql-Install.log 2>&1"
+             mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KC-Release-3_0-3_0_1-Upgrade-Mysql-Install.sql > KC-Release-3_0-3_0_1-Upgrade-Mysql-Install.log 2>&1
+             if [ "${InstRice}" = 'Y' ]
+             then
++            	echo "mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-Release-3_0-3_0_1-Upgrade-Mysql-Install.sql > KR-Release-3_0-3_0_1-Upgrade-Mysql-Install.log 2>&1"
+             	mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-Release-3_0-3_0_1-Upgrade-Mysql-Install.sql > KR-Release-3_0-3_0_1-Upgrade-Mysql-Install.log 2>&1
+             else
++            	echo "mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-Release-3_0-3_0_1-SR-Mysql-Install.sql > KR-Release-3_0-3_0_1-SR-Mysql-Install.log 2>&1"
+             	mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-Release-3_0-3_0_1-SR-Mysql-Install.sql > KR-Release-3_0-3_0_1-SR-Mysql-Install.log 2>&1
+             fi
+             mv *.log ../LOGS/
+             cd .. 
+ 
+ 	    cd KC-RELEASE-3_1_SP1-SCRIPT
++		echo "mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KC-Release-3_0_1-3_1_S1-Upgrade-Mysql-Install.sql > KC-Release-3_0_1-3_1_S1-Upgrade-Mysql-Install.log 2>&1"
+ 		mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KC-Release-3_0_1-3_1_S1-Upgrade-Mysql-Install.sql > KC-Release-3_0_1-3_1_S1-Upgrade-Mysql-Install.log 2>&1
+ 			
+ 		if [ "${InstRice}" = 'Y' ]
+ 		then
++            echo "mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-Server-Release-1_0_3-1_0_3_1-Upgrade-Mysql-Install.sql > KR-Server-Release-1_0_3_1-Upgrade-Mysql-Install.log 2>&1"
+             mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-Server-Release-1_0_3-1_0_3_1-Upgrade-Mysql-Install.sql > KR-Server-Release-1_0_3_1-Upgrade-Mysql-Install.log 2>&1
++			echo "mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-Release-3_0_1-3_1_S1-Upgrade-Mysql-Install.sql > KR-Release-3_0_1-3_1_S1-Upgrade-Mysql-Install.log 2>&1"
+ 			mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-Release-3_0_1-3_1_S1-Upgrade-Mysql-Install.sql > KR-Release-3_0_1-3_1_S1-Upgrade-Mysql-Install.log 2>&1
+ 		else
++			echo "mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-Release-3_0_1-3_1_S1-SR-Mysql-Install.sql > KR-Release-3_0_1-3_1_S1-SR-Mysql-Install.log 2>&1"
+ 			mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-Release-3_0_1-3_1_S1-SR-Mysql-Install.sql > KR-Release-3_0_1-3_1_S1-SR-Mysql-Install.log 2>&1
+ 		fi
+             mv *.log ../LOGS/
+             cd ..
+             
+             cd KC-RELEASE-3_1_SP2-SCRIPT
++            echo "mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KRC-RELEASE-3_1_SP2-Upgrade-MYSQL.sql > KRC-RELEASE-3_1_SP2-Upgrade-MYSQL-Install.log 2>&1"
+             mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KRC-RELEASE-3_1_SP2-Upgrade-MYSQL.sql > KRC-RELEASE-3_1_SP2-Upgrade-MYSQL-Install.log 2>&1
++            echo "mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KC-RELEASE-3_1_SP2-Upgrade-MYSQL.sql > KC-RELEASE-3_1_SP2-Upgrade-MYSQL-Install.log 2>&1"
+             mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KC-RELEASE-3_1_SP2-Upgrade-MYSQL.sql > KC-RELEASE-3_1_SP2-Upgrade-MYSQL-Install.log 2>&1
+             if [ "${InstRice}" = 'Y' ]
+             then
++            	echo "mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-RELEASE-3_1_SP2-Upgrade-MYSQL.sql > KR-RELEASE-3_1_SP2-Upgrade-MYSQL-Install.log 2>&1"
+             	mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-RELEASE-3_1_SP2-Upgrade-MYSQL.sql > KR-RELEASE-3_1_SP2-Upgrade-MYSQL-Install.log 2>&1
+             else
++            	echo "mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-RELEASE-3_1_SP2-SR-MYSQL.sql > KR-RELEASE-3_1_SP2-SR-MYSQL-Install.log 2>&1"
+             	mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-RELEASE-3_1_SP2-SR-MYSQL.sql > KR-RELEASE-3_1_SP2-SR-MYSQL-Install.log 2>&1
+             fi
+             mv *.log ../LOGS/
+             cd ..
+ 
+             cd KC-RELEASE-3_1_SP3-SCRIPT
++            echo "mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KRC-RELEASE-3_1_SP3-Upgrade-MYSQL.sql > KRC-RELEASE-3_1_SP3-Upgrade-MYSQL-Install.log 2>&1"
+             mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KRC-RELEASE-3_1_SP3-Upgrade-MYSQL.sql > KRC-RELEASE-3_1_SP3-Upgrade-MYSQL-Install.log 2>&1
++            echo "mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KC-RELEASE-3_1_SP3-Upgrade-MYSQL.sql > KC-RELEASE-3_1_SP3-Upgrade-MYSQL-Install.log 2>&1"
+             mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KC-RELEASE-3_1_SP3-Upgrade-MYSQL.sql > KC-RELEASE-3_1_SP3-Upgrade-MYSQL-Install.log 2>&1
+             if [ "${InstRice}" = 'Y' ]
+             then
++            	echo "mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-RELEASE-3_1_SP3-Upgrade-MYSQL.sql > KR-RELEASE-3_1_SP3-Upgrade-MYSQL-Install.log 2>&1"
+             	mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-RELEASE-3_1_SP3-Upgrade-MYSQL.sql > KR-RELEASE-3_1_SP3-Upgrade-MYSQL-Install.log 2>&1
+             else
++            	echo "mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-RELEASE-3_1_SP3-SR-MYSQL.sql > KR-RELEASE-3_1_SP3-SR-MYSQL-Install.log 2>&1"
+             	mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-RELEASE-3_1_SP3-SR-MYSQL.sql > KR-RELEASE-3_1_SP3-SR-MYSQL-Install.log 2>&1
+             fi
+             mv *.log ../LOGS/
+             cd ..
+ 
+ 		cd KC-RELEASE-3_1_SP4-SCRIPT
++            echo "mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KRC-RELEASE-3_1_SP4-Upgrade-MYSQL.sql > KRC-RELEASE-3_1_SP4-Upgrade-MYSQL-Install.log 2>&1"
+             mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KRC-RELEASE-3_1_SP4-Upgrade-MYSQL.sql > KRC-RELEASE-3_1_SP4-Upgrade-MYSQL-Install.log 2>&1
++            echo "mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KC-RELEASE-3_1_SP4-Upgrade-MYSQL.sql  > KC-RELEASE-3_1_SP4-Upgrade-MYSQL-Install.log 2>&1"
+             mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KC-RELEASE-3_1_SP4-Upgrade-MYSQL.sql  > KC-RELEASE-3_1_SP4-Upgrade-MYSQL-Install.log 2>&1
+             if [ "${InstRice}" = "Y" ]
+             then
++                echo "mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < RICE-1_0_3_1-1_0_3_2-Upgrade-MYSQL.sql > RICE-1_0_3_1-1_0_3_2-Upgrade-MYSQL-Install.log 2>&1"
+                 mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < RICE-1_0_3_1-1_0_3_2-Upgrade-MYSQL.sql > RICE-1_0_3_1-1_0_3_2-Upgrade-MYSQL-Install.log 2>&1
++            	echo "mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-RELEASE-3_1_SP4-Upgrade-MYSQL.sql > KR-RELEASE-3_1_SP4-Upgrade-MYSQL-Install.log 2>&1"
+             	mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-RELEASE-3_1_SP4-Upgrade-MYSQL.sql > KR-RELEASE-3_1_SP4-Upgrade-MYSQL-Install.log 2>&1
+             else
++            	echo "mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-RELEASE-3_1_SP4-SR-MYSQL.sql > KR-RELEASE-3_1_SP4-SR-MYSQL-Install.log 2>&1"
+             	mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-RELEASE-3_1_SP4-SR-MYSQL.sql > KR-RELEASE-3_1_SP4-SR-MYSQL-Install.log 2>&1
+             fi
+             mv *.log ../LOGS/
+             cd ..
+  
+             cd KC-RELEASE-3_1_1-SCRIPT
++            echo "mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KC-RELEASE-3_1_1-Upgrade-MYSQL.sql > KC-RELEASE-3_1_1-Upgrade-MYSQL-Install.log 2>&1"
+             mysql -u ${un} -p${pw} -D ${DBSvrNm} -s -f < KC-RELEASE-3_1_1-Upgrade-MYSQL.sql > KC-RELEASE-3_1_1-Upgrade-MYSQL-Install.log 2>&1
+             if [ "${InstRice}" = 'Y' ]
+             then
++            	echo "mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-RELEASE-3_1_1-Upgrade-MYSQL.sql > KR-RELEASE-3_1_1-Upgrade-MYSQL-Install.log 2>&1"
+             	mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-RELEASE-3_1_1-Upgrade-MYSQL.sql > KR-RELEASE-3_1_1-Upgrade-MYSQL-Install.log 2>&1
+             else
++            	echo "mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-RELEASE-3_1_1-SR-MYSQL.sql > KR-RELEASE-3_1_1-SR-MYSQL-Install.log 2>&1"
+             	mysql -u ${Riceun} -p${Ricepw} -D ${RiceDBSvrNm} -s -f < KR-RELEASE-3_1_1-SR-MYSQL.sql > KR-RELEASE-3_1_1-SR-MYSQL-Install.log 2>&1
+             fi
+             mv *.log ../LOGS/
