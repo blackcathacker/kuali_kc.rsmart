@@ -22,10 +22,14 @@ CSV.open(@patch_mapping, headers: :first_row, header_converters: :symbol) do |cs
       File.foreach(patch_file) do |line|
         if line =~ /^(---\s+a\/)(.+)$/
           left = $2
-          revised_patch_file.write "--- a/#{new_file_path}\n"
+          if new_file_path.eql? dev_null
+            revised_patch_file.write line
+          else
+            revised_patch_file.write "--- a/#{new_file_path}\n".gsub(/[ab]+\/\/dev\/null/, dev_null)
+          end
         elsif line =~ /^(\+\+\+\s+b\/)(.+)$/
           right = $2
-          revised_patch_file.write "+++ b/#{new_file_path}\n"
+          revised_patch_file.write "+++ b/#{new_file_path}\n".gsub(/[ab]+\/\/dev\/null/, dev_null)
         elsif line =~ /^---\s+\/dev\/null$/
           left = dev_null
           revised_patch_file.write line
