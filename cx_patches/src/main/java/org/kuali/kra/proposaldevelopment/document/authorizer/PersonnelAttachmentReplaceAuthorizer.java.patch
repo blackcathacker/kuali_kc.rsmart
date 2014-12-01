@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/PersonnelAttachmentReplaceAuthorizer.java b/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/PersonnelAttachmentReplaceAuthorizer.java
 index a4c48bb..861e3bc 100644
 --- a/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/PersonnelAttachmentReplaceAuthorizer.java
-+++ b/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/PersonnelAttachmentReplaceAuthorizer.java
++++ /dev/null
 @@ -33,6 +33,10 @@ public class PersonnelAttachmentReplaceAuthorizer extends ProposalAuthorizer {
              boolean isRevisionRequested = StringUtils.equalsIgnoreCase(doc.getDevelopmentProposal().getProposalState().getDescription(), "Revisions Requested");
              result = hasPerm && (isInProgress || isApprovalPending || isRevisionRequested);

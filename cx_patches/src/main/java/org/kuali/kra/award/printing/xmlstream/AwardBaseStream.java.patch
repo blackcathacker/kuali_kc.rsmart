@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/award/printing/xmlstream/AwardBaseStream.java b/src/main/java/org/kuali/kra/award/printing/xmlstream/AwardBaseStream.java
 index 347ebc6..4a50aef 100644
---- a/src/main/java/org/kuali/kra/award/printing/xmlstream/AwardBaseStream.java
-+++ b/src/main/java/org/kuali/kra/award/printing/xmlstream/AwardBaseStream.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/award/printing/xmlstream/AwardBaseStream.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/award/printing/xmlstream/AwardBaseStream.java
 @@ -32,6 +32,8 @@ import noNamespace.AwardType.AwardSpecialItems.ForeignTravel;
  import noNamespace.AwardType.AwardSpecialItems.Subcontract;
  import noNamespace.AwardType.AwardTransferringSponsors.TransferringSponsor;

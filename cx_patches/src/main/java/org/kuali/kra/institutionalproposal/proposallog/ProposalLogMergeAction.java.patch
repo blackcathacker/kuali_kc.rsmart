@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/institutionalproposal/proposallog/ProposalLogMergeAction.java b/src/main/java/org/kuali/kra/institutionalproposal/proposallog/ProposalLogMergeAction.java
 index 62d3ec1..6cccb3c 100644
---- a/src/main/java/org/kuali/kra/institutionalproposal/proposallog/ProposalLogMergeAction.java
-+++ b/src/main/java/org/kuali/kra/institutionalproposal/proposallog/ProposalLogMergeAction.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/institutionalproposal/proposallog/ProposalLogMergeAction.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/institutionalproposal/proposallog/ProposalLogMergeAction.java
 @@ -29,20 +29,33 @@ import javax.servlet.http.HttpServletRequest;
  import javax.servlet.http.HttpServletResponse;
  

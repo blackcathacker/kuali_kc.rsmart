@@ -2,7 +2,7 @@ diff --git a/src/main/webapp/scripts/bootstrap/bootstrap.js b/src/main/webapp/sc
 new file mode 100644
 index 0000000..b2dc926
 --- /dev/null
-+++ b/src/main/webapp/scripts/bootstrap/bootstrap.js
++++ b/coeus-webapp/src/main/webapp/scripts/bootstrap/bootstrap.js
 @@ -0,0 +1,2276 @@
 +/* ===================================================
 + * bootstrap-transition.js v2.3.1

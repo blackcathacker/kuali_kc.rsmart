@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/award/web/struts/action/AwardActionsAction.java b/src/main/java/org/kuali/kra/award/web/struts/action/AwardActionsAction.java
 index fa2f8e4..d215de3 100644
---- a/src/main/java/org/kuali/kra/award/web/struts/action/AwardActionsAction.java
-+++ b/src/main/java/org/kuali/kra/award/web/struts/action/AwardActionsAction.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/award/web/struts/action/AwardActionsAction.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/award/web/struts/action/AwardActionsAction.java
 @@ -26,6 +26,7 @@ import org.kuali.kra.award.awardhierarchy.AwardHierarchyTempObject;
  import org.kuali.kra.award.awardhierarchy.sync.AwardSyncChange;
  import org.kuali.kra.award.awardhierarchy.sync.AwardSyncPendingChangeBean;

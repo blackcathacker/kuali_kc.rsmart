@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/tags/infopage.tag b/src/main/webapp/WEB-INF/tags/infopage.tag
 index 7a10304..a214087 100644
---- a/src/main/webapp/WEB-INF/tags/infopage.tag
-+++ b/src/main/webapp/WEB-INF/tags/infopage.tag
+--- a/coeus-webapp/src/main/webapp/WEB-INF/tags/infopage.tag
++++ b/coeus-webapp/src/main/webapp/WEB-INF/tags/infopage.tag
 @@ -18,8 +18,8 @@
  <%@ attribute name="action" required="true" %>
  <%@ attribute name="htmlFormAction" required="true" %>

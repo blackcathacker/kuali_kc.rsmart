@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/coi/service/impl/CoiMessagesServiceImpl.java b/src/main/java/org/kuali/kra/coi/service/impl/CoiMessagesServiceImpl.java
 index fa6abc4..5fe1a4f 100644
---- a/src/main/java/org/kuali/kra/coi/service/impl/CoiMessagesServiceImpl.java
-+++ b/src/main/java/org/kuali/kra/coi/service/impl/CoiMessagesServiceImpl.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/coi/service/impl/CoiMessagesServiceImpl.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/coi/service/impl/CoiMessagesServiceImpl.java
 @@ -33,6 +33,7 @@ import java.text.SimpleDateFormat;
  import java.util.*;
  

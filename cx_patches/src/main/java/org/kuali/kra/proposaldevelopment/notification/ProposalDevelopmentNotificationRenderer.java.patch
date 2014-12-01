@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/proposaldevelopment/notification/ProposalDevelopmentNotificationRenderer.java b/src/main/java/org/kuali/kra/proposaldevelopment/notification/ProposalDevelopmentNotificationRenderer.java
 index 2759e6d..85c5899 100644
---- a/src/main/java/org/kuali/kra/proposaldevelopment/notification/ProposalDevelopmentNotificationRenderer.java
-+++ b/src/main/java/org/kuali/kra/proposaldevelopment/notification/ProposalDevelopmentNotificationRenderer.java
+--- a/coeus-impl/src/main/java/org/kuali/coeus/propdev/impl/notification/ProposalDevelopmentNotificationRenderer.java
++++ b/coeus-impl/src/main/java/org/kuali/coeus/propdev/impl/notification/ProposalDevelopmentNotificationRenderer.java
 @@ -58,6 +58,7 @@ public class ProposalDevelopmentNotificationRenderer extends NotificationRendere
          SimpleDateFormat dateFormatter = new SimpleDateFormat("MM/dd/yyyy");
          Map<String, String> result = super.getDefaultReplacementParameters();

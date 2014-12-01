@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/datadictionary/SubAwardFundingSource.xml b/src/main/resources/org/kuali/kra/datadictionary/SubAwardFundingSource.xml
 index a9c4977..4e0c191 100644
---- a/src/main/resources/org/kuali/kra/datadictionary/SubAwardFundingSource.xml
-+++ b/src/main/resources/org/kuali/kra/datadictionary/SubAwardFundingSource.xml
+--- a/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/SubAwardFundingSource.xml
++++ b/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/SubAwardFundingSource.xml
 @@ -93,7 +93,7 @@
      <property name="forceUppercase" value="false" />
      <property name="label" value="Account ID" />

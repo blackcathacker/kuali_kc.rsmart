@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/datadictionary/Award.xml b/src/main/resources/org/kuali/kra/datadictionary/Award.xml
 index 4c27bf8..ce7aeb5 100644
---- a/src/main/resources/org/kuali/kra/datadictionary/Award.xml
-+++ b/src/main/resources/org/kuali/kra/datadictionary/Award.xml
+--- a/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/Award.xml
++++ b/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/Award.xml
 @@ -519,7 +519,7 @@
      <property name="forceUppercase" value="false" />
      <property name="label" value="Account ID" />

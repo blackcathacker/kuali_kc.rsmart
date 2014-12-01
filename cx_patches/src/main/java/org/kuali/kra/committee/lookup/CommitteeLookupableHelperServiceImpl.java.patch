@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/committee/lookup/CommitteeLookupableHelperServiceImpl.java b/src/main/java/org/kuali/kra/committee/lookup/CommitteeLookupableHelperServiceImpl.java
 index 1c1e7fe..fa207ec 100644
---- a/src/main/java/org/kuali/kra/committee/lookup/CommitteeLookupableHelperServiceImpl.java
-+++ b/src/main/java/org/kuali/kra/committee/lookup/CommitteeLookupableHelperServiceImpl.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/committee/lookup/CommitteeLookupableHelperServiceImpl.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/committee/lookup/CommitteeLookupableHelperServiceImpl.java
 @@ -15,6 +15,8 @@
   */
  package org.kuali.kra.committee.lookup;

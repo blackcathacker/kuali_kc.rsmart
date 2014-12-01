@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/iacuc/actions/IacucProtocolActionsAction.java b/src/main/java/org/kuali/kra/iacuc/actions/IacucProtocolActionsAction.java
 index 1ea120f..3558a0c 100644
---- a/src/main/java/org/kuali/kra/iacuc/actions/IacucProtocolActionsAction.java
-+++ b/src/main/java/org/kuali/kra/iacuc/actions/IacucProtocolActionsAction.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/iacuc/actions/IacucProtocolActionsAction.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/iacuc/actions/IacucProtocolActionsAction.java
 @@ -167,6 +167,12 @@ public class IacucProtocolActionsAction extends IacucProtocolAction {
              protocolForm.getActionHelper().setCurrentTask("");
          }

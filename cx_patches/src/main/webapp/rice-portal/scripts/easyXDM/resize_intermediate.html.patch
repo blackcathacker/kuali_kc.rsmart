@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/rice-portal/scripts/easyXDM/resize_intermediate.html b/src/main/webapp/rice-portal/scripts/easyXDM/resize_intermediate.html
 index 3a85216..dad3f2f 100644
---- a/src/main/webapp/rice-portal/scripts/easyXDM/resize_intermediate.html
-+++ b/src/main/webapp/rice-portal/scripts/easyXDM/resize_intermediate.html
+--- a/coeus-webapp/src/main/webapp/rice-portal/scripts/easyXDM/resize_intermediate.html
++++ b/coeus-webapp/src/main/webapp/rice-portal/scripts/easyXDM/resize_intermediate.html
 @@ -42,7 +42,7 @@
                      iframe.onload = function() {
                      	top.jQuery.unblockUI();

@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingManagement.jsp b/src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingManagement.jsp
 index f0ed301..a006696 100644
---- a/src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingManagement.jsp
-+++ b/src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingManagement.jsp
+--- a/coeus-webapp/src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingManagement.jsp
++++ b/coeus-webapp/src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingManagement.jsp
 @@ -19,8 +19,8 @@
  <%-- Is the screen an inquiry? --%>
  <c:set var="_isInquiry"

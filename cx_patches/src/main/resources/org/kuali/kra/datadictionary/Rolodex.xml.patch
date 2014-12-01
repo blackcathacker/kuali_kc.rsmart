@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/datadictionary/Rolodex.xml b/src/main/resources/org/kuali/kra/datadictionary/Rolodex.xml
 index adcd602..b1bf30f 100644
---- a/src/main/resources/org/kuali/kra/datadictionary/Rolodex.xml
-+++ b/src/main/resources/org/kuali/kra/datadictionary/Rolodex.xml
+--- a/coeus-impl/src/main/resources/org/kuali/coeus/common/impl/rolodex/Rolodex.xml
++++ b/coeus-impl/src/main/resources/org/kuali/coeus/common/impl/rolodex/Rolodex.xml
 @@ -32,6 +32,7 @@
          <ref bean="Rolodex-phoneNumber"/>
          <ref bean="Rolodex-postalCode"/>

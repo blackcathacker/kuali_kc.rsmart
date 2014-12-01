@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/award/lookup/AwardLookupableHelperServiceImpl.java b/src/main/java/org/kuali/kra/award/lookup/AwardLookupableHelperServiceImpl.java
 index a24b24d..c99d2fd 100644
---- a/src/main/java/org/kuali/kra/award/lookup/AwardLookupableHelperServiceImpl.java
-+++ b/src/main/java/org/kuali/kra/award/lookup/AwardLookupableHelperServiceImpl.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/award/lookup/AwardLookupableHelperServiceImpl.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/award/lookup/AwardLookupableHelperServiceImpl.java
 @@ -245,8 +245,14 @@ class AwardLookupableHelperServiceImpl extends KraLookupableHelperServiceImpl {
          AwardPerson principalInvestigator = award.getPrincipalInvestigator();
          if (principalInvestigator != null) {

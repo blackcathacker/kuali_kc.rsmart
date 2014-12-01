@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/printing/stylesheet/BudgetSummaryTotalPage.xsl b/src/main/resources/org/kuali/kra/printing/stylesheet/BudgetSummaryTotalPage.xsl
 index f14cacb..537c913 100644
---- a/src/main/resources/org/kuali/kra/printing/stylesheet/BudgetSummaryTotalPage.xsl
-+++ b/src/main/resources/org/kuali/kra/printing/stylesheet/BudgetSummaryTotalPage.xsl
+--- a/coeus-impl/src/main/resources/org/kuali/kra/printing/stylesheet/BudgetSummaryTotalPage.xsl
++++ b/coeus-impl/src/main/resources/org/kuali/kra/printing/stylesheet/BudgetSummaryTotalPage.xsl
 @@ -6,7 +6,7 @@
      <xsl:variable name="XML" select="/"/>
      <xsl:variable name="fo:layout-master-set">

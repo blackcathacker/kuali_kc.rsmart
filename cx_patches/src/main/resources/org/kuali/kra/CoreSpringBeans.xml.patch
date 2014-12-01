@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/CoreSpringBeans.xml b/src/main/resources/org/kuali/kra/CoreSpringBeans.xml
 index a6bbe78..daae643 100644
---- a/src/main/resources/org/kuali/kra/CoreSpringBeans.xml
-+++ b/src/main/resources/org/kuali/kra/CoreSpringBeans.xml
+--- a/coeus-impl/src/main/resources/org/kuali/kra/CoreSpringBeans.xml
++++ b/coeus-impl/src/main/resources/org/kuali/kra/CoreSpringBeans.xml
 @@ -39,6 +39,7 @@
      <import resource="classpath:org/kuali/rice/core/RiceJTASpringBeans.xml" />
      <import resource="classpath:org/kuali/kra/KC-RiceDataSourceSpringBeans.xml" />

@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/web.xml b/src/main/webapp/WEB-INF/web.xml
 index 89ac244..638ea34 100644
---- a/src/main/webapp/WEB-INF/web.xml
-+++ b/src/main/webapp/WEB-INF/web.xml
+--- a/coeus-webapp/src/main/webapp/WEB-INF/web.xml
++++ b/coeus-webapp/src/main/webapp/WEB-INF/web.xml
 @@ -58,6 +58,11 @@
      </filter>
  

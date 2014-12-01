@@ -2,7 +2,7 @@ diff --git a/src/main/config/sql/current_mysql/5.2.1/dml/KR_DML_01_KRACOEUS-6640
 new file mode 100644
 index 0000000..0d35978
 --- /dev/null
-+++ b/src/main/config/sql/current_mysql/5.2.1/dml/KR_DML_01_KRACOEUS-6640_B000.sql
++++ b/coeus-db/coeus-db-sql/src/main/resources/org/kuali/coeus/coeus-sql/current_mysql/5.2.1/dml/KR_DML_01_KRACOEUS-6640_B000.sql
 @@ -0,0 +1,5 @@
 +DELIMITER /
 +insert into krcr_parm_t (nmspc_cd, cmpnt_cd, parm_nm, obj_id, ver_nbr, parm_typ_cd, val, parm_desc_txt, eval_oprtr_cd, appl_id)

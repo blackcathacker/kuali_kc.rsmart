@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/proposaldevelopment/service/impl/ProposalCopyServiceImpl.java b/src/main/java/org/kuali/kra/proposaldevelopment/service/impl/ProposalCopyServiceImpl.java
 index c311930..067986a 100644
---- a/src/main/java/org/kuali/kra/proposaldevelopment/service/impl/ProposalCopyServiceImpl.java
-+++ b/src/main/java/org/kuali/kra/proposaldevelopment/service/impl/ProposalCopyServiceImpl.java
+--- a/coeus-impl/src/main/java/org/kuali/coeus/propdev/impl/copy/ProposalCopyServiceImpl.java
++++ b/coeus-impl/src/main/java/org/kuali/coeus/propdev/impl/copy/ProposalCopyServiceImpl.java
 @@ -623,6 +623,7 @@ public class ProposalCopyServiceImpl implements ProposalCopyService {
                      method.invoke(object, proposalNumber);
                  } else if (isPropertyGetterMethod(method, methods)

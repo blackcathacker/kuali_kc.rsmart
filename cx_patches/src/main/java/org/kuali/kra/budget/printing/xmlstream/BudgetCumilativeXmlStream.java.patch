@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetCumilativeXmlStream.java b/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetCumilativeXmlStream.java
 index 5f5dd26..df9eb27 100644
---- a/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetCumilativeXmlStream.java
-+++ b/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetCumilativeXmlStream.java
+--- a/coeus-impl/src/main/java/org/kuali/coeus/common/budget/impl/print/BudgetCumilativeXmlStream.java
++++ b/coeus-impl/src/main/java/org/kuali/coeus/common/budget/impl/print/BudgetCumilativeXmlStream.java
 @@ -87,10 +87,14 @@ public class BudgetCumilativeXmlStream extends BudgetBaseStream {
  		BudgetParent budgetParent = budget.getBudgetParent();
  		ReportHeaderType reportHeaderType = getReportHeaderTypeForCumulativeReport(budgetParent);

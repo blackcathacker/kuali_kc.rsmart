@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/datadictionary/LookupableDevelopmentProposal.xml b/src/main/resources/org/kuali/kra/datadictionary/LookupableDevelopmentProposal.xml
 index 939eb0c..a2af835 100644
---- a/src/main/resources/org/kuali/kra/datadictionary/LookupableDevelopmentProposal.xml
-+++ b/src/main/resources/org/kuali/kra/datadictionary/LookupableDevelopmentProposal.xml
+--- a/coeus-impl/src/main/resources/org/kuali/coeus/propdev/impl/core/LookupableDevelopmentProposal.xml
++++ b/coeus-impl/src/main/resources/org/kuali/coeus/propdev/impl/core/LookupableDevelopmentProposal.xml
 @@ -281,6 +281,6 @@
                  p:attributeName="deadlineDate" />
          </list>

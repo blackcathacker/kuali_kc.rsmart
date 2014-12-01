@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/common/committee/meeting/MeetingActionBase.java b/src/main/java/org/kuali/kra/common/committee/meeting/MeetingActionBase.java
 index e99ec9d..def10c7 100644
---- a/src/main/java/org/kuali/kra/common/committee/meeting/MeetingActionBase.java
-+++ b/src/main/java/org/kuali/kra/common/committee/meeting/MeetingActionBase.java
+--- a/coeus-impl/src/main/java/org/kuali/coeus/common/committee/impl/meeting/MeetingActionBase.java
++++ b/coeus-impl/src/main/java/org/kuali/coeus/common/committee/impl/meeting/MeetingActionBase.java
 @@ -40,6 +40,7 @@ import org.kuali.rice.krad.util.KRADConstants;
  
  import javax.servlet.http.HttpServletRequest;

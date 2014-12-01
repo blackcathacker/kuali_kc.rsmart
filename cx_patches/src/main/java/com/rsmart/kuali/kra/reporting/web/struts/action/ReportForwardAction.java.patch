@@ -2,7 +2,7 @@ diff --git a/src/main/java/com/rsmart/kuali/kra/reporting/web/struts/action/Repo
 new file mode 100644
 index 0000000..06e1fa9
 --- /dev/null
-+++ b/src/main/java/com/rsmart/kuali/kra/reporting/web/struts/action/ReportForwardAction.java
++++ b/coeus-impl/src/main/java/com/rsmart/kuali/kra/reporting/web/struts/action/ReportForwardAction.java
 @@ -0,0 +1,123 @@
 +/*
 + * Copyright 2005-2010 The Kuali Foundation

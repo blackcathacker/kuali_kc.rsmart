@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/NarrativeReplaceAuthorizer.java b/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/NarrativeReplaceAuthorizer.java
 index 573de59..d6e6e3d 100644
 --- a/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/NarrativeReplaceAuthorizer.java
-+++ b/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/NarrativeReplaceAuthorizer.java
++++ /dev/null
 @@ -41,6 +41,10 @@ public class NarrativeReplaceAuthorizer extends NarrativeAuthorizer {
          if (!doc.getDevelopmentProposal().getSubmitFlag() && hasProposalPermission(userId, doc, PermissionConstants.MODIFY_NARRATIVE)) {
              hasPermission = hasNarrativeRight(userId, narrative, NarrativeRight.MODIFY_NARRATIVE_RIGHT);

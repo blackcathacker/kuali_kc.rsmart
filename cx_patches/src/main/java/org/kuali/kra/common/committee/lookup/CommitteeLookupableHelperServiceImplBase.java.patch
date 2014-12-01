@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/common/committee/lookup/CommitteeLookupableHelperServiceImplBase.java b/src/main/java/org/kuali/kra/common/committee/lookup/CommitteeLookupableHelperServiceImplBase.java
 index 972897a..93f5d0f 100644
---- a/src/main/java/org/kuali/kra/common/committee/lookup/CommitteeLookupableHelperServiceImplBase.java
-+++ b/src/main/java/org/kuali/kra/common/committee/lookup/CommitteeLookupableHelperServiceImplBase.java
+--- a/coeus-impl/src/main/java/org/kuali/coeus/common/committee/impl/lookup/CommitteeLookupableHelperServiceImplBase.java
++++ b/coeus-impl/src/main/java/org/kuali/coeus/common/committee/impl/lookup/CommitteeLookupableHelperServiceImplBase.java
 @@ -128,6 +128,7 @@ public abstract class CommitteeLookupableHelperServiceImplBase<CMT extends Commi
      
      protected abstract String getHtmlAction();

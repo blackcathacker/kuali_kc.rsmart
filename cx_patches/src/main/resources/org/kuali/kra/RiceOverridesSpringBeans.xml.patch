@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/RiceOverridesSpringBeans.xml b/src/main/resources/org/kuali/kra/RiceOverridesSpringBeans.xml
 index 6883ca5..890008e 100644
 --- a/src/main/resources/org/kuali/kra/RiceOverridesSpringBeans.xml
-+++ b/src/main/resources/org/kuali/kra/RiceOverridesSpringBeans.xml
++++ /dev/null
 @@ -65,7 +65,11 @@
          </property>
      </bean>

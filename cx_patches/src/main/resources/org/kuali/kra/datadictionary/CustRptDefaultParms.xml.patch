@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/datadictionary/CustRptDefaultParms.xml b/src/main/resources/org/kuali/kra/datadictionary/CustRptDefaultParms.xml
 index 7bcc5c4..71e4df2 100644
---- a/src/main/resources/org/kuali/kra/datadictionary/CustRptDefaultParms.xml
-+++ b/src/main/resources/org/kuali/kra/datadictionary/CustRptDefaultParms.xml
+--- a/coeus-impl/src/main/resources/org/kuali/coeus/common/impl/rpt/cust/CustRptDefaultParms.xml
++++ b/coeus-impl/src/main/resources/org/kuali/coeus/common/impl/rpt/cust/CustRptDefaultParms.xml
 @@ -206,6 +206,6 @@
  					p:forceInquiry="false" />
  			</list>

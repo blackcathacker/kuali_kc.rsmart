@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/award/contacts/AwardSponsorContactAuditRule.java b/src/main/java/org/kuali/kra/award/contacts/AwardSponsorContactAuditRule.java
 index 0838afe..a6d23f1 100644
---- a/src/main/java/org/kuali/kra/award/contacts/AwardSponsorContactAuditRule.java
-+++ b/src/main/java/org/kuali/kra/award/contacts/AwardSponsorContactAuditRule.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/award/contacts/AwardSponsorContactAuditRule.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/award/contacts/AwardSponsorContactAuditRule.java
 @@ -34,6 +34,7 @@ public class AwardSponsorContactAuditRule implements DocumentAuditRule {
  
      private static final String AWARD_SPONSOR_CONTACT_LIST_ERROR_KEY = "document.awardList[0].sponsorContact.auditErrors";

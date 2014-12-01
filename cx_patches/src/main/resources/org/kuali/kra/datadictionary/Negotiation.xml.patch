@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/datadictionary/Negotiation.xml b/src/main/resources/org/kuali/kra/datadictionary/Negotiation.xml
 index 657d38c..cafbf4d 100644
---- a/src/main/resources/org/kuali/kra/datadictionary/Negotiation.xml
-+++ b/src/main/resources/org/kuali/kra/datadictionary/Negotiation.xml
+--- a/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/Negotiation.xml
++++ b/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/Negotiation.xml
 @@ -187,6 +187,9 @@
      <property name="required" value="false" />
      <property name="summary" value="Negotiator Username" />

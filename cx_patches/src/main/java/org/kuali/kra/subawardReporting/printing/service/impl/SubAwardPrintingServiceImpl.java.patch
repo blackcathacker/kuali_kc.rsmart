@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/subawardReporting/printing/service/impl/SubAwardPrintingServiceImpl.java b/src/main/java/org/kuali/kra/subawardReporting/printing/service/impl/SubAwardPrintingServiceImpl.java
 index 075e2a5..0d308a9 100644
---- a/src/main/java/org/kuali/kra/subawardReporting/printing/service/impl/SubAwardPrintingServiceImpl.java
-+++ b/src/main/java/org/kuali/kra/subawardReporting/printing/service/impl/SubAwardPrintingServiceImpl.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/subaward/reporting/printing/service/impl/SubAwardPrintingServiceImpl.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/subaward/reporting/printing/service/impl/SubAwardPrintingServiceImpl.java
 @@ -265,6 +265,7 @@ public class SubAwardPrintingServiceImpl implements SubAwardPrintingService {
          if(subAwardPrint.getAttachment4()){
              printFormTemplates.add(getBusinessObjectService().findBySinglePrimaryKey(SubAwardForms.class, "FDP_ATT_4"));

@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java b/src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java
 index 9dcb3dd..a8adddb 100644
 --- a/src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java
-+++ b/src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java
++++ /dev/null
 @@ -52,6 +52,7 @@ import org.kuali.kra.web.struts.form.CustomDataDocumentForm;
  import org.kuali.kra.web.struts.form.KraTransactionalDocumentFormBase;
  import org.kuali.rice.core.api.CoreApiServiceLocator;

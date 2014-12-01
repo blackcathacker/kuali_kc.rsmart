@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/irb/actions/ProtocolProtocolActionsAction.java b/src/main/java/org/kuali/kra/irb/actions/ProtocolProtocolActionsAction.java
 index 97219e4..95a77ea 100644
---- a/src/main/java/org/kuali/kra/irb/actions/ProtocolProtocolActionsAction.java
-+++ b/src/main/java/org/kuali/kra/irb/actions/ProtocolProtocolActionsAction.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/irb/actions/ProtocolProtocolActionsAction.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/irb/actions/ProtocolProtocolActionsAction.java
 @@ -173,6 +173,11 @@ public class ProtocolProtocolActionsAction extends ProtocolAction implements Aud
              protocolForm.getActionHelper().setCurrentTask("");
          }

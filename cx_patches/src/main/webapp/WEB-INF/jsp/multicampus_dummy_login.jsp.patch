@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/jsp/multicampus_dummy_login.jsp b/src/main/webapp/WEB-INF/jsp/multicampus_dummy_login.jsp
 index 8d04721..691513d 100644
---- a/src/main/webapp/WEB-INF/jsp/multicampus_dummy_login.jsp
-+++ b/src/main/webapp/WEB-INF/jsp/multicampus_dummy_login.jsp
+--- a/coeus-webapp/src/main/webapp/WEB-INF/jsp/multicampus_dummy_login.jsp
++++ b/coeus-webapp/src/main/webapp/WEB-INF/jsp/multicampus_dummy_login.jsp
 @@ -28,50 +28,6 @@
              <script language="JavaScript" type="text/javascript" src="${ConfigProperties.application.url}/${fn:trim(javascriptFile)}"></script>
          </c:if>

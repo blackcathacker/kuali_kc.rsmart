@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/datadictionary/Protocol.xml b/src/main/resources/org/kuali/kra/datadictionary/Protocol.xml
 index 4a514d5..f45466e 100644
---- a/src/main/resources/org/kuali/kra/datadictionary/Protocol.xml
-+++ b/src/main/resources/org/kuali/kra/datadictionary/Protocol.xml
+--- a/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/Protocol.xml
++++ b/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/Protocol.xml
 @@ -291,7 +291,7 @@
  		<property name="shortLabel" value="Principal Investigator" />
  		<property name="maxLength" value="40" />

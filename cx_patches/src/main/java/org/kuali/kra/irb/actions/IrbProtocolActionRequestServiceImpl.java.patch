@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/irb/actions/IrbProtocolActionRequestServiceImpl.java b/src/main/java/org/kuali/kra/irb/actions/IrbProtocolActionRequestServiceImpl.java
 index a380668..66f1350 100644
---- a/src/main/java/org/kuali/kra/irb/actions/IrbProtocolActionRequestServiceImpl.java
-+++ b/src/main/java/org/kuali/kra/irb/actions/IrbProtocolActionRequestServiceImpl.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/irb/actions/IrbProtocolActionRequestServiceImpl.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/irb/actions/IrbProtocolActionRequestServiceImpl.java
 @@ -78,6 +78,7 @@ import org.kuali.kra.irb.actions.notification.ProtocolNotificationRequestBean;
  import org.kuali.kra.irb.actions.notification.ProtocolSuspendedByDSMBNotificationRenderer;
  import org.kuali.kra.irb.actions.notification.ProtocolSuspendedNotificationRenderer;

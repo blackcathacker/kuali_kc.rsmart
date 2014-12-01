@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/datadictionary/AwardPerson.xml b/src/main/resources/org/kuali/kra/datadictionary/AwardPerson.xml
 index 91f9109..d697b95 100644
---- a/src/main/resources/org/kuali/kra/datadictionary/AwardPerson.xml
-+++ b/src/main/resources/org/kuali/kra/datadictionary/AwardPerson.xml
+--- a/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/AwardPerson.xml
++++ b/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/AwardPerson.xml
 @@ -218,7 +218,7 @@
  		    <bean p:attributeName="fullName" parent="FieldDefinition" />
  		  </list>

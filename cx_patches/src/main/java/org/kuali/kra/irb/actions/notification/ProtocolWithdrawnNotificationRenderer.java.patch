@@ -2,7 +2,7 @@ diff --git a/src/main/java/org/kuali/kra/irb/actions/notification/ProtocolWithdr
 new file mode 100644
 index 0000000..b5ce47a
 --- /dev/null
-+++ b/src/main/java/org/kuali/kra/irb/actions/notification/ProtocolWithdrawnNotificationRenderer.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/irb/actions/notification/ProtocolWithdrawnNotificationRenderer.java
 @@ -0,0 +1,77 @@
 +/*
 + * Copyright 2005-2014 The Kuali Foundation

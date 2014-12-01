@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/WEB-INF/struts-config.xml b/src/main/webapp/WEB-INF/struts-config.xml
 index 8870528..515a46b 100755
---- a/src/main/webapp/WEB-INF/struts-config.xml
-+++ b/src/main/webapp/WEB-INF/struts-config.xml
+--- a/coeus-webapp/src/main/webapp/WEB-INF/struts-config.xml
++++ b/coeus-webapp/src/main/webapp/WEB-INF/struts-config.xml
 @@ -62,6 +62,8 @@
          <form-bean name="IacucProtocolCorrespondenceTemplateForm" type="org.kuali.kra.iacuc.correspondence.IacucProtocolCorrespondenceTemplateForm" />
  		<form-bean name="IacucResearchAreasForm" type="org.kuali.kra.iacuc.IacucResearchAreasForm" />

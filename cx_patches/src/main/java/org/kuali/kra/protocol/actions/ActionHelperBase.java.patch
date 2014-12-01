@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/protocol/actions/ActionHelperBase.java b/src/main/java/org/kuali/kra/protocol/actions/ActionHelperBase.java
 index 22c6648..337b9bd 100644
---- a/src/main/java/org/kuali/kra/protocol/actions/ActionHelperBase.java
-+++ b/src/main/java/org/kuali/kra/protocol/actions/ActionHelperBase.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/protocol/actions/ActionHelperBase.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/protocol/actions/ActionHelperBase.java
 @@ -1178,6 +1178,9 @@ public abstract class ActionHelperBase implements Serializable {
      
      

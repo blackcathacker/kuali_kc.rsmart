@@ -1,7 +1,7 @@
 diff --git a/src/main/java/org/kuali/kra/protocol/notification/ProtocolReplacementParameters.java b/src/main/java/org/kuali/kra/protocol/notification/ProtocolReplacementParameters.java
 index 2ca8950..ebd3653 100644
---- a/src/main/java/org/kuali/kra/protocol/notification/ProtocolReplacementParameters.java
-+++ b/src/main/java/org/kuali/kra/protocol/notification/ProtocolReplacementParameters.java
+--- a/coeus-impl/src/main/java/org/kuali/kra/protocol/notification/ProtocolReplacementParameters.java
++++ b/coeus-impl/src/main/java/org/kuali/kra/protocol/notification/ProtocolReplacementParameters.java
 @@ -73,7 +73,9 @@ public class ProtocolReplacementParameters {
                                                                           COMMITTEE_NAME, 
                                                                           PROTOCOL_INITIAL_APPROVAL_DATE,

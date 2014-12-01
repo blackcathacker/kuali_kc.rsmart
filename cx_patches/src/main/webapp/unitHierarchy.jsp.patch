@@ -1,7 +1,7 @@
 diff --git a/src/main/webapp/unitHierarchy.jsp b/src/main/webapp/unitHierarchy.jsp
 index 3240e51..2dac5ef 100644
---- a/src/main/webapp/unitHierarchy.jsp
-+++ b/src/main/webapp/unitHierarchy.jsp
+--- a/coeus-webapp/src/main/webapp/unitHierarchy.jsp
++++ b/coeus-webapp/src/main/webapp/unitHierarchy.jsp
 @@ -14,7 +14,7 @@
   limitations under the License.
  --%>

@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/datadictionary/NegotiationUnassociatedDetail.xml b/src/main/resources/org/kuali/kra/datadictionary/NegotiationUnassociatedDetail.xml
 index 1012bf7..991333a 100644
---- a/src/main/resources/org/kuali/kra/datadictionary/NegotiationUnassociatedDetail.xml
-+++ b/src/main/resources/org/kuali/kra/datadictionary/NegotiationUnassociatedDetail.xml
+--- a/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/NegotiationUnassociatedDetail.xml
++++ b/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/NegotiationUnassociatedDetail.xml
 @@ -293,7 +293,7 @@
  
  		  </list>

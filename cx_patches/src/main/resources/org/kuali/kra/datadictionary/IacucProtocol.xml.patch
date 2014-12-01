@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/org/kuali/kra/datadictionary/IacucProtocol.xml b/src/main/resources/org/kuali/kra/datadictionary/IacucProtocol.xml
 index 9e09002..1703e3d 100644
---- a/src/main/resources/org/kuali/kra/datadictionary/IacucProtocol.xml
-+++ b/src/main/resources/org/kuali/kra/datadictionary/IacucProtocol.xml
+--- a/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/IacucProtocol.xml
++++ b/coeus-impl/src/main/resources/org/kuali/kra/datadictionary/IacucProtocol.xml
 @@ -223,7 +223,7 @@
  		<property name="shortLabel" value="Principal Investigator" />
  		<property name="maxLength" value="40" />

@@ -1,7 +1,7 @@
 diff --git a/src/main/resources/META-INF/kc-config-defaults.xml b/src/main/resources/META-INF/kc-config-defaults.xml
 index e606700..d05e3d6 100644
---- a/src/main/resources/META-INF/kc-config-defaults.xml
-+++ b/src/main/resources/META-INF/kc-config-defaults.xml
+--- a/coeus-impl/src/main/resources/META-INF/kc-config-defaults.xml
++++ b/coeus-impl/src/main/resources/META-INF/kc-config-defaults.xml
 @@ -65,11 +65,11 @@
  	<param name="kew.externalizable.images.url">/${app.context.name}/kew/images/</param>
  	<param name="kra.externalizable.images.url">/${app.context.name}/static/images/</param>

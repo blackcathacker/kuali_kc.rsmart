@@ -1,7 +1,7 @@
 diff --git a/src/main/config/sql/current_mysql/0.0.0/dml/KR_DML_01_KCINFR-1018_B000.sql b/src/main/config/sql/current_mysql/0.0.0/dml/KR_DML_01_KCINFR-1018_B000.sql
 index 43b7bf5..1e3d624 100644
---- a/src/main/config/sql/current_mysql/0.0.0/dml/KR_DML_01_KCINFR-1018_B000.sql
-+++ b/src/main/config/sql/current_mysql/0.0.0/dml/KR_DML_01_KCINFR-1018_B000.sql
+--- a/coeus-db/coeus-db-sql/src/main/resources/org/kuali/coeus/coeus-sql/current_mysql/0.0.0/dml/KR_DML_01_KCINFR-1018_B000.sql
++++ b/coeus-db/coeus-db-sql/src/main/resources/org/kuali/coeus/coeus-sql/current_mysql/0.0.0/dml/KR_DML_01_KCINFR-1018_B000.sql
 @@ -12,13 +12,12 @@ DECLARE rolePermCount INT DEFAULT 0;
  SELECT COUNT(*) INTO roleCount FROM information_schema.tables WHERE table_name = 'KRIM_ROLE_T' and table_schema = (SELECT DATABASE());
  SELECT COUNT(*) INTO rolePermCount FROM information_schema.tables WHERE table_name = 'KRIM_ROLE_T' and table_schema = (SELECT DATABASE());
