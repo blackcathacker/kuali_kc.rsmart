@@ -52,6 +52,8 @@ public class RolodexMaintainableImpl extends KraMaintainableImpl {
     public static final String AUTO_GEN_ROLODEX_ID_PARM = "AUTO_GENERATE_NON_EMPLOYEE_ID";
     public static final String SECTION_ID = "Edit Address Book";
     public static final String ROLODEX_ID_NAME = "rolodexId";
+    private static final String YES = "Y";
+    private static final String NO  = "N";
 
     @Autowired
     @Qualifier("kradApplicationDataSource")
@@ -120,6 +122,21 @@ public class RolodexMaintainableImpl extends KraMaintainableImpl {
     public void processAfterCopy(MaintenanceDocument document, Map<String, String[]> parameters) {
         super.processAfterCopy(document, parameters);
         setGenerateDefaultValues(document.getDocumentHeader().getWorkflowDocument().getDocumentTypeName());       
+    }
+
+    @Override
+    public void prepareForSave() {
+        super.prepareForSave();
+        final Rolodex rolodex = (Rolodex) getBusinessObject();
+
+        if (rolodex != null) {
+            if (rolodex.getIsSponsorAddress() != null && rolodex.getIsSponsorAddress().equalsIgnoreCase(YES)) {
+                rolodex.setSponsorAddressFlag(true);
+            }
+            else if (rolodex.getIsSponsorAddress() != null && rolodex.getIsSponsorAddress().equalsIgnoreCase(NO)) {
+                rolodex.setSponsorAddressFlag(false);
+            }
+        }
     }
 
     public boolean isAutoGenerateCode() {
