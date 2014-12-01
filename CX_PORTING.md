@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/java/org/kuali/kra/award/document/authorization/AwardDocumentAuthorizer.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/award/home/Award.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/award/home/AwardAmountInfo.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/award/lookup/AwardLookupableHelperServiceImpl.java.patch`
@@ -209,3 +208,5 @@ Complete
   * Patch merged cleanly.
 * `cx_patches/src/main/java/org/kuali/kra/award/contacts/AwardSponsorContactAuditRule.java.patch`
   * Manually merged patch conflict.
+* `cx_patches/src/main/java/org/kuali/kra/award/document/authorization/AwardDocumentAuthorizer.java.patch`
+  * Patch merged cleanly.
