@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/java/com/rsmart/kuali/kra/web/jstl/PortalFunctions.java.patch`
 * `cx_patches/src/main/java/com/rsmart/kuali/kra/workflow/UnitAdministratorRoleAttribute.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/award/contacts/AwardSponsorContactAuditRule.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/award/document/authorization/AwardDocumentAuthorizer.java.patch`
@@ -202,4 +201,6 @@ Complete
 * `cx_patches/src/main/java/com/rsmart/kuali/kra/reporting/web/struts/action/ReportForwardAction.java.patch`
   * Patch merged cleanly.
 * `cx_patches/src/main/java/com/rsmart/kuali/kra/reporting/web/struts/form/ReportFormwardForm.java.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/java/com/rsmart/kuali/kra/web/jstl/PortalFunctions.java.patch`
   * Patch merged cleanly.
