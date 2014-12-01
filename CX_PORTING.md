@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/java/com/rsmart/kuali/kra/workflow/UnitAdministratorRoleAttribute.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/award/contacts/AwardSponsorContactAuditRule.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/award/document/authorization/AwardDocumentAuthorizer.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/award/home/Award.java.patch`
@@ -175,6 +174,11 @@ Needs more attention
 * `cx_patches/src/main/config/sql/RELEASE-SCRIPTS/KC_Install.sh.patch`
   * Merge was *mostly* clean; rejects saved for reference.
   * TODO: manually mege all new KC6 SQL scripts into Flyway migrations.
+* `cx_patches/src/main/java/com/rsmart/kuali/kra/workflow/UnitAdministratorRoleAttribute.java.patch`
+  * Merged failed!
+  * TODO: Needs to be manually ported to KC6; rejects saved for reference.
+    * CX Workflow Routing Not Working in ANY instance. The new code will use all Proposal Units, and will route to all Unit Heads associated with those units from the Unit Admin table. https://github.com/rSmart/issues/issues/447
+    * Fixes NPE @ UnitAdministratorRoleAttribute.java:111 Caused by: java.lang.NullPointerException at com.rsmart.kuali.kra.workflow.UnitAdministratorRoleAttribute.resolveRecipients(UnitAdministratorRoleAttribute.java:111) https://github.com/rSmart/issues/issues/358
 
 Complete
 --------
