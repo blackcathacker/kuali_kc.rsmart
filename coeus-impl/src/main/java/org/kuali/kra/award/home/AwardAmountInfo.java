@@ -80,14 +80,20 @@ public class AwardAmountInfo extends AwardAssociate {
     // private AwardBudgetInfo awardBudgetInfo;   
     // private AwardAmtFnaDistribution awardAmtFnaDistribution;   
     public AwardAmountInfo() {
-        setAnticipatedTotalDirect(new ScaleTwoDecimal(0.00));
-        setAnticipatedTotalIndirect(new ScaleTwoDecimal(0.00));
-        setObligatedTotalDirect(new ScaleTwoDecimal(0.00));
-        setObligatedTotalIndirect(new ScaleTwoDecimal(0.00));
-        setAnticipatedTotalAmount(new ScaleTwoDecimal(0.00));
-        setAmountObligatedToDate(new ScaleTwoDecimal(0.00));
-        setObliDistributableAmount(new ScaleTwoDecimal(0.00));
-        setAntDistributableAmount(new ScaleTwoDecimal(0.00));
+        anticipatedTotalAmount = new ScaleTwoDecimal(0.00);
+        antDistributableAmount = new ScaleTwoDecimal(0.00);
+        amountObligatedToDate = new ScaleTwoDecimal(0.00);
+        obliDistributableAmount = new ScaleTwoDecimal(0.00);
+        anticipatedChange = new ScaleTwoDecimal(0.00);
+        obligatedChange = new ScaleTwoDecimal(0.00);
+        obligatedChangeDirect = new ScaleTwoDecimal(0.00);
+        obligatedChangeIndirect = new ScaleTwoDecimal(0.00);
+        anticipatedChangeDirect = new ScaleTwoDecimal(0.00);
+        anticipatedChangeIndirect = new ScaleTwoDecimal(0.00);
+        anticipatedTotalDirect = new ScaleTwoDecimal(0.00);
+        anticipatedTotalIndirect = new ScaleTwoDecimal(0.00);
+        obligatedTotalDirect = new ScaleTwoDecimal(0.00);
+        obligatedTotalIndirect = new ScaleTwoDecimal(0.00);
     }
 
     public Long getAwardAmountInfoId() {
@@ -99,6 +105,9 @@ public class AwardAmountInfo extends AwardAssociate {
     }
 
     public ScaleTwoDecimal getAnticipatedTotalAmount() {
+        if (anticipatedTotalAmount == null) {
+            anticipatedTotalAmount = new ScaleTwoDecimal(0.00);
+        }
         return anticipatedTotalAmount;
     }
 
@@ -112,6 +121,9 @@ public class AwardAmountInfo extends AwardAssociate {
     }
 
     public ScaleTwoDecimal getAntDistributableAmount() {
+        if (antDistributableAmount == null) {
+            antDistributableAmount = new ScaleTwoDecimal(0.00);
+        }
         return antDistributableAmount;
     }
 
@@ -136,6 +148,9 @@ public class AwardAmountInfo extends AwardAssociate {
     }
 
     public ScaleTwoDecimal getAmountObligatedToDate() {
+        if (amountObligatedToDate == null) {
+            amountObligatedToDate = new ScaleTwoDecimal(0.00);
+        }
         return amountObligatedToDate;
     }
 
@@ -149,6 +164,9 @@ public class AwardAmountInfo extends AwardAssociate {
     }
 
     public ScaleTwoDecimal getObliDistributableAmount() {
+        if (obliDistributableAmount == null) {
+            obliDistributableAmount = new ScaleTwoDecimal(0.00);
+        }
         return obliDistributableAmount;
     }
 
@@ -189,6 +207,9 @@ public class AwardAmountInfo extends AwardAssociate {
     }
 
     public ScaleTwoDecimal getAnticipatedChange() {
+        if (anticipatedChange == null) {
+            anticipatedChange = new ScaleTwoDecimal(0.00);
+        }
         return anticipatedChange;
     }
 
@@ -197,6 +218,9 @@ public class AwardAmountInfo extends AwardAssociate {
     }
 
     public ScaleTwoDecimal getObligatedChange() {
+        if (obligatedChange == null) {
+            obligatedChange = new ScaleTwoDecimal(0.00);
+        }
         return obligatedChange;
     }
 
@@ -205,6 +229,9 @@ public class AwardAmountInfo extends AwardAssociate {
     }
 
     public ScaleTwoDecimal getObligatedChangeDirect() {
+        if (obligatedChangeDirect == null) {
+            obligatedChangeDirect = new ScaleTwoDecimal(0.00);
+        }
         return obligatedChangeDirect;
     }
 
@@ -213,6 +240,9 @@ public class AwardAmountInfo extends AwardAssociate {
     }
 
     public ScaleTwoDecimal getObligatedChangeIndirect() {
+        if (obligatedChangeIndirect == null) {
+            obligatedChangeIndirect = new ScaleTwoDecimal(0.00);
+        }
         return obligatedChangeIndirect;
     }
 
@@ -221,6 +251,9 @@ public class AwardAmountInfo extends AwardAssociate {
     }
 
     public ScaleTwoDecimal getAnticipatedChangeDirect() {
+        if (anticipatedChangeDirect == null) {
+            anticipatedChangeDirect = new ScaleTwoDecimal(0.00);
+        }
         return anticipatedChangeDirect;
     }
 
@@ -229,6 +262,9 @@ public class AwardAmountInfo extends AwardAssociate {
     }
 
     public ScaleTwoDecimal getAnticipatedChangeIndirect() {
+        if (anticipatedChangeIndirect == null) {
+            anticipatedChangeIndirect = new ScaleTwoDecimal(0.00);
+        }
         return anticipatedChangeIndirect;
     }
 
@@ -237,6 +273,9 @@ public class AwardAmountInfo extends AwardAssociate {
     }
 
     public ScaleTwoDecimal getAnticipatedTotalDirect() {
+        if (anticipatedTotalDirect == null) {
+            anticipatedTotalDirect = new ScaleTwoDecimal(0.00);
+        }
         return anticipatedTotalDirect;
     }
 
@@ -245,6 +284,9 @@ public class AwardAmountInfo extends AwardAssociate {
     }
 
     public ScaleTwoDecimal getAnticipatedTotalIndirect() {
+        if (anticipatedTotalIndirect == null) {
+            anticipatedTotalIndirect = new ScaleTwoDecimal(0.00);
+        }
         return anticipatedTotalIndirect;
     }
 
@@ -253,6 +295,9 @@ public class AwardAmountInfo extends AwardAssociate {
     }
 
     public ScaleTwoDecimal getObligatedTotalDirect() {
+        if (obligatedTotalDirect == null) {
+            obligatedTotalDirect = new ScaleTwoDecimal(0.00);
+        }
         return obligatedTotalDirect;
     }
 
@@ -261,6 +306,9 @@ public class AwardAmountInfo extends AwardAssociate {
     }
 
     public ScaleTwoDecimal getObligatedTotalIndirect() {
+        if (obligatedTotalIndirect == null) {
+            obligatedTotalIndirect = new ScaleTwoDecimal(0.00);
+        }
         return obligatedTotalIndirect;
     }
 
