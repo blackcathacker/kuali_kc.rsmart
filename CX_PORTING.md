@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetSummaryXmlStream.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/budget/printing/xmlstream/IndustrialBudgetXmlStream.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/budget/web/struts/action/BudgetAction.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/coi/disclosure/CoiDisclosureServiceImpl.java.patch`
@@ -221,4 +220,6 @@ Complete
 * `cx_patches/src/main/java/org/kuali/kra/bo/UnitAdministrator.java.patch`
   * Manually merged patch conflicts.
 * `cx_patches/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetCumilativeXmlStream.java.patch`
+  * Fix already applied upstream in KC6.
+* `cx_patches/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetSummaryXmlStream.java.patch`
   * Fix already applied upstream in KC6.
