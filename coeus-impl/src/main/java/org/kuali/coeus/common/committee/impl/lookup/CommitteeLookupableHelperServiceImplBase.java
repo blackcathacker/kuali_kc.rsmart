@@ -128,6 +128,7 @@ public abstract class CommitteeLookupableHelperServiceImplBase<CMT extends Commi
     
     protected abstract String getHtmlAction();
     protected abstract String getDocumentTypeName();
+    protected abstract String getCustomResumeEditUrl(final String editCommitteeDocId);
     
     protected String getKeyFieldName() {
         return "committeeId";
@@ -151,7 +152,7 @@ public abstract class CommitteeLookupableHelperServiceImplBase<CMT extends Commi
                 AnchorHtmlData htmlData = (AnchorHtmlData) htmlDataList.get(0);
                 CD document = ((CMT) businessObject).getCommitteeDocument();
                 String workflowUrl = getKualiConfigurationService().getPropertyValueAsString(KRADConstants.WORKFLOW_URL_KEY);
-                htmlData.setHref(String.format(DOCHANDLER_LINK, workflowUrl, editCommitteeDocId));
+                htmlData.setHref(getCustomResumeEditUrl(editCommitteeDocId));
                 htmlData.setDisplayText("resume edit");
             }
         }
