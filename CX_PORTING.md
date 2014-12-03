@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetBaseStream.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetCumilativeXmlStream.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetSummaryXmlStream.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/budget/printing/xmlstream/IndustrialBudgetXmlStream.java.patch`
@@ -169,6 +168,8 @@ Needs more attention
     * Fixes NPE @ UnitAdministratorRoleAttribute.java:111 Caused by: java.lang.NullPointerException at com.rsmart.kuali.kra.workflow.UnitAdministratorRoleAttribute.resolveRecipients(UnitAdministratorRoleAttribute.java:111) https://github.com/rSmart/issues/issues/358
 * `cx_patches/src/main/java/org/kuali/kra/bo/Rolodex.java.patch`
   * Patch does NOT merge clean; needs to be inspected further.
+* `cx_patches/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetBaseStream.java.patch`
+  * Patch does NOT merge clean but it looks like *most* of the fix is already in KC6.
 
 Complete
 --------
