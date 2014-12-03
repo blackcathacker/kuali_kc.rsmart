@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/java/org/kuali/kra/common/committee/bo/CommitteeBase.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/common/committee/lookup/CommitteeLookupableHelperServiceImplBase.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/common/committee/meeting/CommitteeScheduleAttachmentsBase.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/common/committee/meeting/MeetingActionBase.java.patch`
@@ -230,3 +229,5 @@ Complete
   * Patch merged cleanly.
 * `cx_patches/src/main/java/org/kuali/kra/committee/lookup/CommitteeLookupableHelperServiceImpl.java.patch`
   * Manually merged patch conflicts.
+* `cx_patches/src/main/java/org/kuali/kra/common/committee/bo/CommitteeBase.java.patch`
+  * Patch merged cleanly.
