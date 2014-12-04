@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/resources/META-INF/kc-config-defaults.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/CoreSpringBeans.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/Award.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/AwardPerson.xml.patch`
@@ -269,4 +268,6 @@ Complete
 * `cx_patches/src/main/java/org/kuali/kra/web/filter/PerformanceLoggingFilter.java.patch`
   * Abandoned patch; not important enough to merge manually.
 * `cx_patches/src/main/resources/ApplicationResources.properties.patch`
+  * Manually merged patch conflicts.
+* `cx_patches/src/main/resources/META-INF/kc-config-defaults.xml.patch`
   * Manually merged patch conflicts.
