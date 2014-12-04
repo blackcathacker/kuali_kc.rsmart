@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/LookupableDevelopmentProposal.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/Negotiation.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/NegotiationActivity.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/NegotiationUnassociatedDetail.xml.patch`
@@ -284,4 +283,6 @@ Complete
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposal.xml.patch`
   * Patch merged cleanly.
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposalPerson.xml.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/LookupableDevelopmentProposal.xml.patch`
   * Patch merged cleanly.
