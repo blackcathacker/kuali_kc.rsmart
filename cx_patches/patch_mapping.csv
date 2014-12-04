@@ -78,7 +78,7 @@ original_location,new_location
 "src/main/resources/ApplicationResources.properties","coeus-impl/src/main/resources/ApplicationResources.properties"
 "src/main/resources/META-INF/kc-config-defaults.xml","coeus-impl/src/main/resources/META-INF/kc-config-defaults.xml"
 "src/main/resources/org/kuali/kra/CoreSpringBeans.xml","coeus-impl/src/main/resources/org/kuali/kra/CoreSpringBeans.xml"
-"src/main/resources/org/kuali/kra/RiceOverridesSpringBeans.xml","/dev/null"
+"src/main/resources/org/kuali/kra/RiceOverridesSpringBeans.xml","coeus-impl/src/main/resources/org/kuali/coeus/sys/impl/RiceBootstrapSpringBeans.xml"
 "src/main/resources/org/kuali/kra/datadictionary/Award.xml","coeus-impl/src/main/resources/org/kuali/kra/datadictionary/Award.xml"
 "src/main/resources/org/kuali/kra/datadictionary/AwardPerson.xml","coeus-impl/src/main/resources/org/kuali/kra/datadictionary/AwardPerson.xml"
 "src/main/resources/org/kuali/kra/datadictionary/Budget.xml","coeus-impl/src/main/resources/org/kuali/coeus/common/budget/impl/core/Budget.xml"
