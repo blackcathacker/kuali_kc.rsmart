@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/java/org/kuali/kra/timeandmoney/transactions/TransactionRuleImpl.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/web/filter/PerformanceLoggingFilter.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java.patch`
 * `cx_patches/src/main/resources/ApplicationResources.properties.patch`
@@ -266,3 +265,5 @@ Complete
   * Manually merged patch conflicts.
 * `cx_patches/src/main/java/org/kuali/kra/subawardReporting/printing/xmlstream/SubAwardFDPPrintXmlStream.java.patch`
   * Manually merged patch conflicts.
+* `cx_patches/src/main/java/org/kuali/kra/timeandmoney/transactions/TransactionRuleImpl.java.patch`
+  * Patch merged cleanly.
