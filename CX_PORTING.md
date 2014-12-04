@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/AwardPerson.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/Budget.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/CustReportDetails.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/CustReportType.xml.patch`
@@ -272,4 +271,6 @@ Complete
 * `cx_patches/src/main/resources/org/kuali/kra/CoreSpringBeans.xml.patch`
   * Manually merged patch conflicts.
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/Award.xml.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/AwardPerson.xml.patch`
   * Patch merged cleanly.
