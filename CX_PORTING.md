@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/resources/org/kuali/kra/printing/stylesheet/FDP_Modification_Template.xsl.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/printing/stylesheet/FDP_Template_Agreement.xsl.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/RiceOverridesSpringBeans.xml.patch`
 * `cx_patches/src/main/resources/repository.xml.patch`
@@ -300,3 +299,5 @@ Complete
   * Manually merged patch conflicts.
 * `cx_patches/src/main/resources/org/kuali/kra/printing/stylesheet/BudgetSummaryTotalPage.xsl.patch`
   * Manually merged patch conflicts.
+* `cx_patches/src/main/resources/org/kuali/kra/printing/stylesheet/FDP_Modification_Template.xsl.patch`
+  * Patch merged cleanly.
