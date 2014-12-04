@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/resources/repository.xml.patch`
 * `cx_patches/src/main/webapp/css/bootstrap/css/bootstrap-skinned.css.patch`
 * `cx_patches/src/main/webapp/css/bootstrap/css/bootstrap.css.patch`
 * `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome-webfont.eot.patch`
@@ -303,3 +302,5 @@ Complete
   * Patch merged cleanly.
 * `cx_patches/src/main/resources/org/kuali/kra/RiceOverridesSpringBeans.xml.patch`
   * Patch merged cleanly.
+* `cx_patches/src/main/resources/repository.xml.patch`
+  * Manually merged patch conflicts.
