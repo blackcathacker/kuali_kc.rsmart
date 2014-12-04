@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/SubAward.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/SubAwardCopyRightsType.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/SubAwardCostType.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/SubAwardFundingSource.xml.patch`
@@ -294,3 +293,5 @@ Complete
   * Patch merged cleanly.
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/Sponsor.xml.patch`
   * Manually merged patch conflicts.
+* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/SubAward.xml.patch`
+  * Patch merged cleanly.
