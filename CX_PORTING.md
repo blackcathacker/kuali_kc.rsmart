@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/webapp/css/images/bl-bevel-focus.gif.patch`
 * `cx_patches/src/main/webapp/css/rsmart.css.patch`
 * `cx_patches/src/main/webapp/rice-portal/scripts/easyXDM/resize_intermediate.html.patch`
 * `cx_patches/src/main/webapp/scripts/bootstrap/bootstrap.js.patch`
@@ -327,4 +326,6 @@ Complete
 * `cx_patches/src/main/webapp/css/bootstrap/img/logo-watermark.png.patch`
   * Patch merged cleanly.
 * `cx_patches/src/main/webapp/css/bootstrap/img/logo.png.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/images/bl-bevel-focus.gif.patch`
   * Patch merged cleanly.
