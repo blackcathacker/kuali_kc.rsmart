@@ -526,8 +526,8 @@ public class ProposalDevelopmentForm extends BudgetVersionFormBase implements Re
      * @return the value of newProposalPersonUnit
      */
     public List<Unit> getNewProposalPersonUnit() {
-        if (this.getProposalDevelopmentDocument().getDevelopmentProposal().getProposalPersons().size() > this.newProposalPersonUnit.size()) {
-            this.newProposalPersonUnit.add(this.newProposalPersonUnit.size(), new Unit());
+        while (getProposalDevelopmentDocument().getDevelopmentProposal().getProposalPersons().size() > newProposalPersonUnit.size()) {
+            this.newProposalPersonUnit.add(new Unit());
         }
         return this.newProposalPersonUnit;
     }
@@ -547,9 +547,8 @@ public class ProposalDevelopmentForm extends BudgetVersionFormBase implements Re
      * @return the value of newProposalPersonDegree
      */
     public List<ProposalPersonDegree> getNewProposalPersonDegree() {
-
-        if (this.getProposalDevelopmentDocument().getDevelopmentProposal().getProposalPersons().size() > this.newProposalPersonDegree.size()) {
-            this.newProposalPersonDegree.add(this.newProposalPersonDegree.size(),new ProposalPersonDegree());
+        while (this.getProposalDevelopmentDocument().getDevelopmentProposal().getProposalPersons().size() > this.newProposalPersonDegree.size()) {
+            this.newProposalPersonDegree.add(new ProposalPersonDegree());
         }
         return this.newProposalPersonDegree;
     }
