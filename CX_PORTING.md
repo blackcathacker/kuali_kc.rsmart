@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/Rolodex.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/Sponsor.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/SponsorSpecial.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/SubAward.xml.patch`
@@ -116,6 +115,8 @@ Needs more attention
   * TODO merged manually but needs review to ensure correctness wrt failed Rolodex merge above.
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/SponsorMaintenanceDocument.xml.patch`
   * Not merged. CX removed this file entirely. Verify that was correct and apply the same change to KC6. See rSmart/issues#264.
+* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/Rolodex.xml.patch`
+  * Not merged. Needs to be reviewed wrt other Rolodex conflicts above.
 
 Complete
 --------
