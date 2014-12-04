@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/SubAwardFundingSource.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/printing/stylesheet/AwardNotice.xsl.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/printing/stylesheet/BudgetSummaryTotalPage.xsl.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/printing/stylesheet/FDP_Modification_Template.xsl.patch`
@@ -296,4 +295,6 @@ Complete
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/SubAwardCopyRightsType.xml.patch`
   * Patch merged cleanly.
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/SubAwardCostType.xml.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/SubAwardFundingSource.xml.patch`
   * Patch merged cleanly.
