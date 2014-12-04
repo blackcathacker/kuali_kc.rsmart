@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/SponsorMaintenanceDocument.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/IacucProtocol.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposal.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposalPerson.xml.patch`
@@ -124,6 +123,8 @@ Needs more attention
   * TODO where should this go?
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/RolodexMaintenanceDocument.xml.patch`
   * TODO merged manually but needs review to ensure correctness wrt failed Rolodex merge above.
+* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/SponsorMaintenanceDocument.xml.patch`
+  * Not merged. CX removed this file entirely. Verify that was correct and apply the same change to KC6. See rSmart/issues#264.
 
 Complete
 --------
