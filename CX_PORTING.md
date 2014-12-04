@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/RolodexMaintenanceDocument.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/SponsorMaintenanceDocument.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/IacucProtocol.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/InstitutionalProposal.xml.patch`
@@ -123,6 +122,8 @@ Needs more attention
   * TODO apply patch to new S2S repo?
 * `cx_patches/src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java.patch`
   * TODO where should this go?
+* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/RolodexMaintenanceDocument.xml.patch`
+  * TODO merged manually but needs review to ensure correctness wrt failed Rolodex merge above.
 
 Complete
 --------
