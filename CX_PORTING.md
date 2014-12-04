@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java.patch`
 * `cx_patches/src/main/resources/ApplicationResources.properties.patch`
 * `cx_patches/src/main/resources/META-INF/kc-config-defaults.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/CoreSpringBeans.xml.patch`
@@ -133,6 +132,8 @@ Needs more attention
   * TODO apply patch to new S2S repo?
 * `cx_patches/src/main/java/org/kuali/kra/service/impl/KraAuthorizationServiceImpl.java.patch`
   * TODO apply patch to new S2S repo?
+* `cx_patches/src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java.patch`
+  * TODO where should this go?
 
 Complete
 --------
