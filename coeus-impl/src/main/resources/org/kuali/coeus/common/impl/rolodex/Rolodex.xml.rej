@@ -1,0 +1,28 @@
+--- coeus-impl/src/main/resources/org/kuali/coeus/common/impl/rolodex/Rolodex.xml
++++ coeus-impl/src/main/resources/org/kuali/coeus/common/impl/rolodex/Rolodex.xml
+@@ -357,6 +358,25 @@
+     <property name="summary" value="Prefix"/>
+     <property name="description" value="Prefix"/>
+   </bean>
++  <bean id="Rolodex-isSponsorAddress" parent="Rolodex-isSponsorAddress-parentBean"/>
++
++  <bean abstract="true" id="Rolodex-isSponsorAddress-parentBean" parent="AttributeDefinition">
++    <property name="name" value="isSponsorAddress"/>
++    <property name="forceUppercase" value="false"/>
++    <property name="label" value="Sponsor Address Flag"/>
++    <property name="shortLabel" value="Sponsor Address Flag"/>
++    <property name="maxLength" value="1"/>
++    <property name="validationPattern">
++      <bean parent="AlphaNumericValidationPattern"/>
++    </property>
++    <property name="control">
++      <bean parent="SelectControlDefinition" 
++      p:valuesFinderClass="org.kuali.kra.lookup.keyvalue.RolodexAddressFlagValuesFinder"
++      p:script="updateOrganizationLookupReturn(this)"/>
++    </property>
++    <property name="summary" value="Sponsor Address Flag"/>
++    <property name="description" value="Sponsor Address Flag"/>
++  </bean>
+   <bean id="Rolodex-sponsorAddressFlag" parent="Rolodex-sponsorAddressFlag-parentBean"/>
+ 
+   <bean abstract="true" id="Rolodex-sponsorAddressFlag-parentBean" parent="AttributeDefinition">
