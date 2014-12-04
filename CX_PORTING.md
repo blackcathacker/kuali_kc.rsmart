@@ -3,28 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome-webfont.eot.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome-webfont.svg.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome-webfont.ttf.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome-webfont.woff.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome.eot.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/FontAwesome.otf.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome.svg.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome.ttf.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.dev.svg.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.svg.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.ttf.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.woff.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/index.html.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/license.txt.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/lte-ie7.js.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/lte-ie7.txt.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/Read Me.txt.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/css/icons/style.css.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/img/glyphicons-halflings.png.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/img/logo-login.png.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/img/logo-watermark.png.patch`
-* `cx_patches/src/main/webapp/css/bootstrap/img/logo.png.patch`
 * `cx_patches/src/main/webapp/css/images/bl-bevel-focus.gif.patch`
 * `cx_patches/src/main/webapp/css/rsmart.css.patch`
 * `cx_patches/src/main/webapp/rice-portal/scripts/easyXDM/resize_intermediate.html.patch`
@@ -305,4 +283,48 @@ Complete
 * `cx_patches/src/main/webapp/css/bootstrap/css/bootstrap-skinned.css.patch`
   * Patch merged cleanly.
 * `cx_patches/src/main/webapp/css/bootstrap/css/bootstrap.css.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome-webfont.eot.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome-webfont.svg.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome-webfont.ttf.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome-webfont.woff.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome.eot.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/FontAwesome.otf.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome.svg.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawesome.ttf.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.dev.svg.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.svg.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.ttf.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/fonts/fontawsome.woff.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/index.html.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/license.txt.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/lte-ie7.js.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/lte-ie7.txt.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/Read Me.txt.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/css/icons/style.css.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/img/glyphicons-halflings.png.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/img/logo-login.png.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/img/logo-watermark.png.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/css/bootstrap/img/logo.png.patch`
   * Patch merged cleanly.
