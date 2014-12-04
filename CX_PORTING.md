@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/DevelopmentProposal.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/RolodexMaintenanceDocument.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/SponsorMaintenanceDocument.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/IacucProtocol.xml.patch`
@@ -278,4 +277,6 @@ Complete
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/CustRptDefaultParms.xml.patch`
   * Patch merged cleanly.
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/CustRptTypeDocument.xml.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/DevelopmentProposal.xml.patch`
   * Patch merged cleanly.
