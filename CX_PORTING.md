@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/java/org/kuali/kra/questionnaire/answer/QuestionnaireAnswerServiceImpl.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/s2s/service/impl/S2SUtilServiceImpl.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/service/impl/KraAuthorizationServiceImpl.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardAction.java.patch`
@@ -259,3 +258,5 @@ Complete
   * Patch merged cleanly.
 * `cx_patches/src/main/java/org/kuali/kra/protocol/notification/ProtocolReplacementParameters.java.patch`
   * Patch merged cleanly.
+* `cx_patches/src/main/java/org/kuali/kra/questionnaire/answer/QuestionnaireAnswerServiceImpl.java.patch`
+  * Manually merged patch conflicts.
