@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/CustReportType.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/CustRptDefaultParms.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/CustRptTypeDocument.xml.patch`
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/DevelopmentProposal.xml.patch`
@@ -275,4 +274,6 @@ Complete
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/Budget.xml.patch`
   * Patch merged cleanly.
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/CustReportDetails.xml.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/CustReportType.xml.patch`
   * Patch merged cleanly.
