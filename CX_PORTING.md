@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/java/org/kuali/kra/service/impl/KraAuthorizationServiceImpl.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardAction.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/subaward/web/struts/action/SubAwardActionsAction.java.patch`
 * `cx_patches/src/main/java/org/kuali/kra/subawardReporting/printing/service/impl/SubAwardPrintingServiceImpl.java.patch`
@@ -137,6 +136,8 @@ Needs more attention
 * `cx_patches/src/main/java/org/kuali/kra/proposaldevelopment/service/impl/ProposalCopyServiceImpl.java.patch`
   * TODO could NOT merge; KC6 class looks very different. Needs closer inspection.
 * `cx_patches/src/main/java/org/kuali/kra/s2s/service/impl/S2SUtilServiceImpl.java.patch`
+  * TODO apply patch to new S2S repo?
+* `cx_patches/src/main/java/org/kuali/kra/service/impl/KraAuthorizationServiceImpl.java.patch`
   * TODO apply patch to new S2S repo?
 
 Complete
