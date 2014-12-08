@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/webapp/unitHierarchy.jsp.patch`
 * `cx_patches/src/main/webapp/WEB-INF/jsp/award/awardHierarchyAwardActionsAjax.jsp.patch`
 * `cx_patches/src/main/webapp/WEB-INF/jsp/coi/FinancialEntityEditList.jsp.patch`
 * `cx_patches/src/main/webapp/WEB-INF/jsp/coi/FinancialEntityEditNew.jsp.patch`
@@ -335,3 +334,5 @@ Complete
   * No change required.
 * `cx_patches/src/main/webapp/static/images/checked.gif.patch`
   * No change required.
+* `cx_patches/src/main/webapp/unitHierarchy.jsp.patch`
+  * Patch merged cleanly.
