@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/webapp/WEB-INF/jsp/proposaldevelopment/ProposalDevelopmentKeyPersonnel.jsp.patch`
 * `cx_patches/src/main/webapp/WEB-INF/jsp/proposaldevelopment/ProposalDevelopmentProposal.jsp.patch`
 * `cx_patches/src/main/webapp/WEB-INF/jsp/timeandmoney/awardHierarchyTimeAndMoneyAjax.jsp.patch`
 * `cx_patches/src/main/webapp/WEB-INF/struts-config.xml.patch`
@@ -350,4 +349,6 @@ Complete
 * `cx_patches/src/main/webapp/WEB-INF/jsp/meeting/meetingManagement.jsp.patch`
   * Patch merged cleanly.
 * `cx_patches/src/main/webapp/WEB-INF/jsp/multicampus_dummy_login.jsp.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/WEB-INF/jsp/proposaldevelopment/ProposalDevelopmentKeyPersonnel.jsp.patch`
   * Patch merged cleanly.
