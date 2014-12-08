@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/webapp/WEB-INF/jsp/timeandmoney/awardHierarchyTimeAndMoneyAjax.jsp.patch`
 * `cx_patches/src/main/webapp/WEB-INF/struts-config.xml.patch`
 * `cx_patches/src/main/webapp/WEB-INF/tags/budget/budgetVersions.tag.patch`
 * `cx_patches/src/main/webapp/WEB-INF/tags/coi/approveAction.tag.patch`
@@ -353,3 +352,5 @@ Complete
   * Patch merged cleanly.
 * `cx_patches/src/main/webapp/WEB-INF/jsp/proposaldevelopment/ProposalDevelopmentProposal.jsp.patch`
   * Manually merged patch conflicts.
+* `cx_patches/src/main/webapp/WEB-INF/jsp/timeandmoney/awardHierarchyTimeAndMoneyAjax.jsp.patch`
+  * Patch merged cleanly.
