@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/webapp/WEB-INF/tags/iacuc/onlinereview/onlineReview.tag.patch`
 * `cx_patches/src/main/webapp/WEB-INF/tags/infopage.tag.patch`
 * `cx_patches/src/main/webapp/WEB-INF/tags/irb/onlinereview/onlineReview.tag.patch`
 * `cx_patches/src/main/webapp/WEB-INF/tags/medusa/medusaNegotiationSummary.tag.patch`
@@ -357,3 +356,5 @@ Complete
   * Patch merged cleanly.
 * `cx_patches/src/main/webapp/WEB-INF/tags/coi/approveAction.tag.patch`
   * Manually merged patch conflicts.
+* `cx_patches/src/main/webapp/WEB-INF/tags/iacuc/onlinereview/onlineReview.tag.patch`
+  * Patch merged cleanly.
