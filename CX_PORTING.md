@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/webapp/WEB-INF/jsp/irb/researchAreaAjax.jsp.patch`
 * `cx_patches/src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingActions.jsp.patch`
 * `cx_patches/src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingCorrespondenceAction.jsp.patch`
 * `cx_patches/src/main/webapp/WEB-INF/jsp/meeting/IacucMeetingManagement.jsp.patch`
@@ -342,4 +341,6 @@ Complete
 * `cx_patches/src/main/webapp/WEB-INF/jsp/coi/ViewNotification.jsp.patch`
   * Patch merged cleanly.
 * `cx_patches/src/main/webapp/WEB-INF/jsp/iacuc/IacucResearchAreaAjax.jsp.patch`
+  * Patch merged cleanly.
+* `cx_patches/src/main/webapp/WEB-INF/jsp/irb/researchAreaAjax.jsp.patch`
   * Patch merged cleanly.
