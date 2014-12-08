@@ -1,10 +1,10 @@
 <%@ include file="/WEB-INF/jsp/kraTldHeader.jsp"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <link rel="stylesheet" href="css/jquery/new_kuali.css" type="text/css" />
 <link rel="stylesheet" href="css/jquery/kuali-stylesheet.css"
 <c:set var="notificationAttributes" value="${DataDictionary.KcNotification.attributes}" />
 <c:set var="notification" value="${KualiForm.disclosureHelper.viewNotification}" />
-<html:html>
+<html>
    <head>
 		<link rel="stylesheet" href="css/jquery/new_kuali.css" type="text/css" />
 		<link rel="stylesheet" href="css/jquery/kuali-stylesheet.css"
@@ -50,4 +50,4 @@
 	    	</tbody>
 		</table>
 	</body>
-</html:html>
+</html>
