@@ -448,7 +448,7 @@ public class KcNotificationServiceImpl implements KcNotificationService {
                 recipient.setRecipientId(getKcPersonService().getKcPersonByPersonId(roleMember).getUserName());
                 recipient.setRecipientType(MemberType.PRINCIPAL.getCode());
                 recipients.add(recipient);
-                catch (IllegalArgumentException e) {
+                } catch (IllegalArgumentException e) {
                     // Quietly ignore recipients that no longer exist - dur!
 
                     // java.lang.IllegalArgumentException: the entity is null
@@ -461,7 +461,6 @@ public class KcNotificationServiceImpl implements KcNotificationService {
                     // at org.kuali.kra.common.notification.service.impl.KcNotificationServiceImpl.sendNotificationAndPersist(KcNotificationServiceImpl.java:596)
                     // at org.kuali.kra.protocol.ProtocolActionBase.save(ProtocolActionBase.java:275)
                 }
-            }
             }
         } 
         
