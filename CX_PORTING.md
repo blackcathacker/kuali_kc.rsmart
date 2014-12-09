@@ -3,7 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO
 ----
-* `cx_patches/src/main/webapp/WEB-INF/tlds/portal-func.tld.patch`
 * `cx_patches/src/main/webapp/WEB-INF/web.xml.patch`
 
 Needs more attention
@@ -371,3 +370,5 @@ Complete
   * Patch merged cleanly.
 * `cx_patches/src/main/webapp/WEB-INF/tags/rice-portal/portalTabs.tag.patch`
   * Manually merged patch conflicts.
+* `cx_patches/src/main/webapp/WEB-INF/tlds/portal-func.tld.patch`
+  * Patch merged cleanly.
