@@ -3,10 +3,6 @@ Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 
 TODO (pass 2)
 -------------
-* `cx_patches/src/main/config/sql/RELEASE-SCRIPTS/KC_Install.sh.patch`
-  * Merge was *mostly* clean; rejects saved for reference.
-  * Probably not worth messing with as long as:
-  * TODO: manually merge all new KC6 SQL upgrade scripts into Flyway migrations.
 * `cx_patches/src/main/java/com/rsmart/kuali/kra/workflow/UnitAdministratorRoleAttribute.java.patch`
   * Merged failed!
   * TODO: Needs to be manually ported to KC6; rejects saved for reference.
@@ -39,6 +35,10 @@ TODO (pass 2)
 
 Needs more attention
 --------------------
+* `cx_patches/src/main/config/sql/RELEASE-SCRIPTS/KC_Install.sh.patch`
+  * Merge was *mostly* clean; rejects saved for reference.
+  * Probably not worth messing with as long as:
+  * TODO: manually merge all new KC6 SQL upgrade scripts into Flyway migrations.
 
 Complete
 --------
