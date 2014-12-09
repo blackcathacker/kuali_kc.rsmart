@@ -29,7 +29,6 @@ import org.kuali.kra.award.awardhierarchy.AwardHierarchyTempObject;
 import org.kuali.kra.award.awardhierarchy.sync.AwardSyncChange;
 import org.kuali.kra.award.awardhierarchy.sync.AwardSyncPendingChangeBean;
 import org.kuali.kra.award.awardhierarchy.sync.AwardSyncType;
-import org.kuali.kra.award.contacts.AwardSponsorContactAuditRule;
 import org.kuali.kra.award.document.AwardDocument;
 import org.kuali.kra.award.home.Award;
 import org.kuali.kra.award.home.ValidRates;
@@ -51,8 +50,6 @@ import org.kuali.rice.kew.api.KewApiConstants;
 import org.kuali.rice.kew.api.WorkflowDocument;
 import org.kuali.rice.kew.api.exception.WorkflowException;
 import org.kuali.rice.kns.question.ConfirmationQuestion;
-import org.kuali.rice.kns.util.AuditError;
-import org.kuali.rice.kns.util.KNSGlobalVariables;
 import org.kuali.rice.kns.web.struts.action.AuditModeAction;
 import org.kuali.rice.kns.web.struts.form.KualiDocumentFormBase;
 import org.kuali.rice.krad.util.GlobalVariables;
@@ -71,12 +68,9 @@ public class AwardActionsAction extends AwardAction implements AuditModeAction {
     private static final String ZERO = "0";
     private static final String NEW_CHILD_SELECTED_AWARD_OPTION = "c";
     private static final String NEW_CHILD_COPY_FROM_PARENT_OPTION = "b";
-    private static final String AWARD_SPONSOR_CONTACT_LIST_ERROR_KEY = "document.awardList[0].sponsorContact";
-    private static final String ERROR_INVALID_COUNTRY_CODE = "error.invalid.countryCode";
     private static final String ERROR_CANCEL_PENDING_PROPOSALS = "error.cancel.fundingproposal.pendingVersion";
     private static final String ACCOUNT_ALREADY_CREATED = "error.award.createAccount.account.already.created";
     private static final String NO_PERMISSION_TO_CREATE_ACCOUNT = "error.award.createAccount.noPermission";
-    private static final String CONTACTS_AUDIT_ERRORS = "contactsAuditErrors";
     public static final String NEW_CHILD_NEW_OPTION = "a";
     public static final String AWARD_COPY_NEW_OPTION = "a";
     public static final String AWARD_COPY_CHILD_OF_OPTION = "d";
@@ -404,20 +398,11 @@ public class AwardActionsAction extends AwardAction implements AuditModeAction {
         return mapping.findForward(Constants.MAPPING_AWARD_BASIC);
     }
 
-    public ActionForward printNotice(final ActionMapping mapping, final ActionForm form,
-            final HttpServletRequest request, final HttpServletResponse response)
+    public ActionForward printNotice(ActionMapping mapping, ActionForm form,
+            HttpServletRequest request, HttpServletResponse response)
             throws Exception {
-        final AwardForm awardForm = (AwardForm) form;
-
-        if (!new AwardSponsorContactAuditRule().processRunAuditBusinessRules(awardForm.getDocument())
-            && auditErrorExists(AWARD_SPONSOR_CONTACT_LIST_ERROR_KEY)) {            
-            GlobalVariables.getMessageMap().putError(AWARD_SPONSOR_CONTACT_LIST_ERROR_KEY,
-                                                     ERROR_INVALID_COUNTRY_CODE);
-            return mapping.findForward("contacts"); // Switch to the contacts tab and show the error.
-        }
-
-
-        final Map<String, Object> reportParameters = new HashMap<String, Object>();
+        AwardForm awardForm = (AwardForm) form;
+        Map<String, Object> reportParameters = new HashMap<String, Object>();
         reportParameters.put(AwardPrintParameters.ADDRESS_LIST
                 .getAwardPrintParameter(), awardForm.getAwardPrintNotice()
                 .getSponsorContacts());
@@ -486,19 +471,6 @@ public class AwardActionsAction extends AwardAction implements AuditModeAction {
         streamToResponse(dataStream, response);
         //return mapping.findForward(Constants.MAPPING_AWARD_BASIC);
         return null;
-    }
-
-    protected boolean auditErrorExists(final String key) {
-        if (key == null) {
-            return false;
-        }
-
-        for (final AuditError error : (List<AuditError>) KNSGlobalVariables.getAuditErrorMap().get(CONTACTS_AUDIT_ERRORS).getAuditErrorList()) {
-            if ((key + ".auditErrors").equalsIgnoreCase(error.getErrorKey())) {
-                return true;
-            }
-        }
-        return false;
     }
 
     public ActionForward printChangeReport(ActionMapping mapping,
