@@ -7,18 +7,8 @@ TODO (pass 2)
   * Patch does NOT merge clean; needs to be inspected further.
 * `cx_patches/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetBaseStream.java.patch`
   * Patch does NOT merge clean but it looks like *most* of the fix is already in KC6.
-* `cx_patches/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/NarrativeReplaceAuthorizer.java.patch`
-  * TODO apply patch to new S2S repo?
-* `cx_patches/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/PersonnelAttachmentReplaceAuthorizer.java.patch`
-  * TODO apply patch to new S2S repo?
 * `cx_patches/src/main/java/org/kuali/kra/proposaldevelopment/service/impl/ProposalCopyServiceImpl.java.patch`
   * TODO could NOT merge; KC6 class looks very different. Needs closer inspection.
-* `cx_patches/src/main/java/org/kuali/kra/s2s/service/impl/S2SUtilServiceImpl.java.patch`
-  * TODO apply patch to new S2S repo?
-* `cx_patches/src/main/java/org/kuali/kra/service/impl/KraAuthorizationServiceImpl.java.patch`
-  * TODO apply patch to new S2S repo?
-* `cx_patches/src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java.patch`
-  * TODO where should this go?
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/RolodexMaintenanceDocument.xml.patch`
   * TODO merged manually but needs review to ensure correctness wrt failed Rolodex merge above.
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/SponsorMaintenanceDocument.xml.patch`
@@ -34,6 +24,16 @@ Needs more attention
   * Merge was *mostly* clean; rejects saved for reference.
   * Probably not worth messing with as long as:
   * TODO: manually merge all new KC6 SQL upgrade scripts into Flyway migrations.
+* `cx_patches/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/NarrativeReplaceAuthorizer.java.patch`
+  * TODO: file cannot be found in KC6; what to do with this change?
+* `cx_patches/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/PersonnelAttachmentReplaceAuthorizer.java.patch`
+  * TODO: file cannot be found in KC6; what to do with this change?
+* `cx_patches/src/main/java/org/kuali/kra/s2s/service/impl/S2SUtilServiceImpl.java.patch`
+  * TODO: file cannot be found in KC6; what to do with this change?
+* `cx_patches/src/main/java/org/kuali/kra/service/impl/KraAuthorizationServiceImpl.java.patch`
+  * TODO: file cannot be found in KC6; what to do with this change?
+* `cx_patches/src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java.patch`
+  * TODO: file cannot be found in KC6; what to do with this change?
 
 Complete
 --------
