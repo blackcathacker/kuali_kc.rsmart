@@ -31,6 +31,9 @@ Needs more attention
   * Not merged. Needs to be reviewed wrt other Rolodex conflicts above.
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/SponsorSpecial.xml.patch`
   * `SponsorSpecial.xml` no longer exists in KC6. If there is nothing to do here, just mark as complete.
+* `cx_patches/src/main/java/org/kuali/kra/award/web/struts/action/AwardActionsAction.java.patch`
+  * Patch merges but does not compile with Rice 2.5.x.
+  * TODO: Review change and apply equivalent fix.
 
 Complete
 --------
@@ -71,8 +74,6 @@ Complete
 * `cx_patches/src/main/java/org/kuali/kra/award/lookup/AwardLookupableHelperServiceImpl.java.patch`
   * Manually merged patch conflicts.
 * `cx_patches/src/main/java/org/kuali/kra/award/printing/xmlstream/AwardBaseStream.java.patch`
-  * Manually merged patch conflicts.
-* `cx_patches/src/main/java/org/kuali/kra/award/web/struts/action/AwardActionsAction.java.patch`
   * Manually merged patch conflicts.
 * `cx_patches/src/main/java/org/kuali/kra/award/web/struts/action/AwardHomeAction.java.patch`
   * Manually merged patch conflicts.
