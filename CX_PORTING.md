@@ -1,14 +1,12 @@
 Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 =========================================
 
-TODO
-----
-
-Needs more attention
---------------------
+TODO (pass 2)
+-------------
 * `cx_patches/src/main/config/sql/RELEASE-SCRIPTS/KC_Install.sh.patch`
   * Merge was *mostly* clean; rejects saved for reference.
-  * TODO: manually mege all new KC6 SQL scripts into Flyway migrations.
+  * Probably not worth messing with as long as:
+  * TODO: manually merge all new KC6 SQL upgrade scripts into Flyway migrations.
 * `cx_patches/src/main/java/com/rsmart/kuali/kra/workflow/UnitAdministratorRoleAttribute.java.patch`
   * Merged failed!
   * TODO: Needs to be manually ported to KC6; rejects saved for reference.
@@ -38,6 +36,9 @@ Needs more attention
   * Not merged. Needs to be reviewed wrt other Rolodex conflicts above.
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/SponsorSpecial.xml.patch`
   * `SponsorSpecial.xml` no longer exists in KC6. If there is nothing to do here, just mark as complete.
+
+Needs more attention
+--------------------
 
 Complete
 --------
