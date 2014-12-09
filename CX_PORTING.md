@@ -1,23 +1,6 @@
 Merge CX 5.2.1.x fixes into 6.0.0.x Notes
 =========================================
 
-TODO (pass 2)
--------------
-* `cx_patches/src/main/java/org/kuali/kra/bo/Rolodex.java.patch`
-  * Patch does NOT merge clean; needs to be inspected further.
-* `cx_patches/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetBaseStream.java.patch`
-  * Patch does NOT merge clean but it looks like *most* of the fix is already in KC6.
-* `cx_patches/src/main/java/org/kuali/kra/proposaldevelopment/service/impl/ProposalCopyServiceImpl.java.patch`
-  * TODO could NOT merge; KC6 class looks very different. Needs closer inspection.
-* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/RolodexMaintenanceDocument.xml.patch`
-  * TODO merged manually but needs review to ensure correctness wrt failed Rolodex merge above.
-* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/SponsorMaintenanceDocument.xml.patch`
-  * Not merged. CX removed this file entirely. Verify that was correct and apply the same change to KC6. See rSmart/issues#264.
-* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/Rolodex.xml.patch`
-  * Not merged. Needs to be reviewed wrt other Rolodex conflicts above.
-* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/SponsorSpecial.xml.patch`
-  * `SponsorSpecial.xml` no longer exists in KC6. If there is nothing to do here, just mark as complete.
-
 Needs more attention
 --------------------
 * `cx_patches/src/main/config/sql/RELEASE-SCRIPTS/KC_Install.sh.patch`
@@ -34,6 +17,20 @@ Needs more attention
   * TODO: file cannot be found in KC6; what to do with this change?
 * `cx_patches/src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java.patch`
   * TODO: file cannot be found in KC6; what to do with this change?
+* `cx_patches/src/main/java/org/kuali/kra/bo/Rolodex.java.patch`
+  * Patch does NOT merge clean; needs to be inspected further.
+* `cx_patches/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetBaseStream.java.patch`
+  * Patch does NOT merge clean but it looks like *most* of the fix is already in KC6.
+* `cx_patches/src/main/java/org/kuali/kra/proposaldevelopment/service/impl/ProposalCopyServiceImpl.java.patch`
+  * TODO could NOT merge; KC6 class looks very different. Needs closer inspection.
+* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/RolodexMaintenanceDocument.xml.patch`
+  * TODO merged manually but needs review to ensure correctness wrt failed Rolodex merge above.
+* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/SponsorMaintenanceDocument.xml.patch`
+  * Not merged. CX removed this file entirely. Verify that was correct and apply the same change to KC6. See rSmart/issues#264.
+* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/Rolodex.xml.patch`
+  * Not merged. Needs to be reviewed wrt other Rolodex conflicts above.
+* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/SponsorSpecial.xml.patch`
+  * `SponsorSpecial.xml` no longer exists in KC6. If there is nothing to do here, just mark as complete.
 
 Complete
 --------
