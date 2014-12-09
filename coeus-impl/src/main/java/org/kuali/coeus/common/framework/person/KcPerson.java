@@ -61,8 +61,6 @@ import java.util.Date;
  */
 public class KcPerson extends TransientBusinessObjectBase implements Contactable, KcPersonContract {
 
-    private static final org.apache.log4j.Logger LOG = org.apache.log4j.Logger.getLogger(KcPerson.class);
-
     private static final long serialVersionUID = 1L;
 
     private String personId;
