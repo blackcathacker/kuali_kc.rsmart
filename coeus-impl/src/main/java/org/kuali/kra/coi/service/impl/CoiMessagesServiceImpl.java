@@ -35,8 +35,6 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class CoiMessagesServiceImpl implements CoiMessagesService {
-    private static final org.apache.log4j.Logger LOG = org.apache.log4j.Logger.getLogger(CoiMessagesServiceImpl.class);
-
     private static final Log LOG = LogFactory.getLog(CoiMessagesServiceImpl.class);
 
     private transient BusinessObjectService businessObjectService;
