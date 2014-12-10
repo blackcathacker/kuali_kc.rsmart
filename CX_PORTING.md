@@ -36,6 +36,8 @@ Needs more attention
 * `cx_patches/src/main/java/org/kuali/kra/award/web/struts/action/AwardActionsAction.java.patch`
   * Patch merges but does not compile with Rice 2.5.x.
   * TODO: Review change and apply equivalent fix.
+* `cx_patches/src/main/java/com/rsmart/kuali/kra/workflow/UnitAdministratorRoleAttribute.java.patch`
+  * TODO: Review `getCode()` change; is the behavior equivalent?
 
 Complete
 --------
@@ -367,5 +369,3 @@ Complete
   * Patch merged cleanly.
 * `cx_patches/src/main/webapp/WEB-INF/web.xml.patch`
   * Manually merged patch conflicts.
-* `cx_patches/src/main/java/com/rsmart/kuali/kra/workflow/UnitAdministratorRoleAttribute.java.patch`
-  * Patch merged cleanly.
