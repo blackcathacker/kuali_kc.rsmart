@@ -37,7 +37,7 @@ Needs more attention
   * Patch merges but does not compile with Rice 2.5.x.
   * TODO: Review change and apply equivalent fix.
 * `cx_patches/src/main/java/com/rsmart/kuali/kra/workflow/UnitAdministratorRoleAttribute.java.patch`
-  * TODO: Review `getCode()` change; is the behavior equivalent?
+  * TODO: Review `getCode()` change; is the behavior equivalent? See commit `948d2708d8174b27ebb103921b53ca0861acafb1`
 
 Complete
 --------
