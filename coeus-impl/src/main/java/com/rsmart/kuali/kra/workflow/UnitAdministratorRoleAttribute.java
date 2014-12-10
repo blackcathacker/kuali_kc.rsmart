@@ -108,7 +108,7 @@ public class UnitAdministratorRoleAttribute extends GenericRoleAttribute {
                    Unit unit  = getUnitService().getUnit(unitElement.getChildText("unitNumber"));
                    List<UnitAdministrator> unitAdministrators = getUnitService().retrieveUnitAdministratorsByUnitNumber(unit.getUnitNumber());
                    for ( UnitAdministrator unitAdministrator : unitAdministrators ) {
-                       if (StringUtils.isNotBlank(unitAdministrator.getPersonId()) && unitAdministrator.getUnitAdministratorType().getUnitAdministratorTypeCode().equals(unitAdministratorCode)) {
+                       if (StringUtils.isNotBlank(unitAdministrator.getPersonId()) && unitAdministrator.getUnitAdministratorType().getCode().equals(unitAdministratorCode)) {
                            Id personId = new PrincipalId(unitAdministrator.getPersonId());
                            
                            if (!members.contains(personId)) {
@@ -125,7 +125,7 @@ public class UnitAdministratorRoleAttribute extends GenericRoleAttribute {
                     if(parentUnit != null){
                         List<UnitAdministrator> unitAdministrators = getUnitService().retrieveUnitAdministratorsByUnitNumber(parentUnit.getUnitNumber());
                         for ( UnitAdministrator unitAdministrator : unitAdministrators ) {
-                            if (StringUtils.isNotBlank(unitAdministrator.getPersonId()) && unitAdministrator.getUnitAdministratorType().getUnitAdministratorTypeCode().equals(unitAdministratorCode)) {
+                            if (StringUtils.isNotBlank(unitAdministrator.getPersonId()) && unitAdministrator.getUnitAdministratorType().getCode().equals(unitAdministratorCode)) {
                                 Id personId = new PrincipalId(unitAdministrator.getPersonId());
                                 
                                 if (!members.contains(personId)) {
