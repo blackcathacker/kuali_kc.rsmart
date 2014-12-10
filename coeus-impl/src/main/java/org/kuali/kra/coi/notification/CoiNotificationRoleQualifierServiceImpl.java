@@ -17,8 +17,8 @@ package org.kuali.kra.coi.notification;
 
 import org.apache.commons.lang3.StringUtils;
 import org.kuali.coeus.common.framework.person.KcPerson;
+import org.kuali.coeus.common.framework.unit.Unit;
 import org.kuali.coeus.common.notification.impl.bo.NotificationModuleRoleQualifier;
-import org.kuali.kra.bo.Unit;
 import org.kuali.kra.coi.CoiDisclosure;
 import org.kuali.kra.kim.bo.KcKimAttributes;
 import org.kuali.rice.kim.api.KimConstants;
