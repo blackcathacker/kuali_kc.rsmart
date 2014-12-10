@@ -25,11 +25,10 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+import org.kuali.coeus.propdev.impl.person.ProposalPerson;
 import org.kuali.kra.infrastructure.Constants;
-import org.kuali.kra.infrastructure.KraServiceLocator;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.kuali.kra.proposaldevelopment.bo.ProposalPerson;
 import org.kuali.rice.core.api.config.property.ConfigContext;
 import org.kuali.rice.kns.web.struts.action.KualiDocumentActionBase;
 import org.kuali.rice.krad.util.GlobalVariables;
@@ -104,6 +103,7 @@ public class ReportForwardAction extends KualiDocumentActionBase {
         proposalKeys.put("personId", principalId);
         proposalKeys.put("proposalPersonRoleId", Constants.PRINCIPAL_INVESTIGATOR_ROLE);
           
+        // TODO verify this is the correct implementation for KC6.
         List<ProposalPerson> proposalPersons = (List<ProposalPerson>) getBusinessObjectService().findMatching(ProposalPerson.class, proposalKeys);
         return (proposalPersons != null && proposalPersons.size() > 0);
 //        if (proposalPersons != null && proposalPersons.size() > 0) {
