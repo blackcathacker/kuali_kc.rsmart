@@ -23,6 +23,8 @@ Needs more attention
   * Patch does NOT merge clean but it looks like *most* of the fix is already in KC6.
 * `cx_patches/src/main/java/org/kuali/kra/proposaldevelopment/service/impl/ProposalCopyServiceImpl.java.patch`
   * TODO could NOT merge; KC6 class looks very different. Needs closer inspection.
+* `cx_patches/src/main/java/org/kuali/kra/bo/RolodexMaintainableImpl.java.patch`
+  * Needs to be refactored into a KC6 equivalent fix.
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/RolodexMaintenanceDocument.xml.patch`
   * TODO merged manually but needs review to ensure correctness wrt failed Rolodex merge above.
 * `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/SponsorMaintenanceDocument.xml.patch`
@@ -78,8 +80,6 @@ Complete
 * `cx_patches/src/main/java/org/kuali/kra/award/web/struts/action/AwardHomeAction.java.patch`
   * Manually merged patch conflicts.
 * `cx_patches/src/main/java/org/kuali/kra/bo/KcPerson.java.patch`
-  * Manually merged patch conflicts.
-* `cx_patches/src/main/java/org/kuali/kra/bo/RolodexMaintainableImpl.java.patch`
   * Manually merged patch conflicts.
 * `cx_patches/src/main/java/org/kuali/kra/bo/UnitAdministrator.java.patch`
   * Manually merged patch conflicts.
