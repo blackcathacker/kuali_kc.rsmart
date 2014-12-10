@@ -668,5 +668,10 @@
             <groupId>com.thoughtworks.xstream</groupId>
             <artifactId>xstream</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.rsmart</groupId>
+            <artifactId>tokenauth</artifactId>
+        </dependency>
     </dependencies>
 </project>
