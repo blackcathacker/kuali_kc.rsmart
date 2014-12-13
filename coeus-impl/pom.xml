@@ -678,5 +678,11 @@
             <groupId>com.rsmart.kuali</groupId>
             <artifactId>cx_data_migration</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.rsmart.kuali</groupId>
+            <artifactId>kc_hr_rest</artifactId>
+        </dependency>
+
     </dependencies>
 </project>
