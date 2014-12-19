@@ -40,7 +40,7 @@ Needs more attention
   * TODO: Review change and apply equivalent fix.
 * `cx_patches/src/main/java/com/rsmart/kuali/kra/workflow/UnitAdministratorRoleAttribute.java.patch`
   * TODO: Review `getCode()` change; is the behavior equivalent? See commit `948d2708d8174b27ebb103921b53ca0861acafb1`
-* TODO: Refactor kc_hr_rest artifact for KC6 changes.
+* TODO: Review TODO and FIXME comments from commit https://github.com/rSmart/kc_hr_rest/commit/e00cc7c54b29b80653446646b572f3addc0f64f3.
 
 Complete
 --------
