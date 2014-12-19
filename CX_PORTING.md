@@ -9,8 +9,6 @@ Needs more attention
   * TODO: manually merge all new KC6 SQL upgrade scripts into Flyway migrations.
   * Troubleshoot KC6 upgrade SQL errors/warnings:
     * `rice/KR_RICE_01_2.3.5-2.4.0_2014-01-09_B000.sql`: `ERROR 1832 (HY000) at line 21: Cannot change column 'attr_defn_id': used in a foreign key constraint 'krms_typ_attr_fk1'`
-    * `dml/KC_DML_02_KCINFR-979_B000.sql`: `ERROR 1062 (23000) at line 26: Duplicate entry '/GrantApplication/Forms/RR_PerformanceSite/OtherSite/Address/Cou' for key 'UQ_S2S_ERROR'`
-    * `dml/KC_DML_02_KCINFR-979_B000.sql`: `ERROR 1062 (23000) at line 26: Duplicate entry '/GrantApplication/Forms/RR_PerformanceSite/OtherSite/Address/Cou' for key 'UQ_S2S_ERROR'`
 * `cx_patches/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/NarrativeReplaceAuthorizer.java.patch`
   * TODO: file cannot be found in KC6; what to do with this change?
 * `cx_patches/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/PersonnelAttachmentReplaceAuthorizer.java.patch`
