@@ -9,10 +9,6 @@ Needs more attention
   * TODO: manually merge all new KC6 SQL upgrade scripts into Flyway migrations.
   * Troubleshoot KC6 upgrade SQL errors/warnings:
     * `rice/KR_RICE_01_2.3.5-2.4.0_2014-01-09_B000.sql`: `ERROR 1832 (HY000) at line 21: Cannot change column 'attr_defn_id': used in a foreign key constraint 'krms_typ_attr_fk1'`
-* `cx_patches/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/NarrativeReplaceAuthorizer.java.patch`
-  * TODO: file cannot be found in KC6; what to do with this change?
-* `cx_patches/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/PersonnelAttachmentReplaceAuthorizer.java.patch`
-  * TODO: file cannot be found in KC6; what to do with this change?
 * `cx_patches/src/main/java/org/kuali/kra/s2s/service/impl/S2SUtilServiceImpl.java.patch`
   * TODO: file cannot be found in KC6; what to do with this change?
 * `cx_patches/src/main/java/org/kuali/kra/service/impl/KraAuthorizationServiceImpl.java.patch`
@@ -375,3 +371,7 @@ Complete
   * Patch merged cleanly.
 * `cx_patches/src/main/webapp/WEB-INF/web.xml.patch`
   * Manually merged patch conflicts.
+* `cx_patches/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/NarrativeReplaceAuthorizer.java.patch`
+* `cx_patches/src/main/java/org/kuali/kra/proposaldevelopment/document/authorizer/PersonnelAttachmentReplaceAuthorizer.java.patch`
+  * Manually merged into /coeus-impl/src/main/java/org/kuali/coeus/propdev/impl/auth/ProposalDevelopmentDocumentAuthorizer.java
+

@@ -409,6 +409,10 @@ public class ProposalDevelopmentDocumentAuthorizer extends KcKradTransactionalDo
         if (!pdDocument.getDevelopmentProposal().getSubmitFlag() && getKcAuthorizationService().hasPermission(user.getPrincipalId(), pdDocument, PermissionConstants.MODIFY_NARRATIVE)) {
             hasPermission = hasNarrativeRight(user.getPrincipalId(), narrative, NarrativeRight.MODIFY_NARRATIVE_RIGHT);
         }
+        if (!hasPermission) {
+        	hasPermission = !pdDocument.getDevelopmentProposal().getSubmitFlag() && pdDocument.getDocumentHeader().getWorkflowDocument().isEnroute() 
+        			&& getKcAuthorizationService().hasPermission(user.getPrincipalId(), pdDocument, PermissionConstants.ALTER_PROPOSAL_DATA);
+        }
 
         return hasPermission;
     }
@@ -536,6 +540,10 @@ public class ProposalDevelopmentDocumentAuthorizer extends KcKradTransactionalDo
         if (!pdDocument.getDevelopmentProposal().getSubmitFlag()) {
             hasPermission = getKcAuthorizationService().hasPermission(user.getPrincipalId(), pdDocument, PermissionConstants.MODIFY_NARRATIVE);
         }
+        if (!hasPermission) {
+        	hasPermission = !pdDocument.getDevelopmentProposal().getSubmitFlag() && pdDocument.getDocumentHeader().getWorkflowDocument().isEnroute() 
+        			&& getKcAuthorizationService().hasPermission(user.getPrincipalId(), pdDocument, PermissionConstants.ALTER_PROPOSAL_DATA);
+        }        
         return hasPermission;
     }
 
@@ -551,9 +559,13 @@ public class ProposalDevelopmentDocumentAuthorizer extends KcKradTransactionalDo
     protected boolean isAuthorizedToReplacePersonnelAttachement(Document document, Person user) {
         final ProposalDevelopmentDocument pdDocument = ((ProposalDevelopmentDocument) document);
         ProposalState proposalState = pdDocument.getDevelopmentProposal().getProposalState();
-        return getKcAuthorizationService().hasPermission(user.getPrincipalId(), pdDocument, PermissionConstants.MODIFY_NARRATIVE)
+        boolean result = getKcAuthorizationService().hasPermission(user.getPrincipalId(), pdDocument, PermissionConstants.MODIFY_NARRATIVE)
                 && (isInProgress(proposalState) || isApprovalPending(proposalState) || isRevisionRequested(proposalState));
-
+        if (!result) {
+        	result = !pdDocument.getDevelopmentProposal().getSubmitFlag() && pdDocument.getDocumentHeader().getWorkflowDocument().isEnroute() 
+        			&& getKcAuthorizationService().hasPermission(user.getPrincipalId(), pdDocument, PermissionConstants.ALTER_PROPOSAL_DATA);
+        }
+        return result;
     }
 
     protected boolean isAuthorizedToRecallProposal(Document document, Person user) {
