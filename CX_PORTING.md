@@ -33,9 +33,6 @@ Needs more attention
 * `cx_patches/src/main/java/com/rsmart/kuali/kra/workflow/UnitAdministratorRoleAttribute.java.patch`
   * TODO: Review `getCode()` change; is the behavior equivalent? See commit `948d2708d8174b27ebb103921b53ca0861acafb1`
 * TODO: Review TODO and FIXME comments from commit https://github.com/rSmart/kc_hr_rest/commit/e00cc7c54b29b80653446646b572f3addc0f64f3.
-* Troubleshoot spring context startup when trying to instatiate REST API beans
-  * Import `<import resource="classpath:com/rsmart/kuali/coeus/hr/JerseyBeans.xml" />` in `coeus-impl/src/main/resources/org/kuali/kra/CoreSpringBeans.xml`.
-  * Resolve error: `Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'importStatusService' defined in class path resource [com/rsmart/kuali/coeus/hr/JerseyBeans.xml]: Cannot resolve reference to bean 'dataSourceXAPool' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'dataSourceXAPool' is defined`
 
 Complete
 --------
