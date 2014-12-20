@@ -11,8 +11,6 @@ Needs more attention
     * `rice/KR_RICE_01_2.3.5-2.4.0_2014-01-09_B000.sql`: `ERROR 1832 (HY000) at line 21: Cannot change column 'attr_defn_id': used in a foreign key constraint 'krms_typ_attr_fk1'`
 * `cx_patches/src/main/java/org/kuali/kra/s2s/service/impl/S2SUtilServiceImpl.java.patch`
   * TODO: file cannot be found in KC6; what to do with this change?
-* `cx_patches/src/main/java/org/kuali/kra/bo/Rolodex.java.patch`
-  * Patch does NOT merge clean; needs to be inspected further.
 * `cx_patches/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetBaseStream.java.patch`
   * Patch does NOT merge clean but it looks like *most* of the fix is already in KC6.
 * TODO: Review TODO and FIXME comments from commit https://github.com/rSmart/kc_hr_rest/commit/e00cc7c54b29b80653446646b572f3addc0f64f3.
@@ -367,3 +365,5 @@ Complete
   * Patch merges but does not compile with Rice 2.5.x. -- Rice 2.5.x related errors fixed and patch applied
 * `cx_patches/src/main/java/com/rsmart/kuali/kra/workflow/UnitAdministratorRoleAttribute.java.patch`
   * TODO: Review `getCode()` change; is the behavior equivalent? See commit `948d2708d8174b27ebb103921b53ca0861acafb1` -- verified this was the correct fix
+* `cx_patches/src/main/java/org/kuali/kra/bo/Rolodex.java.patch`
+  * Relevant changes from patch made to Rolodex.java
