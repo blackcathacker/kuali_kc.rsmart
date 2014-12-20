@@ -15,23 +15,6 @@ Needs more attention
   * Patch does NOT merge clean; needs to be inspected further.
 * `cx_patches/src/main/java/org/kuali/kra/budget/printing/xmlstream/BudgetBaseStream.java.patch`
   * Patch does NOT merge clean but it looks like *most* of the fix is already in KC6.
-* `cx_patches/src/main/java/org/kuali/kra/proposaldevelopment/service/impl/ProposalCopyServiceImpl.java.patch`
-  * TODO could NOT merge; KC6 class looks very different. Needs closer inspection.
-* `cx_patches/src/main/java/org/kuali/kra/bo/RolodexMaintainableImpl.java.patch`
-  * Needs to be refactored into a KC6 equivalent fix.
-* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/RolodexMaintenanceDocument.xml.patch`
-  * TODO merged manually but needs review to ensure correctness wrt failed Rolodex merge above.
-* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/SponsorMaintenanceDocument.xml.patch`
-  * Not merged. CX removed this file entirely. Verify that was correct and apply the same change to KC6. See rSmart/issues#264.
-* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/Rolodex.xml.patch`
-  * Not merged. Needs to be reviewed wrt other Rolodex conflicts above.
-* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/SponsorSpecial.xml.patch`
-  * `SponsorSpecial.xml` no longer exists in KC6. If there is nothing to do here, just mark as complete.
-* `cx_patches/src/main/java/org/kuali/kra/award/web/struts/action/AwardActionsAction.java.patch`
-  * Patch merges but does not compile with Rice 2.5.x.
-  * TODO: Review change and apply equivalent fix.
-* `cx_patches/src/main/java/com/rsmart/kuali/kra/workflow/UnitAdministratorRoleAttribute.java.patch`
-  * TODO: Review `getCode()` change; is the behavior equivalent? See commit `948d2708d8174b27ebb103921b53ca0861acafb1`
 * TODO: Review TODO and FIXME comments from commit https://github.com/rSmart/kc_hr_rest/commit/e00cc7c54b29b80653446646b572f3addc0f64f3.
 
 Complete
@@ -371,5 +354,16 @@ Complete
   * Manually merged into /coeus-impl/src/main/java/org/kuali/coeus/common/impl/auth/perm/KcAuthorizationServiceImpl.java
 * `cx_patches/src/main/java/org/kuali/kra/web/struts/action/KraTransactionalDocumentActionBase.java.patch`
   * Manually merged into /coeus-impl/src/main/java/org/kuali/coeus/sys/framework/controller/KcTransactionalDocumentActionBase.java
-
-
+* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/SponsorSpecial.xml.patch`
+  * `SponsorSpecial.xml` removed in KC6 and similar change already made to Sponsor.xml
+* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/SponsorMaintenanceDocument.xml.patch`
+  * Not merged. This was removed in CX to avoid a conflict with SponsorSpecial, but in 6.0 SponsorSpecial has been removed so this is the only maint doc file for Sponsor now.
+* `cx_patches/src/main/java/org/kuali/kra/bo/RolodexMaintainableImpl.java.patch`
+* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/docs/RolodexMaintenanceDocument.xml.patch`
+* `cx_patches/src/main/resources/org/kuali/kra/datadictionary/Rolodex.xml.patch`
+* `cx_patches/src/main/java/org/kuali/kra/proposaldevelopment/service/impl/ProposalCopyServiceImpl.java.patch`
+  * Unnecessary in 6.0
+* `cx_patches/src/main/java/org/kuali/kra/award/web/struts/action/AwardActionsAction.java.patch`
+  * Patch merges but does not compile with Rice 2.5.x. -- Rice 2.5.x related errors fixed and patch applied
+* `cx_patches/src/main/java/com/rsmart/kuali/kra/workflow/UnitAdministratorRoleAttribute.java.patch`
+  * TODO: Review `getCode()` change; is the behavior equivalent? See commit `948d2708d8174b27ebb103921b53ca0861acafb1` -- verified this was the correct fix
