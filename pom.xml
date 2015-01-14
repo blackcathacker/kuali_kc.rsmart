@@ -23,8 +23,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.kuali.coeus</groupId>
     <artifactId>coeus</artifactId>
-    <version>6.0.1-SNAPSHOT</version>
-    <version>6.0.0.0-kualico-SNAPSHOT</version>
+    <version>6.0.0-cx-beta1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>KualiCo Cloud Express</name>
     <description>
@@ -227,7 +226,7 @@
         <coeus-api-all.version>6.0-SNAPSHOT</coeus-api-all.version>
         <rsmart.cx.token.auth.version>1.0.7</rsmart.cx.token.auth.version>
         <rsmart.hr.rest.version>1.0-SNAPSHOT</rsmart.hr.rest.version>
-        <rsmart.cx.data.migration.version>6.0.0.0-SNAPSHOT</rsmart.cx.data.migration.version>
+        <rsmart.cx.data.migration.version>6.0.0-beta1-SNAPSHOT</rsmart.cx.data.migration.version>
         <wagon.s3.version>1.2.1</wagon.s3.version>
     </properties>
 

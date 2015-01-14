@@ -25,11 +25,7 @@
     <parent>
         <groupId>org.kuali.coeus</groupId>
         <artifactId>coeus</artifactId>
-<<<<<<< HEAD
-        <version>6.0.1-SNAPSHOT</version>
-=======
-        <version>6.0.0.0-kualico-SNAPSHOT</version>
->>>>>>> CX Bug Fix related Changes
+        <version>6.0.0-cx-beta1-SNAPSHOT</version>
     </parent>
     <artifactId>coeus-impl</artifactId>
     <packaging>jar</packaging>
